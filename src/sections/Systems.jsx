@@ -67,14 +67,9 @@ export default function Systems() {
           <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10">
             {/* MacBook fixo */}
             <div className="mx-auto w-full max-w-[280px] sm:max-w-[360px] md:max-w-[500px]">
-              <div className="rounded-t-xl border border-white/10 bg-[#0b0b0b] p-2 shadow-2xl">
-                <div className="flex items-center gap-1.5 px-2 py-1.5">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-                </div>
-                {/* moldura da tela, a fita desliza AQUI dentro */}
-                <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-ink">
+              <div className="rounded-t-xl border border-white/10 bg-[#0b0b0b] p-[6px] shadow-2xl">
+                {/* moldura da tela do MacBook, a fita desliza AQUI dentro */}
+                <div className="relative aspect-[16/10] overflow-hidden rounded-md bg-white">
                   <AnimatePresence mode="popLayout" initial={false}>
                     <motion.div
                       key={cur.id}

@@ -102,19 +102,13 @@ export default function SystemPage() {
           {/* preview (mockup escuro sobre fundo claro) */}
           <Reveal delay={0.2}>
             <div className="mt-16">
-              <div className="overflow-hidden rounded-xl border border-ink/10 bg-[#0b0b0b] shadow-2xl">
-                <div className="flex items-center gap-1.5 border-b border-white/5 px-4 py-3">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-                  <span className="ml-3 font-mono text-xs text-white/30">{s.name.toLowerCase()}.app</span>
-                </div>
+              <div className="overflow-hidden rounded-xl border border-ink/10 bg-white shadow-2xl">
                 {s.shots?.length ? (
                   <div className="aspect-[16/9] w-full">
                     <ShotCarousel shots={s.shots} name={s.name} />
                   </div>
                 ) : (
-                  <div className="flex aspect-[16/8] items-center justify-center font-mono text-xs text-white/25">
+                  <div className="flex aspect-[16/8] items-center justify-center bg-[#0b0b0b] font-mono text-xs text-white/25">
                     SCREENSHOT REAL DO {s.name.toUpperCase()}
                   </div>
                 )}
