@@ -5,15 +5,15 @@ import Blend from "../components/Blend.jsx";
 const GOLD = "#a07d2c";
 
 const phases = [
-  { n: 0, ato: "Ato 1 · Ideia & Marca", title: "Faísca", desc: "Dor validada + posicionamento. Antes de qualquer tela." },
-  { n: 1, ato: "Ato 1 · Ideia & Marca", title: "Marca", desc: "Nome, domínio e brand kit, a cara do produto." },
-  { n: 2, ato: "Ato 1 · Ideia & Marca", title: "Escopo", desc: "As telas essenciais e o fluxo principal." },
-  { n: 3, ato: "Ato 2 · Construção", title: "Lovable", desc: "App navegável no ar, sem escrever código." },
-  { n: 4, ato: "Ato 2 · Construção", title: "Supabase", desc: "Dados, login, RLS e segredos, a fundação." },
-  { n: 5, ato: "Ato 2 · Construção", title: "IA no core", desc: "A feature de IA com cota, via Edge Function." },
-  { n: 6, ato: "Ato 3 · Dinheiro & Venda", title: "Pagamento", desc: "Checkout, webhook e planos que cobram de verdade." },
-  { n: 7, ato: "Ato 3 · Dinheiro & Venda", title: "Blindar", desc: "Claude Code: auditoria e carga antes de escalar." },
-  { n: 8, ato: "Ato 3 · Dinheiro & Venda", title: "Lançar", desc: "Landing, pixel e campanha. No ar, cobrando." },
+  { n: 0, ato: "Ato 1 · Ideia & Marca", title: "Faísca", desc: "Antes de qualquer tela, valide a dor. Uma pessoa real, um problema real, uma frase que posiciona.", ferramenta: "Conversa + papel", entrega: "Dor validada + posicionamento em 1 frase", armadilha: "Se apaixonar pela ideia antes de validar a dor." },
+  { n: 1, ato: "Ato 1 · Ideia & Marca", title: "Marca", desc: "A cara do produto: nome que gruda, domínio disponível e um brand kit mínimo pra tudo conversar.", ferramenta: "IA de nomes + Registro.br", entrega: "Nome, domínio e brand kit", armadilha: "Travar meses escolhendo nome perfeito." },
+  { n: 2, ato: "Ato 1 · Ideia & Marca", title: "Escopo", desc: "Desenhe só as telas essenciais e o fluxo principal. O mínimo que já entrega valor.", ferramenta: "Papel / Figma", entrega: "Lista de telas + fluxo principal", armadilha: "Querer 20 features no primeiro dia." },
+  { n: 3, ato: "Ato 2 · Construção", title: "Lovable", desc: "Coloque um app navegável no ar, sem escrever uma linha de código, conversando com a IA.", ferramenta: "Lovable", entrega: "App navegável publicado", armadilha: "Pedir tudo de uma vez em vez de ir por telas." },
+  { n: 4, ato: "Ato 2 · Construção", title: "Supabase", desc: "A fundação de verdade: banco de dados, login, regras de acesso (RLS) e segredos guardados.", ferramenta: "Supabase", entrega: "Dados, login, RLS e secrets", armadilha: "Deixar a segurança (RLS) pra depois." },
+  { n: 5, ato: "Ato 2 · Construção", title: "IA no core", desc: "A feature de IA que dá o diferencial, com cota e custo controlados numa Edge Function.", ferramenta: "OpenAI / Claude + Edge Function", entrega: "Feature de IA com cota", armadilha: "IA no front sem controlar custo e limite." },
+  { n: 6, ato: "Ato 3 · Dinheiro & Venda", title: "Pagamento", desc: "Cobrar de verdade: checkout, webhook que libera acesso e planos que fazem sentido.", ferramenta: "Stripe / Asaas", entrega: "Checkout + webhook + planos", armadilha: "Liberar acesso sem confirmar o pagamento." },
+  { n: 7, ato: "Ato 3 · Dinheiro & Venda", title: "Blindar", desc: "Antes de escalar, uma auditoria de segurança e teste de carga pra não cair no lançamento.", ferramenta: "Claude Code", entrega: "Auditoria + teste de carga", armadilha: "Escalar tráfego sem blindar o app." },
+  { n: 8, ato: "Ato 3 · Dinheiro & Venda", title: "Lançar", desc: "Landing que converte, pixel medindo tudo e campanha no ar. No ar, cobrando.", ferramenta: "Landing + Meta Pixel", entrega: "Campanha no ar, cobrando", armadilha: "Lançar sem medir (sem pixel, sem dados)." },
 ];
 
 export default function Method() {
@@ -44,7 +44,7 @@ export default function Method() {
               Da ideia ao infoproduto, um caminho repetível, sem programar.
             </h2>
 
-            <div className="mt-6 min-h-[130px] md:mt-10 md:min-h-[190px]">
+            <div className="mt-6 min-h-[300px] md:mt-10 md:min-h-[320px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={cur.n}
@@ -60,7 +60,22 @@ export default function Method() {
                     </span>
                     <span className="font-serif text-3xl font-semibold text-ink md:text-4xl">{cur.title}</span>
                   </div>
-                  <p className="mt-3 max-w-md text-base text-ink/65 md:mt-4 md:text-lg">{cur.desc}</p>
+                  <p className="mt-3 max-w-md text-base text-ink/70 md:mt-4 md:text-lg">{cur.desc}</p>
+
+                  <dl className="mt-5 max-w-md space-y-2.5 border-t border-ink/10 pt-4">
+                    <div className="flex gap-3">
+                      <dt className="w-24 shrink-0 overline text-ink/40" style={{ fontSize: "0.6rem" }}>Ferramenta</dt>
+                      <dd className="text-sm text-ink/75">{cur.ferramenta}</dd>
+                    </div>
+                    <div className="flex gap-3">
+                      <dt className="w-24 shrink-0 overline text-ink/40" style={{ fontSize: "0.6rem" }}>Entregável</dt>
+                      <dd className="text-sm text-ink/75">{cur.entrega}</dd>
+                    </div>
+                    <div className="flex gap-3">
+                      <dt className="w-24 shrink-0 overline text-[#a07d2c]/70" style={{ fontSize: "0.6rem" }}>Armadilha</dt>
+                      <dd className="text-sm italic text-ink/60">{cur.armadilha}</dd>
+                    </div>
+                  </dl>
                 </motion.div>
               </AnimatePresence>
             </div>

@@ -41,7 +41,14 @@ export default function ContactModal() {
   const submit = async (e) => {
     e.preventDefault();
     setStatus("sending");
-    const payload = { ...form, tipo: LABELS[tipo].titulo };
+    const payload = {
+      nome: form.nome,
+      email: form.email,
+      mensagem: form.mensagem,
+      tipo: LABELS[tipo].titulo,
+      _replyto: form.email,
+      _subject: `[Site] ${LABELS[tipo].titulo} — ${form.nome}`,
+    };
     if (FORM_ENDPOINT.includes("SEU_ID")) {
       setTimeout(() => setStatus("done"), 600); // modo demo até o endpoint ser configurado
       return;

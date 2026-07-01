@@ -36,11 +36,22 @@ export default function PainCards() {
               dragElastic={0.45}
               whileTap={{ scale: 1.04 }}
               whileDrag={{ scale: 1.06, rotate: 0, zIndex: 20, boxShadow: "0 40px 70px -20px rgba(0,0,0,0.8)" }}
-              className="flex min-h-[190px] w-[320px] cursor-grab flex-col rounded-2xl border border-offwhite/10 bg-navy/40 p-8 active:cursor-grabbing md:w-[360px]"
+              className="relative flex min-h-[210px] w-[320px] cursor-grab flex-col overflow-hidden rounded-2xl border border-offwhite/10 bg-navy/40 p-8 active:cursor-grabbing md:w-[360px]"
               style={{ boxShadow: "0 28px 52px -22px rgba(0,0,0,0.7)" }}
             >
-              <span className="font-serif text-5xl leading-none text-gold/50">“</span>
-              <p className="mt-1 font-serif text-2xl italic leading-snug text-offwhite/90">{p}</p>
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 opacity-70"
+                style={{
+                  backgroundImage: "radial-gradient(rgba(201,162,75,0.12) 1px, transparent 1px)",
+                  backgroundSize: "16px 16px",
+                }}
+              />
+              <div className="relative z-10 flex h-full flex-col">
+                <span className="font-mono text-xs tracking-widest text-gold/70">{String(i + 1).padStart(2, "0")}</span>
+                <span className="mt-3 font-serif text-5xl leading-none text-gold/50">“</span>
+                <p className="mt-1 font-serif text-2xl italic leading-snug text-offwhite/90">{p}</p>
+              </div>
             </motion.div>
           ))}
         </div>
