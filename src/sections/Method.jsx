@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Blend from "../components/Blend.jsx";
+import Reveal from "../components/Reveal.jsx";
 
 const GOLD = "#a07d2c";
 
@@ -16,7 +17,56 @@ const phases = [
   { n: 8, ato: "Ato 3 · Dinheiro & Venda", title: "Lançar", desc: "Landing que converte, pixel medindo tudo e campanha no ar. No ar, cobrando.", ferramenta: "Landing + Meta Pixel", entrega: "Campanha no ar, cobrando", armadilha: "Lançar sem medir (sem pixel, sem dados)." },
 ];
 
-export default function Method() {
+function Detalhes({ p, small }) {
+  const fs = small ? "0.55rem" : "0.6rem";
+  return (
+    <dl className={`space-y-2 ${small ? "text-sm" : "text-sm"}`}>
+      {[["Ferramenta", p.ferramenta, false], ["Entregável", p.entrega, false], ["Armadilha", p.armadilha, true]].map(([k, v, warn]) => (
+        <div key={k} className="flex gap-3">
+          <dt className={`w-24 shrink-0 overline ${warn ? "text-[#a07d2c]/70" : "text-ink/40"}`} style={{ fontSize: fs }}>{k}</dt>
+          <dd className={warn ? "italic text-ink/60" : "text-ink/75"}>{v}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+/* MOBILE: lista empilhada (rola normal) */
+function MethodMobile() {
+  return (
+    <section className="relative overflow-hidden bg-offwhite px-6 py-20 text-ink md:hidden">
+      <Blend from="ink" edge="top" />
+      <div className="relative z-10 mx-auto max-w-lg">
+        <span className="overline text-[#a07d2c]">05 · O método</span>
+        <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight">
+          Da ideia ao infoproduto, um caminho repetível, sem programar.
+        </h2>
+        <div className="mt-8 space-y-4">
+          {phases.map((p, i) => (
+            <Reveal key={p.n} delay={i * 0.03}>
+              <div className="rounded-xl border border-ink/10 bg-white/50 p-5">
+                <div className="flex items-center gap-3">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full font-mono text-xs text-white" style={{ background: GOLD }}>{p.n}</span>
+                  <div>
+                    <div className="overline text-ink/40" style={{ fontSize: "0.56rem" }}>{p.ato}</div>
+                    <div className="font-serif text-xl font-semibold">{p.title}</div>
+                  </div>
+                </div>
+                <p className="mt-3 text-sm text-ink/70">{p.desc}</p>
+                <div className="mt-3 border-t border-ink/10 pt-3">
+                  <Detalhes p={p} small />
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* DESKTOP: sticky-scrub */
+function MethodDesktop() {
   const ref = useRef(null);
   const [active, setActive] = useState(0);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
@@ -32,84 +82,47 @@ export default function Method() {
   const cur = phases[active];
 
   return (
-    <section id="metodo" ref={ref} className="relative bg-offwhite text-ink" style={{ height: `${n * 55}vh` }}>
+    <section id="metodo" ref={ref} className="relative hidden bg-offwhite text-ink md:block" style={{ height: `${n * 55}vh` }}>
       <Blend from="ink" edge="top" />
       <Blend from="navy" edge="bottom" />
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-8">
-        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          {/* esquerda, revela a fase ativa */}
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-8">
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-12">
           <div>
             <span className="overline text-[#a07d2c]">05 · O método</span>
-            <h2 className="mt-2 font-serif text-2xl font-semibold leading-tight md:text-4xl">
+            <h2 className="mt-2 font-serif text-4xl font-semibold leading-tight">
               Da ideia ao infoproduto, um caminho repetível, sem programar.
             </h2>
-
-            <div className="mt-6 min-h-[300px] md:mt-10 md:min-h-[320px]">
+            <div className="mt-10 min-h-[320px]">
               <AnimatePresence mode="wait">
-                <motion.div
-                  key={cur.n}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -16 }}
-                  transition={{ duration: 0.4 }}
-                >
+                <motion.div key={cur.n} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.4 }}>
                   <div className="overline text-[#a07d2c]">{cur.ato}</div>
                   <div className="mt-3 flex items-baseline gap-4">
-                    <span className="font-serif text-5xl font-semibold text-ink/15 md:text-6xl">
-                      {String(cur.n).padStart(2, "0")}
-                    </span>
-                    <span className="font-serif text-3xl font-semibold text-ink md:text-4xl">{cur.title}</span>
+                    <span className="font-serif text-6xl font-semibold text-ink/15">{String(cur.n).padStart(2, "0")}</span>
+                    <span className="font-serif text-4xl font-semibold text-ink">{cur.title}</span>
                   </div>
-                  <p className="mt-3 max-w-md text-base text-ink/70 md:mt-4 md:text-lg">{cur.desc}</p>
-
-                  <dl className="mt-5 max-w-md space-y-2.5 border-t border-ink/10 pt-4">
-                    <div className="flex gap-3">
-                      <dt className="w-24 shrink-0 overline text-ink/40" style={{ fontSize: "0.6rem" }}>Ferramenta</dt>
-                      <dd className="text-sm text-ink/75">{cur.ferramenta}</dd>
-                    </div>
-                    <div className="flex gap-3">
-                      <dt className="w-24 shrink-0 overline text-ink/40" style={{ fontSize: "0.6rem" }}>Entregável</dt>
-                      <dd className="text-sm text-ink/75">{cur.entrega}</dd>
-                    </div>
-                    <div className="flex gap-3">
-                      <dt className="w-24 shrink-0 overline text-[#a07d2c]/70" style={{ fontSize: "0.6rem" }}>Armadilha</dt>
-                      <dd className="text-sm italic text-ink/60">{cur.armadilha}</dd>
-                    </div>
-                  </dl>
+                  <p className="mt-4 max-w-md text-lg text-ink/70">{cur.desc}</p>
+                  <div className="mt-5 max-w-md border-t border-ink/10 pt-4">
+                    <Detalhes p={cur} />
+                  </div>
                 </motion.div>
               </AnimatePresence>
             </div>
           </div>
 
-          {/* direita, trilha das 9 fases */}
           <div className="relative flex gap-5">
             <div className="relative w-[2px] shrink-0 bg-ink/10">
               <motion.div style={{ height: railHeight, background: GOLD }} className="absolute left-0 top-0 w-full" />
             </div>
             <ul className="flex-1 space-y-1.5">
               {phases.map((p, i) => (
-                <li
-                  key={p.n}
-                  className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all duration-300"
-                  style={{
-                    background: i === active ? "rgba(160,125,44,0.12)" : "transparent",
-                    opacity: i === active ? 1 : i < active ? 0.55 : 0.35,
-                  }}
-                >
-                  <span
-                    className="grid h-7 w-7 shrink-0 place-items-center rounded-full font-mono text-xs transition-colors"
-                    style={{
-                      background: i <= active ? GOLD : "transparent",
-                      color: i <= active ? "#fff" : "var(--color-ink)",
-                      border: i <= active ? "none" : "1px solid rgba(27,27,26,0.25)",
-                    }}
-                  >
+                <li key={p.n} className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all duration-300"
+                  style={{ background: i === active ? "rgba(160,125,44,0.12)" : "transparent", opacity: i === active ? 1 : i < active ? 0.55 : 0.35 }}>
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full font-mono text-xs transition-colors"
+                    style={{ background: i <= active ? GOLD : "transparent", color: i <= active ? "#fff" : "var(--color-ink)", border: i <= active ? "none" : "1px solid rgba(27,27,26,0.25)" }}>
                     {p.n}
                   </span>
                   <span className="font-medium text-ink">{p.title}</span>
-                  <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-ink/40">
-                    {p.ato.split("·")[0].trim()}
-                  </span>
+                  <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-ink/40">{p.ato.split("·")[0].trim()}</span>
                 </li>
               ))}
             </ul>
@@ -117,5 +130,14 @@ export default function Method() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function Method() {
+  return (
+    <>
+      <MethodMobile />
+      <MethodDesktop />
+    </>
   );
 }
