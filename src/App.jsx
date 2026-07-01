@@ -4,6 +4,9 @@ import { useLenis } from "./lib/useLenis.js";
 import Nav from "./components/Nav.jsx";
 import Reveal, { RevealGroup, RevealItem } from "./components/Reveal.jsx";
 import Counter from "./components/Counter.jsx";
+import ScrollProgress from "./components/ScrollProgress.jsx";
+import Marquee from "./components/Marquee.jsx";
+import Magnetic from "./components/Magnetic.jsx";
 import Systems from "./sections/Systems.jsx";
 import Method from "./sections/Method.jsx";
 import Mentoria from "./sections/Mentoria.jsx";
@@ -37,12 +40,12 @@ function Hero() {
           </RevealItem>
           <RevealItem>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#zephyr" className="rounded-full bg-gold px-6 py-3 font-medium text-ink transition hover:opacity-90">
+              <Magnetic href="#zephyr" className="inline-flex rounded-full bg-gold px-6 py-3 font-medium text-ink transition hover:opacity-90">
                 Falar com a Zephyr
-              </a>
-              <a href="#mentoria" className="rounded-full border border-offwhite/25 px-6 py-3 font-medium text-offwhite transition hover:border-gold hover:text-gold">
+              </Magnetic>
+              <Magnetic href="#mentoria" className="inline-flex rounded-full border border-offwhite/25 px-6 py-3 font-medium text-offwhite transition hover:border-gold hover:text-gold">
                 Conhecer a mentoria
-              </a>
+              </Magnetic>
             </div>
           </RevealItem>
         </RevealGroup>
@@ -96,8 +99,12 @@ export default function App() {
 
   return (
     <div id="top">
+      <ScrollProgress />
       <Nav />
       <Hero />
+
+      {/* faixa marquee — clima unicoweb */}
+      <Marquee items={["Da ideia ao infoproduto", "Construído com IA", "Sem programar", "Repetível"]} />
 
       {/* 02 AUTORIDADE / HISTÓRIA — seção clara (editorial) */}
       <section id="zephyr" className="bg-offwhite px-8 py-24 text-ink">
@@ -134,7 +141,7 @@ export default function App() {
             {[
               { num: <Counter to={10} suffix="+" />, lbl: "anos no mercado financeiro" },
               { num: <Counter to={300} suffix="+" />, lbl: "famílias planejadas" },
-              { num: <Counter to={100} prefix="R$" suffix="M" />, lbl: "sob gestão (a confirmar)" },
+              { num: <Counter to={100} prefix="R$" suffix="M" />, lbl: "sob gestão" },
             ].map((s, i) => (
               <RevealItem key={i}>
                 <div className="flex items-baseline gap-4 rounded-xl border border-ink/10 bg-white/50 px-6 py-5">
