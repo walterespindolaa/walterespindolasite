@@ -1,28 +1,21 @@
+import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import { openContact } from "../components/ContactModal.jsx";
 
 const tiers = [
   {
-    nivel: "Nível 1",
-    nome: "Self-service",
-    desc: "O método gravado, com templates e prompts prontos pra copiar. No seu ritmo.",
-    bullets: ["Aulas gravadas das 9 fases", "Kit de prompts por fase", "Comunidade de alunos"],
-    bg: "#123457",
-    solid: false,
-  },
-  {
-    nivel: "Nível 2",
-    nome: "Grupo",
-    desc: "Calls ao vivo, cadência semanal e uma turma construindo junto com você.",
-    bullets: ["Calls semanais ao vivo", "Revisão dos seus entregáveis", "Bastidor do SalvaReceitas ao vivo"],
+    tag: "No seu ritmo",
+    nome: "Curso",
+    desc: "Da ideia ao sistema, com aulas gravadas das 9 fases. Você assiste, executa e coloca no ar.",
+    bullets: ["As 9 fases em aula, passo a passo", "Kit de prompts pra copiar", "Os 4 apps como exemplo real"],
     bg: "#0E2A47",
     solid: false,
   },
   {
-    nivel: "Nível 3",
-    nome: "Individual · done-with-you",
-    desc: "A gente constrói o seu produto junto, do zero ao no ar. Poucas vagas.",
-    bullets: ["Acompanhamento 1:1", "Construção guiada do seu app", "Da faísca ao lançamento"],
+    tag: "Comigo, poucas vagas",
+    nome: "Mentoria 1:1",
+    desc: "Dois cérebros no brainstorm da sua ideia. 4 encontros ao vivo, construindo junto até o seu sistema no ar.",
+    bullets: ["4 encontros de 1h a 1h30 (1 por semana)", "Do brainstorm ao sistema no ar", "Acompanhamento direto comigo"],
     bg: "#0b0b0b",
     solid: true,
   },
@@ -33,17 +26,16 @@ export default function Mentoria() {
     <section id="mentoria" className="bg-navy px-6 pb-24 pt-20">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
-          <span className="overline text-gold/80">06 · A ponte</span>
+          <span className="overline text-gold/80">06 · A mentoria</span>
           <h2 className="mt-2 font-serif text-4xl font-semibold text-offwhite md:text-5xl">
-            Aprenda o método. Termine com algo no ar.
+            Da Ideia ao Sistema em 24 horas.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-offwhite/60">
-            Três formas de entrar, do gravado ao "eu construo com você".
+            Aprenda o método no curso, ou construa junto comigo na mentoria. Você termina com um produto no ar, cobrando.
           </p>
         </Reveal>
       </div>
 
-      {/* stacking cards, cada card gruda no topo e empilha */}
       <div className="mx-auto mt-16 max-w-3xl">
         {tiers.map((t, i) => (
           <div
@@ -60,12 +52,10 @@ export default function Mentoria() {
               }}
             >
               <div className="flex items-center gap-3">
-                <span className="overline text-gold">{t.nivel}</span>
-                {t.solid && (
-                  <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-bold uppercase text-ink">
-                    Poucas vagas
-                  </span>
-                )}
+                <span className="overline text-gold">{t.nome}</span>
+                <span className="rounded-full bg-gold/15 px-2 py-0.5 text-[10px] font-bold uppercase text-gold">
+                  {t.tag}
+                </span>
               </div>
               <h3 className="mt-2 font-serif text-3xl font-semibold text-offwhite md:text-4xl">{t.nome}</h3>
               <p className="mt-3 max-w-lg text-offwhite/70">{t.desc}</p>
@@ -84,11 +74,17 @@ export default function Mentoria() {
                     : "border border-offwhite/25 text-offwhite hover:border-gold hover:text-gold"
                 }`}
               >
-                Quero esse nível →
+                Quero {t.solid ? "a mentoria" : "o curso"} →
               </button>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-14 text-center">
+        <Link to="/mentoria" className="inline-flex items-center gap-2 text-sm text-offwhite/70 transition hover:text-gold">
+          Ver a mentoria completa <span aria-hidden>→</span>
+        </Link>
       </div>
     </section>
   );

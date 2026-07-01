@@ -3,6 +3,7 @@ import { useLayoutEffect } from "react";
 import { useLenis } from "./lib/useLenis.js";
 import Home from "./pages/Home.jsx";
 import SystemPage from "./pages/SystemPage.jsx";
+import MentoriaPage from "./pages/MentoriaPage.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -20,6 +21,7 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/mentoria" element={<MentoriaPage />} />
         <Route path="/sistema/:id" element={<SystemPage />} />
       </Routes>
     </>
