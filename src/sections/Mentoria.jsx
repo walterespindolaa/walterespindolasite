@@ -32,17 +32,17 @@ export default function Mentoria() {
     <section id="mentoria" className="bg-navy px-6 pb-24 pt-20">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
-          <span className="font-mono text-xs uppercase tracking-widest text-gold/80">06 · A ponte</span>
+          <span className="overline text-gold/80">06 · A ponte</span>
           <h2 className="mt-2 font-serif text-4xl font-semibold text-offwhite md:text-5xl">
             Aprenda o método. Termine com algo no ar.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-offwhite/60">
-            Três formas de entrar — do gravado ao "eu construo com você".
+            Três formas de entrar, do gravado ao "eu construo com você".
           </p>
         </Reveal>
       </div>
 
-      {/* stacking cards — cada card gruda no topo e empilha */}
+      {/* stacking cards, cada card gruda no topo e empilha */}
       <div className="mx-auto mt-16 max-w-3xl">
         {tiers.map((t, i) => (
           <div
@@ -59,7 +59,7 @@ export default function Mentoria() {
               }}
             >
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs uppercase tracking-widest text-gold">{t.nivel}</span>
+                <span className="overline text-gold">{t.nivel}</span>
                 {t.solid && (
                   <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-bold uppercase text-ink">
                     Poucas vagas

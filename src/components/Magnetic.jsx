@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-/* Botão magnético — feel da Gabriela (framer-motion) */
+/* Botão magnético, feel da Gabriela (framer-motion) */
 export default function Magnetic({ children, href, className = "", strength = 0.3 }) {
   const ref = useRef(null);
   const x = useMotionValue(0);

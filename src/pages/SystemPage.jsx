@@ -117,7 +117,7 @@ export default function SystemPage() {
         </div>
       </header>
 
-      {/* A IDEIA — pull quote editorial */}
+      {/* A IDEIA, pull quote editorial */}
       <section className="px-6 py-28 md:px-10">
         <div className="mx-auto max-w-4xl">
           <Reveal><Index n="01">A ideia por trás</Index></Reveal>
@@ -127,7 +127,7 @@ export default function SystemPage() {
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-8 text-sm text-ink/40">Walter Espíndola — idealizador e construtor</p>
+            <p className="mt-8 text-sm text-ink/40">Walter Espíndola, idealizador e construtor</p>
           </Reveal>
         </div>
       </section>
@@ -142,7 +142,7 @@ export default function SystemPage() {
         </div>
       </section>
 
-      {/* O QUE CONSTRUÍ — lista editorial numerada */}
+      {/* O QUE CONSTRUÍ, lista editorial numerada */}
       <section className="border-t border-ink/10 px-6 py-24 md:px-10">
         <div className="mx-auto max-w-5xl">
           <Reveal>
@@ -173,7 +173,7 @@ export default function SystemPage() {
         </div>
       </section>
 
-      {/* IMPACTO — faixa escura pra contraste */}
+      {/* IMPACTO, faixa escura pra contraste */}
       {s.impacto && (
         <section className="bg-navy px-6 py-24 text-offwhite md:px-10">
           <div className="mx-auto max-w-5xl">
@@ -209,7 +209,7 @@ export default function SystemPage() {
             <Index n={s.impacto ? "05" : "04"}>O tamanho do que construí</Index>
             <p className="mt-6 font-mono text-sm text-ink/55">{s.prova}</p>
             <p className="mt-4 max-w-md text-ink/70">
-              Tudo do zero, sozinho, com IA — pela mesma receita que se repete em todos os sistemas.
+              Tudo do zero, sozinho, com IA, pela mesma receita que se repete em todos os sistemas.
             </p>
           </Reveal>
           {s.siteUrl && s.siteUrl !== "#" && (

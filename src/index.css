@@ -9,18 +9,27 @@
   --color-slate: #5b7a99;
   --color-terracota: #b5643c;
 
-  --font-serif: "Fraunces", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-sans: "Familjen Grotesk", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Sistema tipográfico — títulos serifa com optical sizing e tracking editorial */
+/* Sistema tipográfico: títulos em serifa editorial com optical sizing */
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
   font-optical-sizing: auto;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
 }
-h1 { letter-spacing: -0.03em; }
+h1 { letter-spacing: -0.025em; }
+
+/* overline / rótulo: grotesk em caixa alta espaçada */
+.overline {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-weight: 500;
+  font-size: 0.72rem;
+}
 
 /* rótulos mono (kickers, labels) */
 .kicker {

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-/* Reveal on scroll — fade + slide, dispara ao entrar na viewport */
+/* Reveal on scroll, fade + slide, dispara ao entrar na viewport */
 export default function Reveal({
   children,
   y = 28,

@@ -1,4 +1,4 @@
-/* Ticker editorial — itálico serifa, ✦ dourado, fade nas bordas */
+/* Ticker editorial, itálico serifa, ✦ dourado, fade nas bordas */
 export default function Marquee({ items, className = "" }) {
   const row = [...items, ...items];
   const fade =

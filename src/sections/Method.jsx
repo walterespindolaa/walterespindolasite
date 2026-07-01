@@ -5,10 +5,10 @@ const GOLD = "#a07d2c";
 
 const phases = [
   { n: 0, ato: "Ato 1 · Ideia & Marca", title: "Faísca", desc: "Dor validada + posicionamento. Antes de qualquer tela." },
-  { n: 1, ato: "Ato 1 · Ideia & Marca", title: "Marca", desc: "Nome, domínio e brand kit — a cara do produto." },
+  { n: 1, ato: "Ato 1 · Ideia & Marca", title: "Marca", desc: "Nome, domínio e brand kit, a cara do produto." },
   { n: 2, ato: "Ato 1 · Ideia & Marca", title: "Escopo", desc: "As telas essenciais e o fluxo principal." },
   { n: 3, ato: "Ato 2 · Construção", title: "Lovable", desc: "App navegável no ar, sem escrever código." },
-  { n: 4, ato: "Ato 2 · Construção", title: "Supabase", desc: "Dados, login, RLS e segredos — a fundação." },
+  { n: 4, ato: "Ato 2 · Construção", title: "Supabase", desc: "Dados, login, RLS e segredos, a fundação." },
   { n: 5, ato: "Ato 2 · Construção", title: "IA no core", desc: "A feature de IA com cota, via Edge Function." },
   { n: 6, ato: "Ato 3 · Dinheiro & Venda", title: "Pagamento", desc: "Checkout, webhook e planos que cobram de verdade." },
   { n: 7, ato: "Ato 3 · Dinheiro & Venda", title: "Blindar", desc: "Claude Code: auditoria e carga antes de escalar." },
@@ -34,11 +34,11 @@ export default function Method() {
     <section id="metodo" ref={ref} className="relative bg-offwhite text-ink" style={{ height: `${n * 55}vh` }}>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-8">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-          {/* esquerda — revela a fase ativa */}
+          {/* esquerda, revela a fase ativa */}
           <div>
-            <span className="font-mono text-xs uppercase tracking-widest text-[#a07d2c]">05 · O método</span>
+            <span className="overline text-[#a07d2c]">05 · O método</span>
             <h2 className="mt-2 font-serif text-2xl font-semibold leading-tight md:text-4xl">
-              Da ideia ao infoproduto — um caminho repetível, sem programar.
+              Da ideia ao infoproduto, um caminho repetível, sem programar.
             </h2>
 
             <div className="mt-6 min-h-[130px] md:mt-10 md:min-h-[190px]">
@@ -50,7 +50,7 @@ export default function Method() {
                   exit={{ opacity: 0, y: -16 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <div className="font-mono text-xs uppercase tracking-widest text-[#a07d2c]">{cur.ato}</div>
+                  <div className="overline text-[#a07d2c]">{cur.ato}</div>
                   <div className="mt-3 flex items-baseline gap-4">
                     <span className="font-serif text-5xl font-semibold text-ink/15 md:text-6xl">
                       {String(cur.n).padStart(2, "0")}
@@ -63,7 +63,7 @@ export default function Method() {
             </div>
           </div>
 
-          {/* direita — trilha das 9 fases */}
+          {/* direita, trilha das 9 fases */}
           <div className="relative flex gap-5">
             <div className="relative w-[2px] shrink-0 bg-ink/10">
               <motion.div style={{ height: railHeight, background: GOLD }} className="absolute left-0 top-0 w-full" />

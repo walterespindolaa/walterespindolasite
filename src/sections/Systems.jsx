@@ -49,7 +49,7 @@ export default function Systems() {
         {/* título */}
         <div className="px-6 pt-20 md:px-8 md:pt-24">
           <div className="mx-auto max-w-6xl">
-            <span className="font-mono text-xs uppercase tracking-widest text-gold/80">04 · A prova</span>
+            <span className="overline text-gold/80">04 · A prova</span>
             <h2 className="mt-1 font-serif text-xl font-semibold text-offwhite md:text-3xl">
               Eu não falo de tecnologia. Eu resolvo dores com ela.
             </h2>
@@ -67,7 +67,7 @@ export default function Systems() {
                   <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
                   <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
                 </div>
-                {/* moldura da tela — a fita desliza AQUI dentro */}
+                {/* moldura da tela, a fita desliza AQUI dentro */}
                 <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-ink">
                   <AnimatePresence mode="popLayout" initial={false}>
                     <motion.div
@@ -99,7 +99,7 @@ export default function Systems() {
                   transition={{ duration: 0.4 }}
                 >
                   <div className="mb-2 flex items-center justify-center gap-3 md:justify-start">
-                    <span className="font-mono text-xs uppercase tracking-widest text-gold">
+                    <span className="overline text-gold">
                       0{active + 1} · {cur.name}
                     </span>
                     {cur.live && (

@@ -21,7 +21,7 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
         <RevealGroup stagger={0.14}>
           <RevealItem>
-            <span className="font-mono text-xs uppercase tracking-widest text-gold">
+            <span className="overline text-gold">
               CEO da Zephyr Investimentos
             </span>
           </RevealItem>
@@ -33,7 +33,7 @@ function Hero() {
           </RevealItem>
           <RevealItem>
             <p className="mt-6 max-w-md text-base text-offwhite/70 md:text-lg">
-              Construí 4 SaaS do zero, sozinho, com IA — de forma repetível. Agora
+              Construí 4 SaaS do zero, sozinho, com IA, de forma repetível. Agora
               ensino o método, da ideia ao infoproduto.
             </p>
           </RevealItem>
@@ -77,7 +77,7 @@ function Virada() {
     <section id="virada" className="bg-ink px-6 py-24 md:px-8">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
-          <span className="font-mono text-xs uppercase tracking-widest text-gold/80">03 · A virada</span>
+          <span className="overline text-gold/80">03 · A virada</span>
         </Reveal>
         <RevealGroup stagger={0.18} className="mt-6">
           {lines.map((l) => (
@@ -102,25 +102,25 @@ export default function Home() {
 
       <Marquee items={["Da ideia ao infoproduto", "Construído com IA", "Sem programar", "Repetível"]} />
 
-      {/* 02 AUTORIDADE / HISTÓRIA — seção clara (editorial) */}
+      {/* 02 AUTORIDADE / HISTÓRIA, seção clara (editorial) */}
       <section id="zephyr" className="bg-offwhite px-6 py-24 text-ink md:px-8">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-[1.1fr_.9fr] md:items-center md:gap-14">
           <div>
             <Reveal>
-              <span className="font-mono text-xs uppercase tracking-widest text-[#a07d2c]">02 · Autoridade</span>
+              <span className="overline text-[#a07d2c]">02 · Autoridade</span>
               <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight md:text-5xl">
                 Aprendi na marra que <span className="text-[#a07d2c]">plano é tudo.</span>
               </h2>
             </Reveal>
             <RevealGroup stagger={0.14} className="mt-8 space-y-5 text-lg leading-relaxed text-ink/75">
               <RevealItem>
-                <p>Cresci numa pousada no litoral de Santa Catarina. Meus pais tocaram o negócio por 25 anos — sem nunca ter um plano. Em 2020, fechou.</p>
+                <p>Cresci numa pousada no litoral de Santa Catarina. Meus pais tocaram o negócio por 25 anos, sem nunca ter um plano. Em 2020, fechou.</p>
               </RevealItem>
               <RevealItem>
                 <p>No segundo mês da pandemia, a pergunta virou minha: <em>"E agora? Estamos fazendo certo?"</em></p>
               </RevealItem>
               <RevealItem>
-                <p>Comecei a construir um sistema pra responder isso — primeiro pra mim e minha esposa, depois pra família e amigos. Esse sistema virou o Atlas, e o método que hoje uso com mais de 300 famílias.</p>
+                <p>Comecei a construir um sistema pra responder isso, primeiro pra mim e minha esposa, depois pra família e amigos. Esse sistema virou o Atlas, e o método que hoje uso com mais de 300 famílias.</p>
               </RevealItem>
               <RevealItem>
                 <p className="font-medium text-ink">Foi aí que entendi: eu resolvo dores construindo sistemas. Hoje, à frente da Zephyr, cuido de quem tem muito a perder.</p>
@@ -142,7 +142,7 @@ export default function Home() {
               <RevealItem key={i}>
                 <div className="flex items-baseline gap-4 rounded-xl border border-ink/10 bg-white/50 px-6 py-5">
                   <div className="font-serif text-4xl font-semibold text-[#a07d2c]">{s.num}</div>
-                  <div className="font-mono text-xs uppercase tracking-widest text-ink/55">{s.lbl}</div>
+                  <div className="overline text-ink/55">{s.lbl}</div>
                 </div>
               </RevealItem>
             ))}
@@ -161,7 +161,7 @@ export default function Home() {
           {[["4", "apps no ar + 1 ao vivo"], ["1", "pessoa construindo"], ["0", "linhas escritas à mão"]].map(([num, lbl]) => (
             <div key={lbl}>
               <div className="font-serif text-4xl font-semibold text-gold">{num}</div>
-              <div className="mt-1 font-mono text-xs uppercase tracking-widest text-offwhite/50">{lbl}</div>
+              <div className="mt-1 overline text-offwhite/50">{lbl}</div>
             </div>
           ))}
           <p className="max-w-xs text-left text-sm text-offwhite/60">
@@ -179,7 +179,7 @@ export default function Home() {
       {/* 07 CONTATO */}
       <section id="contato" className="bg-ink px-6 py-20 md:px-8">
         <Reveal className="mx-auto max-w-6xl text-center">
-          <span className="font-mono text-xs uppercase tracking-widest text-gold/80">07 · Contato</span>
+          <span className="overline text-gold/80">07 · Contato</span>
           <h2 className="mt-2 font-serif text-4xl font-semibold text-offwhite md:text-5xl">Dois caminhos. Escolha o seu.</h2>
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 md:grid-cols-2">
             <div className="rounded-xl border border-offwhite/10 p-8">
