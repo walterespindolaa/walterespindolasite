@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { systems } from "../data/systems.js";
 
@@ -46,20 +47,20 @@ export default function Systems() {
     <section id="sistemas" ref={ref} className="relative bg-navy" style={{ height: `${n * 85}vh` }}>
       <div className="sticky top-0 flex h-screen flex-col overflow-hidden">
         {/* título */}
-        <div className="px-8 pt-24">
+        <div className="px-6 pt-20 md:px-8 md:pt-24">
           <div className="mx-auto max-w-6xl">
             <span className="font-mono text-xs uppercase tracking-widest text-gold/80">04 · A prova</span>
-            <h2 className="mt-1 font-serif text-2xl font-semibold text-offwhite md:text-3xl">
+            <h2 className="mt-1 font-serif text-xl font-semibold text-offwhite md:text-3xl">
               Eu não falo de tecnologia. Eu resolvo dores com ela.
             </h2>
           </div>
         </div>
 
         {/* palco: MacBook (tela desliza dentro) + copy */}
-        <div className="flex flex-1 items-center px-8">
-          <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2">
+        <div className="flex flex-1 items-center px-6 md:px-8">
+          <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-10">
             {/* MacBook fixo */}
-            <div className="mx-auto w-full max-w-[500px]">
+            <div className="mx-auto w-full max-w-[280px] sm:max-w-[360px] md:max-w-[500px]">
               <div className="rounded-t-xl border border-white/10 bg-[#0b0b0b] p-2 shadow-2xl">
                 <div className="flex items-center gap-1.5 px-2 py-1.5">
                   <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
@@ -88,7 +89,7 @@ export default function Systems() {
             </div>
 
             {/* copy sincronizada */}
-            <div className="min-h-[260px]">
+            <div className="min-h-0 text-center md:min-h-[260px] md:text-left">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={cur.id}
@@ -97,7 +98,7 @@ export default function Systems() {
                   exit={{ opacity: 0, y: -14 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <div className="mb-2 flex items-center gap-3">
+                  <div className="mb-2 flex items-center justify-center gap-3 md:justify-start">
                     <span className="font-mono text-xs uppercase tracking-widest text-gold">
                       0{active + 1} · {cur.name}
                     </span>
@@ -108,22 +109,22 @@ export default function Systems() {
                     )}
                   </div>
                   <p className="mb-2 font-serif text-base italic text-offwhite/55">"{cur.dor}"</p>
-                  <h3 className="mb-5 font-serif text-3xl font-semibold leading-tight text-offwhite md:text-4xl">
+                  <h3 className="mb-5 font-serif text-2xl font-semibold leading-tight text-offwhite md:text-4xl">
                     {cur.solucao}
                   </h3>
-                  <ul className="space-y-2.5">
+                  <ul className="mx-auto inline-block space-y-2.5 text-left md:mx-0 md:block">
                     {cur.ganhos.map((g) => (
                       <li key={g} className="flex gap-3 text-offwhite/85">
                         <span className="mt-1 text-gold">→</span> <span>{g}</span>
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={`#sistema-${cur.id}`}
+                  <Link
+                    to={`/sistema/${cur.id}`}
                     className="mt-7 inline-flex items-center gap-2 rounded-full border border-offwhite/25 px-5 py-2.5 text-sm font-medium text-offwhite transition-colors hover:border-gold hover:text-gold"
                   >
                     Ver o sistema <span aria-hidden>↗</span>
-                  </a>
+                  </Link>
                 </motion.div>
               </AnimatePresence>
             </div>

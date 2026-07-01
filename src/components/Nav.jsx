@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const links = [
-  { label: "Zephyr", href: "#zephyr" },
-  { label: "Sistemas", href: "#sistemas" },
-  { label: "Método", href: "#metodo" },
-  { label: "Mentoria", href: "#mentoria" },
+  { label: "Zephyr", href: "/#zephyr" },
+  { label: "Sistemas", href: "/#sistemas" },
+  { label: "Método", href: "/#metodo" },
+  { label: "Mentoria", href: "/#mentoria" },
 ];
 
 export default function Nav() {
@@ -17,7 +17,7 @@ export default function Nav() {
       style={{ background: "rgba(27,27,26,0.55)" }}
     >
       <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
-        <a href="#top" className="font-serif text-xl tracking-tight text-offwhite">
+        <a href="/" className="font-serif text-xl tracking-tight text-offwhite">
           Walter <span className="text-gold">Espíndola</span>
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm text-offwhite/70">
@@ -28,7 +28,7 @@ export default function Nav() {
           ))}
         </div>
         <a
-          href="#contato"
+          href="/#contato"
           className="rounded-full border border-gold/60 px-4 py-2 text-sm font-medium text-gold hover:bg-gold hover:text-ink transition-colors"
         >
           Contato

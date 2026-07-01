@@ -32,16 +32,16 @@ export default function Method() {
 
   return (
     <section id="metodo" ref={ref} className="relative bg-offwhite text-ink" style={{ height: `${n * 55}vh` }}>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-8">
-        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-8">
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
           {/* esquerda — revela a fase ativa */}
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-[#a07d2c]">05 · O método</span>
-            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight md:text-4xl">
+            <h2 className="mt-2 font-serif text-2xl font-semibold leading-tight md:text-4xl">
               Da ideia ao infoproduto — um caminho repetível, sem programar.
             </h2>
 
-            <div className="mt-10 min-h-[190px]">
+            <div className="mt-6 min-h-[130px] md:mt-10 md:min-h-[190px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={cur.n}
@@ -52,12 +52,12 @@ export default function Method() {
                 >
                   <div className="font-mono text-xs uppercase tracking-widest text-[#a07d2c]">{cur.ato}</div>
                   <div className="mt-3 flex items-baseline gap-4">
-                    <span className="font-serif text-6xl font-semibold text-ink/15">
+                    <span className="font-serif text-5xl font-semibold text-ink/15 md:text-6xl">
                       {String(cur.n).padStart(2, "0")}
                     </span>
-                    <span className="font-serif text-4xl font-semibold text-ink">{cur.title}</span>
+                    <span className="font-serif text-3xl font-semibold text-ink md:text-4xl">{cur.title}</span>
                   </div>
-                  <p className="mt-4 max-w-md text-lg text-ink/65">{cur.desc}</p>
+                  <p className="mt-3 max-w-md text-base text-ink/65 md:mt-4 md:text-lg">{cur.desc}</p>
                 </motion.div>
               </AnimatePresence>
             </div>
