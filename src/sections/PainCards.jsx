@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Blend from "../components/Blend.jsx";
 
@@ -11,6 +12,15 @@ const pains = [
 ];
 
 export default function PainCards() {
+  const [canDrag, setCanDrag] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px) and (pointer: fine)");
+    const update = () => setCanDrag(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-ink px-6 py-24 md:px-10">
       <Blend from="navy" edge="top" />
@@ -31,7 +41,7 @@ export default function PainCards() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ rotate: 0, y: -8, scale: 1.03 }}
-              drag
+              drag={canDrag}
               dragSnapToOrigin
               dragElastic={0.45}
               whileTap={{ scale: 1.04 }}

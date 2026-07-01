@@ -82,7 +82,7 @@ export default function ContactModal() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.97 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-full max-w-md rounded-2xl border border-white/10 bg-ink p-8 text-offwhite shadow-2xl"
+            className="relative max-h-[90vh] w-full max-w-md overflow-y-auto rounded-2xl border border-white/10 bg-ink p-8 text-offwhite shadow-2xl"
           >
             <button
               onClick={() => setOpen(false)}
