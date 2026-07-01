@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* Troque pelo seu endpoint do Formspree (crie grátis em formspree.io).
    Enquanto estiver "SEU_ID", o form roda em modo demo (mostra sucesso sem enviar). */
-const FORM_ENDPOINT = "https://formspree.io/f/SEU_ID";
+const FORM_ENDPOINT = "https://formspree.io/f/xdarwynw";
 
 const LABELS = {
   zephyr: { titulo: "Falar com a Zephyr", sub: "Assessoria de alto nível. Conte um pouco sobre você." },
