@@ -72,7 +72,7 @@ function Virada() {
     { t: "Sozinho, com IA, de forma repetível.", gold: false },
   ];
   return (
-    <section id="virada" className="bg-ink px-8 py-32">
+    <section id="virada" className="bg-ink px-8 py-24">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <span className="font-mono text-xs uppercase tracking-widest text-gold/80">03 · A virada</span>
@@ -100,7 +100,7 @@ export default function App() {
       <Hero />
 
       {/* 02 AUTORIDADE / ZEPHYR */}
-      <section id="zephyr" className="bg-navy px-8 py-28">
+      <section id="zephyr" className="bg-navy px-8 py-20">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <span className="font-mono text-xs uppercase tracking-widest text-gold/80">02 · Autoridade</span>
@@ -138,7 +138,7 @@ export default function App() {
       <Systems />
 
       {/* faixa-resumo (números como feito) */}
-      <section className="bg-navy px-8 pb-28 pt-4">
+      <section className="bg-navy px-8 pb-20 pt-2">
         <Reveal className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-10 rounded-2xl border border-offwhite/10 bg-ink/40 px-8 py-8 text-center">
           {[["4", "apps no ar + 1 ao vivo"], ["1", "pessoa construindo"], ["0", "linhas escritas à mão"]].map(([num, lbl]) => (
             <div key={lbl}>
@@ -159,7 +159,7 @@ export default function App() {
       <Mentoria />
 
       {/* 07 CONTATO */}
-      <section id="contato" className="bg-ink px-8 py-28">
+      <section id="contato" className="bg-ink px-8 py-20">
         <Reveal className="mx-auto max-w-6xl text-center">
           <span className="font-mono text-xs uppercase tracking-widest text-gold/80">07 · Contato</span>
           <h2 className="mt-2 font-serif text-4xl font-semibold text-offwhite md:text-5xl">Dois caminhos. Escolha o seu.</h2>

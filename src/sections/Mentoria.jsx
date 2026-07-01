@@ -29,7 +29,7 @@ const tiers = [
 
 export default function Mentoria() {
   return (
-    <section id="mentoria" className="bg-navy px-6 pb-32 pt-28">
+    <section id="mentoria" className="bg-navy px-6 pb-24 pt-20">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <span className="font-mono text-xs uppercase tracking-widest text-gold/80">06 · A ponte</span>
