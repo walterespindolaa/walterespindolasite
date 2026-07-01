@@ -31,7 +31,12 @@ export default function PainCards() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ rotate: 0, y: -8, scale: 1.03 }}
-              className="flex min-h-[190px] w-[320px] flex-col rounded-2xl border border-offwhite/10 bg-navy/40 p-8 md:w-[360px]"
+              drag
+              dragSnapToOrigin
+              dragElastic={0.45}
+              whileTap={{ scale: 1.04 }}
+              whileDrag={{ scale: 1.06, rotate: 0, zIndex: 20, boxShadow: "0 40px 70px -20px rgba(0,0,0,0.8)" }}
+              className="flex min-h-[190px] w-[320px] cursor-grab flex-col rounded-2xl border border-offwhite/10 bg-navy/40 p-8 active:cursor-grabbing md:w-[360px]"
               style={{ boxShadow: "0 28px 52px -22px rgba(0,0,0,0.7)" }}
             >
               <span className="font-serif text-5xl leading-none text-gold/50">“</span>

@@ -127,7 +127,7 @@ export default function SystemPage() {
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-8 text-sm text-ink/40">Walter Espíndola, idealizador e construtor</p>
+            <p className="mt-8 text-sm text-ink/40">Walter Espindola, idealizador e construtor</p>
           </Reveal>
         </div>
       </section>

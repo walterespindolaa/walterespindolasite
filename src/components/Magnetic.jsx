@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 /* Botão magnético, feel da Gabriela (framer-motion) */
-export default function Magnetic({ children, href, className = "", strength = 0.3 }) {
+export default function Magnetic({ children, href, className = "", strength = 0.3, onClick }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -23,6 +23,7 @@ export default function Magnetic({ children, href, className = "", strength = 0.
     <motion.a
       ref={ref}
       href={href}
+      onClick={onClick}
       onMouseMove={onMove}
       onMouseLeave={reset}
       style={{ x: sx, y: sy }}

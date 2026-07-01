@@ -8,6 +8,7 @@ import Marquee from "../components/Marquee.jsx";
 import Magnetic from "../components/Magnetic.jsx";
 import Blend from "../components/Blend.jsx";
 import AnimatedGridPattern from "../components/AnimatedGridPattern.jsx";
+import ContactModal, { openContact } from "../components/ContactModal.jsx";
 import Systems from "../sections/Systems.jsx";
 import PainCards from "../sections/PainCards.jsx";
 import Method from "../sections/Method.jsx";
@@ -22,10 +23,12 @@ function Hero() {
   return (
     <section ref={ref} className="relative flex min-h-screen items-center overflow-hidden bg-ink px-6 pb-16 pt-28 md:px-8">
       <AnimatedGridPattern
-        numSquares={38}
-        maxOpacity={0.16}
-        duration={3.5}
-        className="[mask-image:radial-gradient(700px_circle_at_72%_38%,white,transparent)]"
+        numSquares={50}
+        maxOpacity={0.38}
+        duration={3}
+        color="rgba(201,162,75,0.85)"
+        stroke="rgba(201,162,75,0.16)"
+        className="[mask-image:radial-gradient(980px_circle_at_72%_42%,white,transparent)]"
       />
       <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
         <RevealGroup stagger={0.14}>
@@ -48,7 +51,11 @@ function Hero() {
           </RevealItem>
           <RevealItem>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Magnetic href="#zephyr" className="inline-flex rounded-full bg-gold px-6 py-3 font-medium text-ink transition hover:opacity-90">
+              <Magnetic
+                href="#contato"
+                onClick={(e) => { e.preventDefault(); openContact("zephyr"); }}
+                className="inline-flex rounded-full bg-gold px-6 py-3 font-medium text-ink transition hover:opacity-90"
+              >
                 Falar com a Zephyr
               </Magnetic>
               <Magnetic href="#mentoria" className="inline-flex rounded-full border border-offwhite/25 px-6 py-3 font-medium text-offwhite transition hover:border-gold hover:text-gold">
@@ -67,7 +74,7 @@ function Hero() {
           <motion.div style={{ y: photoY, scale: photoScale }} className="absolute -inset-[8%]">
             <img
               src="/img/walter-hero.webp"
-              alt="Walter Espíndola, CEO da Zephyr Investimentos"
+              alt="Walter Espindola, CEO da Zephyr Investimentos"
               className="h-full w-full object-cover object-center"
             />
           </motion.div>
@@ -143,9 +150,9 @@ export default function Home() {
               </RevealItem>
             </RevealGroup>
             <Reveal delay={0.1}>
-              <a href="#contato" className="mt-8 inline-flex rounded-full bg-ink px-6 py-3 text-sm font-medium text-offwhite transition hover:bg-navy">
+              <button onClick={() => openContact("zephyr")} className="mt-8 inline-flex rounded-full bg-ink px-6 py-3 text-sm font-medium text-offwhite transition hover:bg-navy">
                 Quero uma assessoria de verdade →
-              </a>
+              </button>
             </Reveal>
 
             <RevealGroup stagger={0.1} className="mt-10 grid grid-cols-3 gap-4 border-t border-ink/10 pt-6">
@@ -166,7 +173,7 @@ export default function Home() {
             <div className="relative overflow-hidden rounded-2xl border border-ink/10">
               <img
                 src="/img/walter-historia.webp"
-                alt="Walter Espíndola"
+                alt="Walter Espindola"
                 className="aspect-[4/5] w-full object-cover object-center md:aspect-auto md:h-[560px]"
               />
             </div>
@@ -204,23 +211,56 @@ export default function Home() {
       <Mentoria />
 
       {/* 07 CONTATO */}
-      <section id="contato" className="bg-ink px-6 py-20 md:px-8">
-        <Reveal className="mx-auto max-w-6xl text-center">
+      <section id="contato" className="relative overflow-hidden bg-ink px-6 pt-20 md:px-8">
+        <Blend from="navy" edge="top" />
+        <div className="relative z-10 mx-auto max-w-6xl text-center">
           <span className="overline text-gold/80">07 · Contato</span>
           <h2 className="mt-2 font-serif text-4xl font-semibold text-offwhite md:text-5xl">Dois caminhos. Escolha o seu.</h2>
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="rounded-xl border border-offwhite/10 p-8">
+            <div className="rounded-2xl border border-offwhite/10 p-8 text-left">
               <h3 className="font-serif text-2xl text-offwhite">Cliente Zephyr</h3>
-              <a href="mailto:walterjoose@gmail.com?subject=Quero%20conhecer%20a%20assessoria%20Zephyr" className="mt-4 inline-block rounded-full border border-offwhite/25 px-5 py-2.5 text-sm text-offwhite transition hover:border-gold hover:text-gold">Falar com a Zephyr →</a>
+              <p className="mt-2 text-sm text-offwhite/55">Assessoria de alto nível, com tecnologia própria.</p>
+              <button onClick={() => openContact("zephyr")} className="mt-5 inline-block rounded-full border border-offwhite/25 px-5 py-2.5 text-sm text-offwhite transition hover:border-gold hover:text-gold">Falar com a Zephyr →</button>
             </div>
-            <div className="rounded-xl border border-gold/40 p-8">
+            <div className="rounded-2xl border border-gold/40 p-8 text-left">
               <h3 className="font-serif text-2xl text-offwhite">Aluno da mentoria</h3>
-              <a href="mailto:walterjoose@gmail.com?subject=Quero%20entrar%20na%20mentoria" className="mt-4 inline-block rounded-full bg-gold px-5 py-2.5 text-sm font-medium text-ink transition hover:opacity-90">Entrar na mentoria →</a>
+              <p className="mt-2 text-sm text-offwhite/55">Da ideia ao infoproduto, com IA, sem programar.</p>
+              <button onClick={() => openContact("mentoria")} className="mt-5 inline-block rounded-full bg-gold px-5 py-2.5 text-sm font-medium text-ink transition hover:opacity-90">Entrar na mentoria →</button>
             </div>
           </div>
-          <p className="mt-10 font-mono text-xs text-offwhite/40">© 2026 Walter Espíndola · CTA a definir (WhatsApp / e-mail / Calendly) · Fase 2: liga no funil /aplicar</p>
-        </Reveal>
+        </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="bg-ink px-6 pb-12 pt-20 md:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col gap-10 border-t border-white/10 pt-12 md:flex-row md:items-start md:justify-between">
+            <div className="max-w-xs">
+              <div className="font-serif text-2xl text-offwhite">Walter <span className="text-gold">Espindola</span></div>
+              <p className="mt-3 text-sm leading-relaxed text-offwhite/50">
+                Da assessoria de alto nível à construção de sistemas. Autoridade, construtor e professor.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <span className="overline text-offwhite/40">Navegar</span>
+              {[["Zephyr", "#zephyr"], ["Sistemas", "#sistemas"], ["Método", "#metodo"], ["Mentoria", "#mentoria"]].map(([l, h]) => (
+                <a key={h} href={h} className="text-sm text-offwhite/70 transition hover:text-gold">{l}</a>
+              ))}
+            </div>
+            <div className="flex flex-col items-start gap-3">
+              <span className="overline text-offwhite/40">Contato</span>
+              <button onClick={() => openContact("geral")} className="text-sm text-offwhite/70 transition hover:text-gold">Mandar um recado</button>
+              <a href="https://www.useatlasapp.com" target="_blank" rel="noopener noreferrer" className="text-sm text-offwhite/70 transition hover:text-gold">Atlas ↗</a>
+            </div>
+          </div>
+          <div className="mt-10 flex flex-col gap-2 border-t border-white/5 pt-6 text-xs text-offwhite/35 md:flex-row md:items-center md:justify-between">
+            <span>© 2026 Walter Espindola. Todos os direitos reservados.</span>
+            <span className="font-mono">Feito do zero, com IA.</span>
+          </div>
+        </div>
+      </footer>
+
+      <ContactModal />
     </div>
   );
 }

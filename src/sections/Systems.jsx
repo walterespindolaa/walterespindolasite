@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { systems } from "../data/systems.js";
+import Blend from "../components/Blend.jsx";
 
 /* Conteúdo da "tela" do app (placeholder até entrar o screenshot real) */
 function AppScreen({ system }) {
@@ -45,6 +46,7 @@ export default function Systems() {
 
   return (
     <section id="sistemas" ref={ref} className="relative bg-navy" style={{ height: `${n * 85}vh` }}>
+      <Blend from="ink" edge="top" />
       <div className="sticky top-0 flex h-screen flex-col overflow-hidden">
         {/* título */}
         <div className="px-6 pt-20 md:px-8 md:pt-24">

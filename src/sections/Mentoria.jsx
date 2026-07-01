@@ -1,4 +1,5 @@
 import Reveal from "../components/Reveal.jsx";
+import { openContact } from "../components/ContactModal.jsx";
 
 const tiers = [
   {
@@ -75,8 +76,8 @@ export default function Mentoria() {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#contato"
+              <button
+                onClick={() => openContact("mentoria")}
                 className={`mt-8 inline-flex rounded-full px-6 py-3 text-sm font-medium transition ${
                   t.solid
                     ? "bg-gold text-ink hover:opacity-90"
@@ -84,7 +85,7 @@ export default function Mentoria() {
                 }`}
               >
                 Quero esse nível →
-              </a>
+              </button>
             </div>
           </div>
         ))}
