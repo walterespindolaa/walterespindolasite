@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import Blend from "../components/Blend.jsx";
 
 const GOLD = "#a07d2c";
 
@@ -32,6 +33,8 @@ export default function Method() {
 
   return (
     <section id="metodo" ref={ref} className="relative bg-offwhite text-ink" style={{ height: `${n * 55}vh` }}>
+      <Blend from="ink" edge="top" />
+      <Blend from="navy" edge="bottom" />
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-8">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
           {/* esquerda, revela a fase ativa */}

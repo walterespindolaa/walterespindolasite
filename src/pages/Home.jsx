@@ -6,7 +6,9 @@ import Counter from "../components/Counter.jsx";
 import ScrollProgress from "../components/ScrollProgress.jsx";
 import Marquee from "../components/Marquee.jsx";
 import Magnetic from "../components/Magnetic.jsx";
+import Blend from "../components/Blend.jsx";
 import Systems from "../sections/Systems.jsx";
+import PainCards from "../sections/PainCards.jsx";
 import Method from "../sections/Method.jsx";
 import Mentoria from "../sections/Mentoria.jsx";
 
@@ -103,8 +105,10 @@ export default function Home() {
       <Marquee items={["Da ideia ao infoproduto", "Construído com IA", "Sem programar", "Repetível"]} />
 
       {/* 02 AUTORIDADE / HISTÓRIA, seção clara (editorial) */}
-      <section id="zephyr" className="bg-offwhite px-6 py-24 text-ink md:px-8">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-[1.1fr_.9fr] md:items-center md:gap-14">
+      <section id="zephyr" className="relative overflow-hidden bg-offwhite px-6 py-24 text-ink md:px-8">
+        <Blend from="ink" edge="top" />
+        <Blend from="ink" edge="bottom" />
+        <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-[1.1fr_.9fr] md:items-center md:gap-14">
           <div>
             <Reveal>
               <span className="overline text-[#a07d2c]">02 · Autoridade</span>
@@ -169,6 +173,9 @@ export default function Home() {
           </p>
         </Reveal>
       </section>
+
+      {/* pain cards (feel da Gabriela) */}
+      <PainCards />
 
       {/* 05 MÉTODO */}
       <Method />
