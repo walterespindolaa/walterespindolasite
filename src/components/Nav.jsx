@@ -17,8 +17,11 @@ export default function Nav() {
       style={{ background: "rgba(27,27,26,0.55)" }}
     >
       <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
-        <a href="/" className="font-serif text-xl tracking-tight text-offwhite">
-          Walter <span className="text-gold">Espindola</span>
+        <a href="/" className="flex items-center gap-3">
+          <span className="grid h-9 w-9 place-items-center rounded-lg border border-gold/50 font-serif text-lg font-semibold text-gold">W</span>
+          <span className="font-serif text-xl tracking-tight text-offwhite">
+            Walter <span className="text-gold">Espindola</span>
+          </span>
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm text-offwhite/70">
           {links.map((l) => (

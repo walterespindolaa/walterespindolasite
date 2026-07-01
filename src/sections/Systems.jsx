@@ -4,8 +4,11 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { systems } from "../data/systems.js";
 import Blend from "../components/Blend.jsx";
 
-/* Conteúdo da "tela" do app (placeholder até entrar o screenshot real) */
+/* Conteúdo da "tela" do app: screenshot real se houver, senão um mock */
 function AppScreen({ system }) {
+  if (system.shot) {
+    return <img src={system.shot} alt={`Tela do ${system.name}`} className="h-full w-full object-cover object-top" />;
+  }
   return (
     <div className="h-full w-full bg-ink">
       <div className="flex h-14 items-center px-5" style={{ background: system.accent }}>
