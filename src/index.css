@@ -11,6 +11,24 @@
 
   --font-serif: "Fraunces", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Sistema tipográfico — títulos serifa com optical sizing e tracking editorial */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
+}
+h1 { letter-spacing: -0.03em; }
+
+/* rótulos mono (kickers, labels) */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 500;
 }
 
 html {

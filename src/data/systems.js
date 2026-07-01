@@ -26,6 +26,29 @@ export const systems = [
       { title: "Household", desc: "PF e PJ na mesma jornada; um acesso extra pra compartilhar com quem você ama." },
     ],
     prova: "93 telas · 216 componentes · 159 migrations · 45 edge functions",
+    rich: {
+      tagline: "Toda montanha precisa de um caminho",
+      trial: "7 dias grátis, sem cartão",
+      cta: "Pronto para encontrar seu caminho?",
+      jornada: [
+        { title: "Você vê o que aconteceu.", text: "Registra o mês, vê onde o dinheiro foi. Começa a entender o padrão." },
+        { title: "Você categoriza.", text: "Cada categoria revela um valor. Você alinha gastos com o que importa." },
+        { title: "Você projeta o futuro.", text: "Sai do presente, entra no futuro. Vê a aposentadoria como meta tangível." },
+        { title: "Você decide com dados.", text: "Não mais por emoção. Vê o impacto de R$100 a mais em 10, 20, 30 anos." },
+        { title: "Você vê a vida inteira.", text: "Pensa em décadas. Sua vida financeira tem começo, meio e fim claro." },
+      ],
+      depoimentos: [
+        { name: "Bruno T.", quote: "Pela primeira vez sei pra onde meu dinheiro vai. Montei minha reserva em 4 meses." },
+        { name: "Rafael & Júlia", quote: "A gente brigava por dinheiro. Planejando juntos no Atlas, virou decisão a dois, sem briga." },
+        { name: "Letícia M.", quote: "Parei de usar três planilhas. O Atlas junta tudo e ainda me diz o próximo passo." },
+        { name: "Diego A.", quote: "Estava endividado e perdido. Hoje tenho um plano claro e já saí do vermelho." },
+      ],
+      planos: [
+        { plan: "Essencial", price: "R$ 15,90", note: "Controle do dia a dia, análises básicas e Atlas Score, comunidade." },
+        { plan: "Pro", price: "R$ 24,90", note: "Tudo do Essencial + planejamento e cenários, Método Atlas (IA), Atlas Negócios.", destaque: true },
+        { plan: "Elite", price: "R$ 32,90", note: "Tudo do Pro + cursos, Plano da Liberdade, suporte prioritário." },
+      ],
+    },
   },
   {
     id: "zephyr",

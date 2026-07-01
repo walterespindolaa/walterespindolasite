@@ -111,6 +111,81 @@ export default function SystemPage() {
         </div>
       </section>
 
+      {/* CONTEÚDO REAL (Atlas) — jornada, depoimentos, planos */}
+      {s.rich && (
+        <>
+          <section className="border-t border-white/5 px-6 py-20 md:px-8">
+            <div className="mx-auto max-w-4xl">
+              <span className="kicker text-gold/80">A jornada</span>
+              <h2 className="mt-2 font-serif text-3xl font-semibold text-offwhite md:text-4xl">
+                {s.rich.tagline}
+              </h2>
+              <RevealGroup stagger={0.08} className="mt-10 space-y-7">
+                {s.rich.jornada.map((j, i) => (
+                  <RevealItem key={j.title}>
+                    <div className="flex gap-5">
+                      <span className="font-serif text-3xl font-semibold text-gold/40">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="font-serif text-xl font-semibold text-offwhite">{j.title}</h3>
+                        <p className="mt-1 text-offwhite/70">{j.text}</p>
+                      </div>
+                    </div>
+                  </RevealItem>
+                ))}
+              </RevealGroup>
+            </div>
+          </section>
+
+          <section className="border-t border-white/5 bg-navy px-6 py-20 md:px-8">
+            <div className="mx-auto max-w-5xl">
+              <span className="kicker text-gold/80">Histórias de quem já subiu</span>
+              <RevealGroup stagger={0.08} className="mt-8 grid gap-4 sm:grid-cols-2">
+                {s.rich.depoimentos.map((d) => (
+                  <RevealItem key={d.name}>
+                    <blockquote className="h-full rounded-xl border border-offwhite/10 bg-ink/30 p-6">
+                      <p className="font-serif text-lg italic text-offwhite/85">"{d.quote}"</p>
+                      <footer className="mt-3 kicker text-gold/70">{d.name}</footer>
+                    </blockquote>
+                  </RevealItem>
+                ))}
+              </RevealGroup>
+            </div>
+          </section>
+
+          <section className="border-t border-white/5 px-6 py-20 md:px-8">
+            <div className="mx-auto max-w-5xl text-center">
+              <span className="kicker text-gold/80">Planos</span>
+              <h2 className="mt-2 font-serif text-3xl font-semibold text-offwhite md:text-4xl">
+                {s.rich.trial}
+              </h2>
+              <RevealGroup stagger={0.1} className="mt-10 grid gap-4 md:grid-cols-3">
+                {s.rich.planos.map((p) => (
+                  <RevealItem key={p.plan}>
+                    <div
+                      className="flex h-full flex-col rounded-2xl border p-7 text-left"
+                      style={{
+                        borderColor: p.destaque ? "rgba(201,162,75,0.5)" : "rgba(244,240,231,0.12)",
+                        background: p.destaque ? "rgba(201,162,75,0.06)" : "transparent",
+                      }}
+                    >
+                      <div className="kicker text-gold">{p.plan}</div>
+                      <div className="mt-2 font-serif text-4xl font-semibold text-offwhite">
+                        {p.price}
+                        <span className="font-sans text-sm font-normal text-offwhite/50">/mês</span>
+                      </div>
+                      <p className="mt-4 text-sm text-offwhite/70">{p.note}</p>
+                    </div>
+                  </RevealItem>
+                ))}
+              </RevealGroup>
+              <p className="mt-8 font-serif text-xl italic text-offwhite/70">{s.rich.cta}</p>
+            </div>
+          </section>
+        </>
+      )}
+
       {/* PROVA + CTA */}
       <section className="border-t border-white/5 px-6 py-20 md:px-8">
         <Reveal className="mx-auto max-w-5xl text-center">
