@@ -15,7 +15,7 @@ import Mentoria from "../sections/Mentoria.jsx";
 function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const photoY = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const photoY = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const photoScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
 
   return (
@@ -55,14 +55,19 @@ function Hero() {
           initial={{ opacity: 0, clipPath: "inset(12% 12% 12% 12%)" }}
           animate={{ opacity: 1, clipPath: "inset(0% 0% 0% 0%)" }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="relative order-first overflow-hidden rounded-2xl md:order-none"
+          className="relative order-first aspect-[4/5] overflow-hidden rounded-2xl border border-offwhite/10 md:order-none"
         >
-          <motion.div
-            style={{ y: photoY, scale: photoScale }}
-            className="flex aspect-[4/5] items-center justify-center rounded-2xl border border-dashed border-offwhite/20 bg-navy/40 font-mono text-xs text-offwhite/40"
-          >
-            FOTO RECORTADA (Walter)
+          <motion.div style={{ y: photoY, scale: photoScale }} className="absolute -inset-[8%]">
+            <img
+              src="/img/walter-hero.webp"
+              alt="Walter Espíndola, CEO da Zephyr Investimentos"
+              className="h-full w-full object-cover object-center"
+            />
           </motion.div>
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{ background: "linear-gradient(to top, rgba(27,27,26,0.55), transparent 55%)" }}
+          />
         </motion.div>
       </div>
     </section>
@@ -135,22 +140,30 @@ export default function Home() {
                 Quero uma assessoria de verdade →
               </a>
             </Reveal>
+
+            <RevealGroup stagger={0.1} className="mt-10 grid grid-cols-3 gap-4 border-t border-ink/10 pt-6">
+              {[
+                { num: <Counter to={10} suffix="+" />, lbl: "anos de mercado" },
+                { num: <Counter to={300} suffix="+" />, lbl: "famílias" },
+                { num: <Counter to={100} prefix="R$" suffix="M" />, lbl: "sob gestão" },
+              ].map((s, i) => (
+                <RevealItem key={i}>
+                  <div className="font-serif text-3xl font-semibold text-[#a07d2c] md:text-4xl">{s.num}</div>
+                  <div className="mt-1 overline text-ink/50" style={{ fontSize: "0.62rem" }}>{s.lbl}</div>
+                </RevealItem>
+              ))}
+            </RevealGroup>
           </div>
 
-          <RevealGroup stagger={0.12} className="grid grid-cols-1 gap-4">
-            {[
-              { num: <Counter to={10} suffix="+" />, lbl: "anos no mercado financeiro" },
-              { num: <Counter to={300} suffix="+" />, lbl: "famílias planejadas" },
-              { num: <Counter to={100} prefix="R$" suffix="M" />, lbl: "sob gestão" },
-            ].map((s, i) => (
-              <RevealItem key={i}>
-                <div className="flex items-baseline gap-4 rounded-xl border border-ink/10 bg-white/50 px-6 py-5">
-                  <div className="font-serif text-4xl font-semibold text-[#a07d2c]">{s.num}</div>
-                  <div className="overline text-ink/55">{s.lbl}</div>
-                </div>
-              </RevealItem>
-            ))}
-          </RevealGroup>
+          <Reveal delay={0.1}>
+            <div className="relative overflow-hidden rounded-2xl border border-ink/10">
+              <img
+                src="/img/walter-historia.webp"
+                alt="Walter Espíndola"
+                className="aspect-[4/5] w-full object-cover object-center md:aspect-auto md:h-[560px]"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 

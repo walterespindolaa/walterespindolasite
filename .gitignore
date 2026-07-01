@@ -18,3 +18,8 @@ npm-debug.log*
 .DS_Store
 .vscode/*
 !.vscode/extensions.json
+
+# fotos originais pesadas (só as otimizadas em public/img sobem)
+/IMG_*.jpg
+/_thumbs
+/_originals
