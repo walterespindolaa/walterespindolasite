@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { systems } from "../data/systems.js";
 import Blend from "../components/Blend.jsx";
+import ShotCarousel from "../components/ShotCarousel.jsx";
 
 /* Conteúdo da "tela" do app: screenshot real se houver, senão um mock */
 function AppScreen({ system }) {
-  if (system.shot) {
-    return <img src={system.shot} alt={`Tela do ${system.name}`} className="h-full w-full object-cover object-top" />;
+  if (system.shots?.length) {
+    return <ShotCarousel shots={system.shots} name={system.name} />;
   }
   return (
     <div className="h-full w-full bg-ink">

@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import Nav from "../components/Nav.jsx";
 import ScrollProgress from "../components/ScrollProgress.jsx";
 import Reveal from "../components/Reveal.jsx";
+import ShotCarousel from "../components/ShotCarousel.jsx";
 import { systems, getSystem } from "../data/systems.js";
 
 const GOLD = "#a07d2c";
@@ -108,8 +109,10 @@ export default function SystemPage() {
                   <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
                   <span className="ml-3 font-mono text-xs text-white/30">{s.name.toLowerCase()}.app</span>
                 </div>
-                {s.shot ? (
-                  <img src={s.shot} alt={`Tela do ${s.name}`} className="aspect-[16/9] w-full object-cover object-top" />
+                {s.shots?.length ? (
+                  <div className="aspect-[16/9] w-full">
+                    <ShotCarousel shots={s.shots} name={s.name} />
+                  </div>
                 ) : (
                   <div className="flex aspect-[16/8] items-center justify-center font-mono text-xs text-white/25">
                     SCREENSHOT REAL DO {s.name.toUpperCase()}

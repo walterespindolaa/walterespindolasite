@@ -14,7 +14,7 @@ export const systems = [
     ],
     accent: "#5B7A99",
     siteUrl: "https://www.useatlasapp.com",
-    shot: "/img/shots/atlas.webp",
+    shots: ["/img/shots/atlas.webp"],
     ideia:
       "Depois de estudar mais de 300 planejamentos reais, percebi que o que trava as pessoas não é falta de dinheiro, é falta de plano e de clareza. Quis colocar o trabalho de um bom assessor dentro de um app, acessível, pra qualquer pessoa usar todo dia.",
     dorLong:
@@ -50,6 +50,7 @@ export const systems = [
     ],
     accent: "#C9A24B",
     siteUrl: "#",
+    shots: ["/img/shots/zephyr.webp", "/img/shots/zephyr1.webp"],
     ideia:
       "Toda assessoria promete atenção, mas roda em planilha e no improviso. Quis construir a plataforma que a minha assessoria merecia: o motor de projeção do Atlas por baixo, e um CRM que enxerga cada cliente de perto.",
     dorLong:
@@ -75,6 +76,7 @@ export const systems = [
     ],
     accent: "#B5643C",
     siteUrl: "#",
+    shots: ["/img/shots/pejota.webp", "/img/shots/pejota1.webp"],
     ideia:
       "Vendo donos de PJ afogados em planilha, boleto e imposto, percebi que o problema não era falta de esforço, era falta de um lugar só. Construí o ERP que junta caixa, vendas e nota fiscal num sistema que trabalha por eles.",
     dorLong:
@@ -102,6 +104,7 @@ export const systems = [
     ],
     accent: "#7C9A6B",
     siteUrl: "#",
+    shots: ["/img/shots/cria.webp", "/img/shots/cria1.webp", "/img/shots/cria2.webp"],
     ideia:
       "Todo criador tem ideia; poucos têm processo. O gargalo não é criatividade, é o caminho da ideia até o publicado. Construí um hub que segura a mão em cada etapa, com IA no meio.",
     dorLong:

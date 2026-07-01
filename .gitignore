@@ -23,3 +23,6 @@ npm-debug.log*
 /IMG_*.jpg
 /_thumbs
 /_originals
+
+# screenshots-fonte (só as otimizadas em public/img sobem)
+/*.png
