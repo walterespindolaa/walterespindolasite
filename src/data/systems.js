@@ -14,7 +14,7 @@ export const systems = [
     ],
     accent: "#5B7A99",
     siteUrl: "https://www.useatlasapp.com",
-    shots: ["/img/shots/atlas.webp"],
+    shots: ["/img/shots/atlas.webp", "/img/shots/atlas1.webp"],
     ideia:
       "Depois de estudar mais de 300 planejamentos reais, percebi que o que trava as pessoas não é falta de dinheiro, é falta de plano e de clareza. Quis colocar o trabalho de um bom assessor dentro de um app, acessível, pra qualquer pessoa usar todo dia.",
     dorLong:
