@@ -1,4 +1,5 @@
-// Os sistemas — dor → solução → ganhos + detalhe pra página de estudo de caso.
+// Os sistemas — contados na voz do BUILDER (Walter):
+// ideia por trás → dor que resolvi → funcionalidades que construí → prova.
 export const systems = [
   {
     id: "atlas",
@@ -13,42 +14,27 @@ export const systems = [
     ],
     accent: "#5B7A99",
     siteUrl: "https://www.useatlasapp.com",
-    problema:
-      "A maioria das pessoas não sabe pra onde o dinheiro vai — e muito menos pra onde ele as leva. Falta clareza, falta plano, e as decisões grandes acabam saindo no impulso.",
-    solucaoLong:
-      "O Atlas é o plano que um bom assessor faria, transformado em app pra usar todo dia. Mostra onde você está, o próximo passo e o que muda se você seguir um caminho diferente.",
+    ideia:
+      "Depois de estudar mais de 300 planejamentos reais, percebi que o que trava as pessoas não é falta de dinheiro — é falta de plano e de clareza. Quis colocar o trabalho de um bom assessor dentro de um app, acessível, pra qualquer pessoa usar todo dia.",
+    dorLong:
+      "A maioria não sabe pra onde o dinheiro vai — muito menos pra onde ele a leva. Sem clareza e sem plano, as decisões grandes saem no impulso, e a vida financeira vira um borrão de meses soltos.",
     features: [
-      { title: "Atlas Score", desc: "Em 2 segundos você sabe onde está. Atualiza a cada decisão." },
-      { title: "Vista da Montanha", desc: "Sua projeção patrimonial no tempo — a aposentadoria como meta tangível." },
-      { title: "Simulador de Decisão", desc: '"E se eu aumentar a reserva em R$100?" Veja o impacto em 10, 20, 30 anos.' },
-      { title: "Método Atlas (IA)", desc: "5 relatórios: os mesmos diagnósticos usados com 300+ famílias." },
-      { title: "Renda Passiva", desc: "Carteira viva — descubra quando sua renda te liberta." },
-      { title: "Household", desc: "PF e PJ na mesma jornada; um acesso extra pra compartilhar com quem você ama." },
+      { title: "Atlas Score", desc: "Construí um índice único que, em 2 segundos, diz onde você está — e reage a cada decisão.", resolve: "clareza imediata" },
+      { title: "Vista da Montanha", desc: "Reaproveitei um motor de projeção patrimonial pra transformar a aposentadoria em meta tangível, no tempo.", resolve: "enxergar o futuro" },
+      { title: "Simulador de Decisão", desc: "Um 'e se?' pra qualquer escolha: veja o impacto de R$100 a mais em 10, 20, 30 anos, antes de agir.", resolve: "decidir com dados" },
+      { title: "Método Atlas (IA)", desc: "5 relatórios por IA com os mesmos diagnósticos que uso com 300+ famílias — não achismo.", resolve: "diagnóstico de verdade" },
+      { title: "Renda Passiva", desc: "Uma carteira viva que mostra quando a sua renda passiva te liberta.", resolve: "meta de liberdade" },
+      { title: "Household", desc: "PF e PJ na mesma jornada, com um acesso extra pra planejar a dois.", resolve: "finanças do casal" },
     ],
-    prova: "93 telas · 216 componentes · 159 migrations · 45 edge functions",
-    rich: {
-      tagline: "Toda montanha precisa de um caminho",
-      trial: "7 dias grátis, sem cartão",
-      cta: "Pronto para encontrar seu caminho?",
-      jornada: [
-        { title: "Você vê o que aconteceu.", text: "Registra o mês, vê onde o dinheiro foi. Começa a entender o padrão." },
-        { title: "Você categoriza.", text: "Cada categoria revela um valor. Você alinha gastos com o que importa." },
-        { title: "Você projeta o futuro.", text: "Sai do presente, entra no futuro. Vê a aposentadoria como meta tangível." },
-        { title: "Você decide com dados.", text: "Não mais por emoção. Vê o impacto de R$100 a mais em 10, 20, 30 anos." },
-        { title: "Você vê a vida inteira.", text: "Pensa em décadas. Sua vida financeira tem começo, meio e fim claro." },
-      ],
+    impacto: {
+      stat: "300+",
+      statLabel: "famílias planejadas com o método",
       depoimentos: [
         { name: "Bruno T.", quote: "Pela primeira vez sei pra onde meu dinheiro vai. Montei minha reserva em 4 meses." },
-        { name: "Rafael & Júlia", quote: "A gente brigava por dinheiro. Planejando juntos no Atlas, virou decisão a dois, sem briga." },
-        { name: "Letícia M.", quote: "Parei de usar três planilhas. O Atlas junta tudo e ainda me diz o próximo passo." },
-        { name: "Diego A.", quote: "Estava endividado e perdido. Hoje tenho um plano claro e já saí do vermelho." },
-      ],
-      planos: [
-        { plan: "Essencial", price: "R$ 15,90", note: "Controle do dia a dia, análises básicas e Atlas Score, comunidade." },
-        { plan: "Pro", price: "R$ 24,90", note: "Tudo do Essencial + planejamento e cenários, Método Atlas (IA), Atlas Negócios.", destaque: true },
-        { plan: "Elite", price: "R$ 32,90", note: "Tudo do Pro + cursos, Plano da Liberdade, suporte prioritário." },
+        { name: "Rafael & Júlia", quote: "A gente brigava por dinheiro. No Atlas virou decisão a dois, sem briga." },
       ],
     },
+    prova: "93 telas · 216 componentes · 159 migrations · 45 edge functions",
   },
   {
     id: "zephyr",
@@ -63,15 +49,15 @@ export const systems = [
     ],
     accent: "#C9A24B",
     siteUrl: "#",
-    problema:
-      "Assessoria genérica trata todo mundo igual. Quem tem muito a perder precisa de alguém que enxergue o quadro completo — e de tecnologia à altura.",
-    solucaoLong:
-      "A Zephyr é a plataforma interna da assessoria: planejadora, assessores e admin no mesmo lugar, com o motor de projeção do Atlas por baixo. É o negócio-mãe — a raiz da autoridade.",
+    ideia:
+      "Toda assessoria promete atenção, mas roda em planilha e no improviso. Quis construir a plataforma que a minha assessoria merecia: o motor de projeção do Atlas por baixo, e um CRM que enxerga cada cliente de perto.",
+    dorLong:
+      "Assessoria genérica trata todo mundo igual. Quem tem muito a perder precisa de alguém que enxergue o quadro completo — e de tecnologia à altura, não de planilha compartilhada.",
     features: [
-      { title: "Planejamento sob medida", desc: "Cada cliente com o seu plano, não um template." },
-      { title: "Motor de projeção", desc: "A mesma engine de projeção patrimonial do Atlas." },
-      { title: "CRM de cliente", desc: "Do primeiro contato ao acompanhamento contínuo." },
-      { title: "Acesso por papel", desc: "Planejadora, assessores e admin — cada um com a sua visão." },
+      { title: "Planejamento sob medida", desc: "Cada cliente com o seu plano, montado a partir dos números reais — não um template.", resolve: "atenção real" },
+      { title: "Motor de projeção", desc: "Reaproveitei a mesma engine de projeção do Atlas pra rodar cenários por cliente.", resolve: "visão de longo prazo" },
+      { title: "CRM de cliente", desc: "Do primeiro contato ao acompanhamento contínuo, tudo num lugar.", resolve: "acompanhamento de perto" },
+      { title: "Acesso por papel", desc: "Planejadora, assessores e admin — cada um com a sua visão e permissões.", resolve: "operação organizada" },
     ],
     prova: "10 telas · 80 componentes · 12 migrations · 3 edge functions",
   },
@@ -88,17 +74,17 @@ export const systems = [
     ],
     accent: "#B5643C",
     siteUrl: "#",
-    problema:
+    ideia:
+      "Vendo donos de PJ afogados em planilha, boleto e imposto, percebi que o problema não era falta de esforço — era falta de um lugar só. Construí o ERP que junta caixa, vendas e nota fiscal num sistema que trabalha por eles.",
+    dorLong:
       "Dono de PJ vive apagando incêndio: caixa numa planilha, cobrança noutra, imposto atrasado e nota fiscal que ninguém entende. O administrativo consome o tempo que devia ir pro negócio.",
-    solucaoLong:
-      "O PeJota é o ERP que junta tudo: fluxo de caixa, contas a pagar e receber, funil de vendas, propostas, estoque e emissão de NF-e/NFS-e — com IA pra te ajudar a escrever e decidir.",
     features: [
-      { title: "Fluxo de caixa", desc: "Contas a pagar e receber sob controle, sem planilha." },
-      { title: "Funil + propostas", desc: "Do lead à proposta assinada, num fluxo só." },
-      { title: "NF-e / NFS-e", desc: "Emissão de nota fiscal integrada (PlugNotas)." },
-      { title: "Cobrança BR", desc: "Stripe + Asaas — PIX e boleto nativos." },
-      { title: "PeJota Copilot", desc: "IA que escreve e resume pra você (pejota-ai-write)." },
-      { title: "Estoque", desc: "Controle de produtos ligado às vendas." },
+      { title: "Fluxo de caixa", desc: "Contas a pagar e receber num painel só, sem planilha paralela.", resolve: "controle do dinheiro" },
+      { title: "Funil + propostas", desc: "Do lead à proposta assinada, num fluxo que fecha mais negócio.", resolve: "vender melhor" },
+      { title: "NF-e / NFS-e", desc: "Emissão de nota fiscal integrada (PlugNotas) — sem sair do sistema.", resolve: "fiscal sem dor" },
+      { title: "Cobrança BR", desc: "Stripe + Asaas, com PIX e boleto nativos do jeito brasileiro.", resolve: "receber mais fácil" },
+      { title: "PeJota Copilot (IA)", desc: "Uma IA que escreve e resume pra você dentro do fluxo de trabalho.", resolve: "menos trabalho manual" },
+      { title: "Estoque", desc: "Controle de produtos ligado direto às vendas.", resolve: "operação redonda" },
     ],
     prova: "118 telas · 217 componentes · 160 migrations · 52 edge functions",
   },
@@ -115,16 +101,16 @@ export const systems = [
     ],
     accent: "#7C9A6B",
     siteUrl: "#",
-    problema:
-      "Criar conteúdo com constância é caótico: a ideia surge, o roteiro trava, a produção atrasa e a análise nunca acontece. No meio do caminho, a ideia se perde.",
-    solucaoLong:
-      "O Cria Social Club é o hub que leva da ideia ao publicado num fluxo só: ideação, planejamento, roteiro com IA, produção, agendamento e análise — tudo conectado às suas redes.",
+    ideia:
+      "Todo criador tem ideia; poucos têm processo. O gargalo não é criatividade — é o caminho da ideia até o publicado. Construí um hub que segura a mão em cada etapa, com IA no meio.",
+    dorLong:
+      "Criar com constância é caótico: a ideia surge, o roteiro trava, a produção atrasa e a análise nunca acontece. No meio do caminho, a ideia se perde.",
     features: [
-      { title: "Ideação + roteiro (IA)", desc: "Do branco à pauta pronta, com a IA no processo." },
-      { title: "Planejamento", desc: "Calendário editorial que não vira bagunça." },
-      { title: "Agendamento", desc: "Publica direto — Instagram, Google Calendar/Drive." },
-      { title: "Produção", desc: "Vídeo hospedado (Bunny) e ativos no lugar." },
-      { title: "Análise", desc: "Veja o que performou (Meta CAPI) e repita o que dá certo." },
+      { title: "Ideação + roteiro (IA)", desc: "Do branco à pauta pronta, com a IA participando do processo criativo.", resolve: "destravar a ideia" },
+      { title: "Planejamento", desc: "Um calendário editorial que organiza sem virar bagunça.", resolve: "constância" },
+      { title: "Agendamento", desc: "Publica direto — Instagram, Google Calendar e Drive integrados.", resolve: "publicar sem atrito" },
+      { title: "Produção", desc: "Vídeo hospedado (Bunny) e ativos no lugar certo.", resolve: "produção organizada" },
+      { title: "Análise", desc: "Veja o que performou (Meta CAPI) e repita o que dá certo.", resolve: "crescer com dados" },
     ],
     prova: "52 telas · 174 componentes · 69 migrations · 37 edge functions",
   },
@@ -142,14 +128,14 @@ export const systems = [
     accent: "#C9A24B",
     live: true,
     siteUrl: "#",
-    problema:
-      "Todo método soa bonito no papel. A pergunta que fica é: funciona de novo, do zero, na vida real?",
-    solucaoLong:
-      "O SalvaReceitas é o próximo produto — construído em público, ao vivo. Cada sessão de build vira conteúdo (post, aula, capítulo) via um diário de bordo. É a prova de que a receita se repete.",
+    ideia:
+      "Todo método soa bonito no papel. Quis provar que a receita se repete construindo o próximo produto em público, ao vivo, do zero — com cada passo documentado.",
+    dorLong:
+      "A pergunta que fica sobre qualquer método é: funciona de novo, do zero, na vida real? O SalvaReceitas existe pra responder isso na frente de todo mundo.",
     features: [
-      { title: "Build in public", desc: "Cada etapa aberta, do zero ao no ar." },
-      { title: "Diário de bordo", desc: "Toda sessão vira um registro — e material da mentoria." },
-      { title: "Prova viva", desc: "O método aplicado em tempo real, sem edição." },
+      { title: "Build in public", desc: "Cada etapa aberta, do zero ao no ar, sem edição.", resolve: "prova real" },
+      { title: "Diário de bordo", desc: "Toda sessão vira um registro — e material da mentoria.", resolve: "método documentado" },
+      { title: "A receita aplicada", desc: "O mesmo esqueleto dos outros 4, do começo ao fim.", resolve: "repetibilidade" },
     ],
     prova: "Em construção — acompanhe ao vivo.",
   },
