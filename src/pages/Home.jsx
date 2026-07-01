@@ -7,6 +7,7 @@ import ScrollProgress from "../components/ScrollProgress.jsx";
 import Marquee from "../components/Marquee.jsx";
 import Magnetic from "../components/Magnetic.jsx";
 import Blend from "../components/Blend.jsx";
+import AnimatedGridPattern from "../components/AnimatedGridPattern.jsx";
 import Systems from "../sections/Systems.jsx";
 import PainCards from "../sections/PainCards.jsx";
 import Method from "../sections/Method.jsx";
@@ -20,7 +21,13 @@ function Hero() {
 
   return (
     <section ref={ref} className="relative flex min-h-screen items-center overflow-hidden bg-ink px-6 pb-16 pt-28 md:px-8">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
+      <AnimatedGridPattern
+        numSquares={38}
+        maxOpacity={0.16}
+        duration={3.5}
+        className="[mask-image:radial-gradient(700px_circle_at_72%_38%,white,transparent)]"
+      />
+      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
         <RevealGroup stagger={0.14}>
           <RevealItem>
             <span className="overline text-gold">
@@ -204,11 +211,11 @@ export default function Home() {
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 md:grid-cols-2">
             <div className="rounded-xl border border-offwhite/10 p-8">
               <h3 className="font-serif text-2xl text-offwhite">Cliente Zephyr</h3>
-              <a href="#" className="mt-4 inline-block rounded-full border border-offwhite/25 px-5 py-2.5 text-sm text-offwhite transition hover:border-gold hover:text-gold">Falar com a Zephyr →</a>
+              <a href="mailto:walterjoose@gmail.com?subject=Quero%20conhecer%20a%20assessoria%20Zephyr" className="mt-4 inline-block rounded-full border border-offwhite/25 px-5 py-2.5 text-sm text-offwhite transition hover:border-gold hover:text-gold">Falar com a Zephyr →</a>
             </div>
             <div className="rounded-xl border border-gold/40 p-8">
               <h3 className="font-serif text-2xl text-offwhite">Aluno da mentoria</h3>
-              <a href="#" className="mt-4 inline-block rounded-full bg-gold px-5 py-2.5 text-sm font-medium text-ink transition hover:opacity-90">Entrar na mentoria →</a>
+              <a href="mailto:walterjoose@gmail.com?subject=Quero%20entrar%20na%20mentoria" className="mt-4 inline-block rounded-full bg-gold px-5 py-2.5 text-sm font-medium text-ink transition hover:opacity-90">Entrar na mentoria →</a>
             </div>
           </div>
           <p className="mt-10 font-mono text-xs text-offwhite/40">© 2026 Walter Espíndola · CTA a definir (WhatsApp / e-mail / Calendly) · Fase 2: liga no funil /aplicar</p>

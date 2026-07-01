@@ -22,20 +22,20 @@ export default function PainCards() {
           </h2>
         </div>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-5">
+        <div className="mt-16 flex flex-wrap justify-center gap-6">
           {pains.map((p, i) => (
             <motion.div
               key={p}
-              initial={{ opacity: 0, y: 44, rotate: i % 2 ? 2.5 : -2.5 }}
+              initial={{ opacity: 0, y: 48, rotate: i % 2 ? 2.5 : -2.5 }}
               whileInView={{ opacity: 1, y: 0, rotate: i % 2 ? 1.6 : -1.6 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ rotate: 0, y: -8, scale: 1.03 }}
-              className="w-[260px] rounded-2xl border border-offwhite/10 bg-navy/40 p-6"
-              style={{ boxShadow: "0 24px 46px -22px rgba(0,0,0,0.65)" }}
+              className="flex min-h-[190px] w-[320px] flex-col rounded-2xl border border-offwhite/10 bg-navy/40 p-8 md:w-[360px]"
+              style={{ boxShadow: "0 28px 52px -22px rgba(0,0,0,0.7)" }}
             >
-              <span className="font-serif text-4xl leading-none text-gold/50">“</span>
-              <p className="-mt-2 font-serif text-lg italic leading-snug text-offwhite/85">{p}</p>
+              <span className="font-serif text-5xl leading-none text-gold/50">“</span>
+              <p className="mt-1 font-serif text-2xl italic leading-snug text-offwhite/90">{p}</p>
             </motion.div>
           ))}
         </div>
