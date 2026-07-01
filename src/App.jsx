@@ -99,36 +99,51 @@ export default function App() {
       <Nav />
       <Hero />
 
-      {/* 02 AUTORIDADE / ZEPHYR */}
-      <section id="zephyr" className="bg-navy px-8 py-20">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <span className="font-mono text-xs uppercase tracking-widest text-gold/80">02 · Autoridade</span>
-            <h2 className="mt-2 max-w-3xl font-serif text-4xl font-semibold leading-tight text-offwhite md:text-5xl">
-              10+ anos cuidando de quem tem muito a perder.
-            </h2>
-          </Reveal>
-          <RevealGroup className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+      {/* 02 AUTORIDADE / HISTÓRIA — seção clara (editorial) */}
+      <section id="zephyr" className="bg-offwhite px-8 py-24 text-ink">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-14 md:grid-cols-[1.1fr_.9fr] md:items-center">
+          <div>
+            <Reveal>
+              <span className="font-mono text-xs uppercase tracking-widest text-[#a07d2c]">02 · Autoridade</span>
+              <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight md:text-5xl">
+                Aprendi na marra que <span className="text-[#a07d2c]">plano é tudo.</span>
+              </h2>
+            </Reveal>
+            <RevealGroup stagger={0.14} className="mt-8 space-y-5 text-lg leading-relaxed text-ink/75">
+              <RevealItem>
+                <p>Cresci numa pousada no litoral de Santa Catarina. Meus pais tocaram o negócio por 25 anos — sem nunca ter um plano. Em 2020, fechou.</p>
+              </RevealItem>
+              <RevealItem>
+                <p>No segundo mês da pandemia, a pergunta virou minha: <em>"E agora? Estamos fazendo certo?"</em></p>
+              </RevealItem>
+              <RevealItem>
+                <p>Comecei a construir um sistema pra responder isso — primeiro pra mim e minha esposa, depois pra família e amigos. Esse sistema virou o Atlas, e o método que hoje uso com mais de 300 famílias.</p>
+              </RevealItem>
+              <RevealItem>
+                <p className="font-medium text-ink">Foi aí que entendi: eu resolvo dores construindo sistemas. Hoje, à frente da Zephyr, cuido de quem tem muito a perder.</p>
+              </RevealItem>
+            </RevealGroup>
+            <Reveal delay={0.1}>
+              <a href="#contato" className="mt-8 inline-flex rounded-full bg-ink px-6 py-3 text-sm font-medium text-offwhite transition hover:bg-navy">
+                Quero uma assessoria de verdade →
+              </a>
+            </Reveal>
+          </div>
+
+          <RevealGroup stagger={0.12} className="grid grid-cols-1 gap-4">
             {[
-              { num: <Counter to={10} suffix="+" />, lbl: "anos de mercado" },
+              { num: <Counter to={10} suffix="+" />, lbl: "anos no mercado financeiro" },
+              { num: <Counter to={300} suffix="+" />, lbl: "famílias planejadas" },
               { num: <Counter to={100} prefix="R$" suffix="M" />, lbl: "sob gestão (a confirmar)" },
-              { num: "Poucos", lbl: "clientes, alto toque" },
             ].map((s, i) => (
               <RevealItem key={i}>
-                <div className="rounded-xl border border-offwhite/10 p-8 text-center">
-                  <div className="font-serif text-5xl font-semibold text-gold">{s.num}</div>
-                  <div className="mt-2 font-mono text-xs uppercase tracking-widest text-offwhite/50">{s.lbl}</div>
+                <div className="flex items-baseline gap-4 rounded-xl border border-ink/10 bg-white/50 px-6 py-5">
+                  <div className="font-serif text-4xl font-semibold text-[#a07d2c]">{s.num}</div>
+                  <div className="font-mono text-xs uppercase tracking-widest text-ink/55">{s.lbl}</div>
                 </div>
               </RevealItem>
             ))}
           </RevealGroup>
-          <Reveal delay={0.1}>
-            <div className="mt-8">
-              <a href="#contato" className="inline-flex rounded-full border border-offwhite/25 px-6 py-3 text-sm font-medium text-offwhite transition hover:border-gold hover:text-gold">
-                Quero uma assessoria de verdade →
-              </a>
-            </div>
-          </Reveal>
         </div>
       </section>
 

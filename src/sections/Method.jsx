@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
+const GOLD = "#a07d2c";
+
 const phases = [
   { n: 0, ato: "Ato 1 · Ideia & Marca", title: "Faísca", desc: "Dor validada + posicionamento. Antes de qualquer tela." },
   { n: 1, ato: "Ato 1 · Ideia & Marca", title: "Marca", desc: "Nome, domínio e brand kit — a cara do produto." },
@@ -29,15 +31,13 @@ export default function Method() {
   const cur = phases[active];
 
   return (
-    <section id="metodo" ref={ref} className="relative bg-ink" style={{ height: `${n * 60}vh` }}>
+    <section id="metodo" ref={ref} className="relative bg-offwhite text-ink" style={{ height: `${n * 55}vh` }}>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-8">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
-          {/* esquerda — fixa, revela a fase ativa */}
+          {/* esquerda — revela a fase ativa */}
           <div>
-            <span className="font-mono text-xs uppercase tracking-widest text-gold/80">
-              05 · O método
-            </span>
-            <h2 className="mt-2 font-serif text-3xl font-semibold text-offwhite md:text-4xl">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#a07d2c]">05 · O método</span>
+            <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight md:text-4xl">
               Da ideia ao infoproduto — um caminho repetível, sem programar.
             </h2>
 
@@ -50,14 +50,14 @@ export default function Method() {
                   exit={{ opacity: 0, y: -16 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <div className="font-mono text-xs uppercase tracking-widest text-gold">{cur.ato}</div>
+                  <div className="font-mono text-xs uppercase tracking-widest text-[#a07d2c]">{cur.ato}</div>
                   <div className="mt-3 flex items-baseline gap-4">
-                    <span className="font-serif text-6xl font-semibold text-gold/30">
+                    <span className="font-serif text-6xl font-semibold text-ink/15">
                       {String(cur.n).padStart(2, "0")}
                     </span>
-                    <span className="font-serif text-4xl font-semibold text-offwhite">{cur.title}</span>
+                    <span className="font-serif text-4xl font-semibold text-ink">{cur.title}</span>
                   </div>
-                  <p className="mt-4 max-w-md text-lg text-offwhite/70">{cur.desc}</p>
+                  <p className="mt-4 max-w-md text-lg text-ink/65">{cur.desc}</p>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -65,8 +65,8 @@ export default function Method() {
 
           {/* direita — trilha das 9 fases */}
           <div className="relative flex gap-5">
-            <div className="relative w-[2px] shrink-0 bg-offwhite/10">
-              <motion.div style={{ height: railHeight }} className="absolute left-0 top-0 w-full bg-gold" />
+            <div className="relative w-[2px] shrink-0 bg-ink/10">
+              <motion.div style={{ height: railHeight, background: GOLD }} className="absolute left-0 top-0 w-full" />
             </div>
             <ul className="flex-1 space-y-1.5">
               {phases.map((p, i) => (
@@ -74,22 +74,22 @@ export default function Method() {
                   key={p.n}
                   className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all duration-300"
                   style={{
-                    background: i === active ? "rgba(201,162,75,0.10)" : "transparent",
-                    opacity: i === active ? 1 : i < active ? 0.5 : 0.3,
+                    background: i === active ? "rgba(160,125,44,0.12)" : "transparent",
+                    opacity: i === active ? 1 : i < active ? 0.55 : 0.35,
                   }}
                 >
                   <span
                     className="grid h-7 w-7 shrink-0 place-items-center rounded-full font-mono text-xs transition-colors"
                     style={{
-                      background: i <= active ? "var(--color-gold)" : "transparent",
-                      color: i <= active ? "var(--color-ink)" : "var(--color-offwhite)",
-                      border: i <= active ? "none" : "1px solid rgba(244,240,231,0.3)",
+                      background: i <= active ? GOLD : "transparent",
+                      color: i <= active ? "#fff" : "var(--color-ink)",
+                      border: i <= active ? "none" : "1px solid rgba(27,27,26,0.25)",
                     }}
                   >
                     {p.n}
                   </span>
-                  <span className="font-medium text-offwhite">{p.title}</span>
-                  <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-offwhite/40">
+                  <span className="font-medium text-ink">{p.title}</span>
+                  <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-ink/40">
                     {p.ato.split("·")[0].trim()}
                   </span>
                 </li>
