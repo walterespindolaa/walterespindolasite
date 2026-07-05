@@ -8,6 +8,7 @@ import Marquee from "../components/Marquee.jsx";
 import Magnetic from "../components/Magnetic.jsx";
 import Blend from "../components/Blend.jsx";
 import AnimatedGridPattern from "../components/AnimatedGridPattern.jsx";
+import Sticker from "../components/Sticker.jsx";
 import ContactModal, { openContact } from "../components/ContactModal.jsx";
 import Systems from "../sections/Systems.jsx";
 import PainCards from "../sections/PainCards.jsx";
@@ -95,8 +96,10 @@ function Virada() {
     { t: "Sozinho, com IA, de forma repetível.", gold: false },
   ];
   return (
-    <section id="virada" className="bg-ink px-6 py-24 md:px-8">
-      <div className="mx-auto max-w-3xl text-center">
+    <section id="virada" className="relative overflow-hidden bg-ink px-6 py-24 md:px-8">
+      <Sticker src="gears" size={84} rotate={-10} className="left-[5%] top-1/2 hidden md:block" opacity={0.85} />
+      <Sticker src="growth" size={80} rotate={8} delay={1.2} className="right-[6%] top-1/3 hidden md:block" opacity={0.85} />
+      <div className="relative z-10 mx-auto max-w-3xl text-center">
         <Reveal>
           <span className="overline text-gold/80">03 · A virada</span>
         </Reveal>
@@ -213,6 +216,8 @@ export default function Home() {
       {/* 07 CONTATO */}
       <section id="contato" className="relative overflow-hidden bg-ink px-6 pt-20 md:px-8">
         <Blend from="navy" edge="top" />
+        <Sticker src="target" size={78} rotate={-8} className="left-[7%] top-28 hidden lg:block" opacity={0.8} />
+        <Sticker src="funnel" size={70} rotate={7} delay={1} className="right-[8%] top-24 hidden lg:block" opacity={0.8} />
         <div className="relative z-10 mx-auto max-w-6xl text-center">
           <span className="overline text-gold/80">07 · Contato</span>
           <h2 className="mt-2 font-serif text-4xl font-semibold text-offwhite md:text-5xl">Dois caminhos. Escolha o seu.</h2>

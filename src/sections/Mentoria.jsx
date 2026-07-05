@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
+import Sticker from "../components/Sticker.jsx";
 import { openContact } from "../components/ContactModal.jsx";
 
 const tiers = [
@@ -23,8 +24,10 @@ const tiers = [
 
 export default function Mentoria() {
   return (
-    <section id="mentoria" className="bg-navy px-6 pb-24 pt-20">
-      <div className="mx-auto max-w-3xl text-center">
+    <section id="mentoria" className="relative overflow-hidden bg-navy px-6 pb-24 pt-20">
+      <Sticker src="lightbulb" size={84} rotate={-9} className="left-[7%] top-16 hidden lg:block" opacity={0.9} />
+      <Sticker src="chess" size={78} rotate={8} delay={1} className="right-[7%] top-24 hidden lg:block" opacity={0.9} />
+      <div className="relative z-10 mx-auto max-w-3xl text-center">
         <Reveal>
           <span className="overline text-gold/80">06 · A mentoria</span>
           <h2 className="mt-2 font-serif text-4xl font-semibold text-offwhite md:text-5xl">

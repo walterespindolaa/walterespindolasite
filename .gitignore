@@ -26,3 +26,7 @@ npm-debug.log*
 
 # screenshots-fonte (só as otimizadas em public/img sobem)
 /*.png
+
+# stickers/logo originais pesados (só os otimizados em public/img sobem)
+/public/sticker*.png
+/public/Logo.png
