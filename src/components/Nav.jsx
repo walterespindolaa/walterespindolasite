@@ -18,8 +18,9 @@ export default function Nav() {
     >
       <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-3">
-          <img src="/img/logo-white.png" alt="Walter Espindola" className="h-9 w-9 object-contain" />
-          <span className="font-serif text-xl tracking-tight text-offwhite">
+          <img src="/img/logo-we-white.png" alt="Walter Espindola" className="h-6 w-auto object-contain md:h-7" />
+          <span className="h-6 w-px bg-offwhite/20" />
+          <span className="font-serif text-lg tracking-tight text-offwhite md:text-xl">
             Walter <span className="text-gold">Espindola</span>
           </span>
         </a>
