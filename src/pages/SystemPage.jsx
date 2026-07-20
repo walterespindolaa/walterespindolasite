@@ -5,7 +5,7 @@ import Reveal from "../components/Reveal.jsx";
 import ShotCarousel from "../components/ShotCarousel.jsx";
 import { systems, getSystem } from "../data/systems.js";
 
-const GOLD = "#a07d2c";
+const GOLD = "#1F73C2";
 
 /* índice editorial: número dourado + filete + label discreto */
 function Index({ n, children }) {
@@ -56,7 +56,7 @@ export default function SystemPage() {
         />
         <div className="relative mx-auto max-w-6xl">
           <Reveal>
-            <Link to="/#sistemas" className="text-sm text-ink/45 transition-colors hover:text-[#a07d2c]">
+            <Link to="/#sistemas" className="text-sm text-ink/45 transition-colors hover:text-[#1F73C2]">
               ← Sistemas
             </Link>
           </Reveal>
@@ -219,7 +219,7 @@ export default function SystemPage() {
                 href={s.siteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 border-b-2 pb-1 text-lg font-medium text-ink transition-colors hover:text-[#a07d2c]"
+                className="group inline-flex items-center gap-2 border-b-2 pb-1 text-lg font-medium text-ink transition-colors hover:text-[#1F73C2]"
                 style={{ borderColor: GOLD }}
               >
                 Visitar o {s.name}
@@ -241,7 +241,7 @@ export default function SystemPage() {
                 to={`/sistema/${o.id}`}
                 className="group flex items-baseline justify-between py-5"
               >
-                <span className="font-serif text-2xl text-ink transition-colors group-hover:text-[#a07d2c] md:text-3xl">
+                <span className="font-serif text-2xl text-ink transition-colors group-hover:text-[#1F73C2] md:text-3xl">
                   {o.name}
                 </span>
                 <span className="flex items-center gap-4 text-sm text-ink/40">
@@ -252,7 +252,7 @@ export default function SystemPage() {
             ))}
           </div>
           <div className="mt-10">
-            <Link to="/" className="text-sm text-ink/45 transition-colors hover:text-[#a07d2c]">
+            <Link to="/" className="text-sm text-ink/45 transition-colors hover:text-[#1F73C2]">
               ← Voltar ao início
             </Link>
           </div>

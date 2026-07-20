@@ -12,8 +12,8 @@ export default function AnimatedGridPattern({
   className = "",
   maxOpacity = 0.4,
   duration = 4,
-  color = "rgba(201,162,75,0.55)",
-  stroke = "rgba(201,162,75,0.10)",
+  color = "rgba(31,115,194,0.55)",
+  stroke = "rgba(31,115,194,0.10)",
 }) {
   const id = useId();
   const containerRef = useRef(null);

@@ -4,7 +4,7 @@ import ScrollProgress from "../components/ScrollProgress.jsx";
 import Reveal, { RevealGroup, RevealItem } from "../components/Reveal.jsx";
 import { openContact } from "../components/ContactModal.jsx";
 
-const GOLD = "#a07d2c";
+const GOLD = "#1F73C2";
 
 const modulos = [
   {
@@ -53,13 +53,13 @@ function Caminho({ tag, nome, desc, bullets, solid, cta }) {
     <div
       className="flex h-full flex-col rounded-2xl border p-8"
       style={{
-        borderColor: solid ? "rgba(160,125,44,0.5)" : "rgba(27,27,26,0.12)",
-        background: solid ? "rgba(160,125,44,0.06)" : "transparent",
+        borderColor: solid ? "rgba(31,115,194,0.5)" : "rgba(0,31,39,0.12)",
+        background: solid ? "rgba(31,115,194,0.06)" : "transparent",
       }}
     >
       <div className="flex items-center gap-3">
         <span className="overline" style={{ color: GOLD }}>{nome}</span>
-        <span className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase" style={{ background: "rgba(160,125,44,0.15)", color: GOLD }}>{tag}</span>
+        <span className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase" style={{ background: "rgba(31,115,194,0.15)", color: GOLD }}>{tag}</span>
       </div>
       <h3 className="mt-2 font-serif text-3xl font-semibold text-ink">{nome}</h3>
       <p className="mt-3 text-ink/70">{desc}</p>
@@ -72,7 +72,7 @@ function Caminho({ tag, nome, desc, bullets, solid, cta }) {
       </ul>
       <div className="mt-8 flex items-center justify-between gap-4">
         <span className="font-mono text-sm text-ink/45">Investimento sob consulta</span>
-        <button onClick={() => openContact("mentoria")} className={`rounded-full px-5 py-2.5 text-sm font-medium transition ${solid ? "bg-[#a07d2c] text-white hover:opacity-90" : "border border-ink/25 text-ink hover:border-[#a07d2c] hover:text-[#a07d2c]"}`}>
+        <button onClick={() => openContact("mentoria")} className={`rounded-full px-5 py-2.5 text-sm font-medium transition ${solid ? "bg-[#1F73C2] text-white hover:opacity-90" : "border border-ink/25 text-ink hover:border-[#1F73C2] hover:text-[#1F73C2]"}`}>
           {cta} →
         </button>
       </div>
@@ -88,10 +88,10 @@ export default function MentoriaPage() {
 
       {/* HERO */}
       <header className="relative overflow-hidden px-6 pb-16 pt-32 md:px-10 md:pt-40">
-        <div className="pointer-events-none absolute -top-24 right-0 h-[420px] w-[420px] rounded-full opacity-20 blur-3xl" style={{ background: "#C9A24B" }} />
+        <div className="pointer-events-none absolute -top-24 right-0 h-[420px] w-[420px] rounded-full opacity-20 blur-3xl" style={{ background: "#1F73C2" }} />
         <div className="relative mx-auto max-w-4xl">
           <Reveal>
-            <Link to="/#mentoria" className="text-sm text-ink/45 transition-colors hover:text-[#a07d2c]">← Início</Link>
+            <Link to="/#mentoria" className="text-sm text-ink/45 transition-colors hover:text-[#1F73C2]">← Início</Link>
           </Reveal>
           <Reveal delay={0.05}>
             <span className="mt-8 block overline" style={{ color: GOLD }}>A mentoria</span>
@@ -233,7 +233,7 @@ export default function MentoriaPage() {
             <span className="overline" style={{ color: GOLD }}>Por que aprender comigo</span>
             <h2 className="mt-2 max-w-2xl font-serif text-4xl font-semibold text-ink md:text-5xl">Eu não só ensino. Eu construí 4 vezes.</h2>
             <p className="mt-4 max-w-xl text-ink/70">Atlas, Zephyr, PeJota e Cria: quatro SaaS completos, do zero, sozinho, com IA. O método é a receita que se repetiu em todos.</p>
-            <Link to="/#sistemas" className="mt-6 inline-flex items-center gap-2 border-b-2 pb-1 font-medium text-ink transition-colors hover:text-[#a07d2c]" style={{ borderColor: GOLD }}>
+            <Link to="/#sistemas" className="mt-6 inline-flex items-center gap-2 border-b-2 pb-1 font-medium text-ink transition-colors hover:text-[#1F73C2]" style={{ borderColor: GOLD }}>
               Ver os sistemas <span aria-hidden>→</span>
             </Link>
           </Reveal>

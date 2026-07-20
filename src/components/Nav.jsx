@@ -14,7 +14,7 @@ export default function Nav() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-0 inset-x-0 z-50 backdrop-blur-md"
-      style={{ background: "rgba(27,27,26,0.55)" }}
+      style={{ background: "rgba(0,31,39,0.55)" }}
     >
       <nav className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
         <a href="/" className="flex items-center gap-3">

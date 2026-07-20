@@ -53,7 +53,7 @@ export default function PainCards() {
                 aria-hidden
                 className="pointer-events-none absolute inset-0 opacity-70"
                 style={{
-                  backgroundImage: "radial-gradient(rgba(201,162,75,0.12) 1px, transparent 1px)",
+                  backgroundImage: "radial-gradient(rgba(31,115,194,0.12) 1px, transparent 1px)",
                   backgroundSize: "16px 16px",
                 }}
               />

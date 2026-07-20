@@ -9,7 +9,7 @@ const tiers = [
     nome: "Curso",
     desc: "Da ideia ao sistema, com aulas gravadas das 9 fases. Você assiste, executa e coloca no ar.",
     bullets: ["As 9 fases em aula, passo a passo", "Kit de prompts pra copiar", "Os 4 apps como exemplo real"],
-    bg: "#0E2A47",
+    bg: "#003A35",
     solid: false,
   },
   {
@@ -50,7 +50,7 @@ export default function Mentoria() {
               className="rounded-3xl border p-8 md:p-10"
               style={{
                 background: t.bg,
-                borderColor: t.solid ? "rgba(201,162,75,0.5)" : "rgba(244,240,231,0.12)",
+                borderColor: t.solid ? "rgba(31,115,194,0.5)" : "rgba(244,240,231,0.12)",
                 boxShadow: "0 30px 60px -30px rgba(0,0,0,0.8)",
               }}
             >

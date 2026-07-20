@@ -48,7 +48,7 @@ export const systems = [
       "Acompanhamento contínuo, de perto",
       "O olhar de um assessor + a força de um sistema",
     ],
-    accent: "#C9A24B",
+    accent: "#1F73C2",
     siteUrl: "#",
     shots: ["/img/shots/zephyr.webp", "/img/shots/zephyr1.webp"],
     ideia:
@@ -129,7 +129,7 @@ export const systems = [
       "A prova de que a receita se repete",
       "Do zero ao no ar, documentado",
     ],
-    accent: "#C9A24B",
+    accent: "#1F73C2",
     live: true,
     siteUrl: "#",
     ideia:

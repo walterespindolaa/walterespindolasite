@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import Blend from "../components/Blend.jsx";
 import Reveal from "../components/Reveal.jsx";
 
-const GOLD = "#a07d2c";
+const GOLD = "#1F73C2";
 
 const phases = [
   { n: 0, ato: "Ato 1 · Ideia & Marca", title: "Faísca", desc: "Antes de qualquer tela, valide a dor. Uma pessoa real, um problema real, uma frase que posiciona.", ferramenta: "Conversa + papel", entrega: "Dor validada + posicionamento em 1 frase", armadilha: "Se apaixonar pela ideia antes de validar a dor." },
@@ -23,7 +23,7 @@ function Detalhes({ p, small }) {
     <dl className={`space-y-2 ${small ? "text-sm" : "text-sm"}`}>
       {[["Ferramenta", p.ferramenta, false], ["Entregável", p.entrega, false], ["Armadilha", p.armadilha, true]].map(([k, v, warn]) => (
         <div key={k} className="flex gap-3">
-          <dt className={`w-24 shrink-0 overline ${warn ? "text-[#a07d2c]/70" : "text-ink/40"}`} style={{ fontSize: fs }}>{k}</dt>
+          <dt className={`w-24 shrink-0 overline ${warn ? "text-[#1F73C2]/70" : "text-ink/40"}`} style={{ fontSize: fs }}>{k}</dt>
           <dd className={warn ? "italic text-ink/60" : "text-ink/75"}>{v}</dd>
         </div>
       ))}
@@ -37,7 +37,7 @@ function MethodMobile() {
     <section className="relative overflow-hidden bg-offwhite px-6 py-20 text-ink md:hidden">
       <Blend from="ink" edge="top" />
       <div className="relative z-10 mx-auto max-w-lg">
-        <span className="overline text-[#a07d2c]">05 · O método</span>
+        <span className="overline text-[#1F73C2]">05 · O método</span>
         <h2 className="mt-2 font-serif text-3xl font-semibold leading-tight">
           Da ideia ao infoproduto, um caminho repetível, sem programar.
         </h2>
@@ -88,14 +88,14 @@ function MethodDesktop() {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-8">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-12">
           <div>
-            <span className="overline text-[#a07d2c]">05 · O método</span>
+            <span className="overline text-[#1F73C2]">05 · O método</span>
             <h2 className="mt-2 font-serif text-4xl font-semibold leading-tight">
               Da ideia ao infoproduto, um caminho repetível, sem programar.
             </h2>
             <div className="mt-10 min-h-[320px]">
               <AnimatePresence mode="wait">
                 <motion.div key={cur.n} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -16 }} transition={{ duration: 0.4 }}>
-                  <div className="overline text-[#a07d2c]">{cur.ato}</div>
+                  <div className="overline text-[#1F73C2]">{cur.ato}</div>
                   <div className="mt-3 flex items-baseline gap-4">
                     <span className="font-serif text-6xl font-semibold text-ink/15">{String(cur.n).padStart(2, "0")}</span>
                     <span className="font-serif text-4xl font-semibold text-ink">{cur.title}</span>
@@ -116,9 +116,9 @@ function MethodDesktop() {
             <ul className="flex-1 space-y-1.5">
               {phases.map((p, i) => (
                 <li key={p.n} className="flex items-center gap-3 rounded-lg px-3 py-2 transition-all duration-300"
-                  style={{ background: i === active ? "rgba(160,125,44,0.12)" : "transparent", opacity: i === active ? 1 : i < active ? 0.55 : 0.35 }}>
+                  style={{ background: i === active ? "rgba(31,115,194,0.12)" : "transparent", opacity: i === active ? 1 : i < active ? 0.55 : 0.35 }}>
                   <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full font-mono text-xs transition-colors"
-                    style={{ background: i <= active ? GOLD : "transparent", color: i <= active ? "#fff" : "var(--color-ink)", border: i <= active ? "none" : "1px solid rgba(27,27,26,0.25)" }}>
+                    style={{ background: i <= active ? GOLD : "transparent", color: i <= active ? "#fff" : "var(--color-ink)", border: i <= active ? "none" : "1px solid rgba(0,31,39,0.25)" }}>
                     {p.n}
                   </span>
                   <span className="font-medium text-ink">{p.title}</span>

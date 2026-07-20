@@ -1,5 +1,5 @@
 /* Transição de cor entre seções (estilo Atlas): funde a borda com a cor vizinha */
-const C = { ink: "#1B1B1A", navy: "#0E2A47", offwhite: "#F4F0E7" };
+const C = { ink: "#001F27", navy: "#003A35", offwhite: "#F4F0E7" };
 
 export default function Blend({ from, edge = "top", height = 112 }) {
   const color = C[from] || from;

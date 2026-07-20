@@ -27,8 +27,8 @@ function Hero() {
         numSquares={50}
         maxOpacity={0.38}
         duration={3}
-        color="rgba(201,162,75,0.85)"
-        stroke="rgba(201,162,75,0.16)"
+        color="rgba(31,115,194,0.85)"
+        stroke="rgba(31,115,194,0.16)"
         className="[mask-image:radial-gradient(980px_circle_at_72%_42%,white,transparent)]"
       />
       <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
@@ -81,7 +81,7 @@ function Hero() {
           </motion.div>
           <div
             className="pointer-events-none absolute inset-0"
-            style={{ background: "linear-gradient(to top, rgba(27,27,26,0.55), transparent 55%)" }}
+            style={{ background: "linear-gradient(to top, rgba(0,31,39,0.55), transparent 55%)" }}
           />
         </motion.div>
       </div>
@@ -133,9 +133,9 @@ export default function Home() {
         <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-[1.1fr_.9fr] md:items-center md:gap-14">
           <div>
             <Reveal>
-              <span className="overline text-[#a07d2c]">02 · Autoridade</span>
+              <span className="overline text-[#1F73C2]">02 · Autoridade</span>
               <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight md:text-5xl">
-                Aprendi na marra que <span className="text-[#a07d2c]">plano é tudo.</span>
+                Aprendi na marra que <span className="text-[#1F73C2]">plano é tudo.</span>
               </h2>
             </Reveal>
             <RevealGroup stagger={0.14} className="mt-8 space-y-5 text-lg leading-relaxed text-ink/75">
@@ -165,7 +165,7 @@ export default function Home() {
                 { num: <Counter to={100} prefix="R$" suffix="M" />, lbl: "sob gestão" },
               ].map((s, i) => (
                 <RevealItem key={i}>
-                  <div className="font-serif text-3xl font-semibold text-[#a07d2c] md:text-4xl">{s.num}</div>
+                  <div className="font-serif text-3xl font-semibold text-[#1F73C2] md:text-4xl">{s.num}</div>
                   <div className="mt-1 overline text-ink/50" style={{ fontSize: "0.62rem" }}>{s.lbl}</div>
                 </RevealItem>
               ))}
