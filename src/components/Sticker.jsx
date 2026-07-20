@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Sticker({ src, className = "", size = 72, rotate = 0, delay = 0, float = 9, opacity = 0.9 }) {
   return (
     <motion.img
-      src={`/img/stickers/${src}.webp`}
+      src={`/img/stk/${src}.webp`}
       alt=""
       aria-hidden="true"
       draggable={false}

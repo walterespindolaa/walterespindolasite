@@ -30,3 +30,7 @@ npm-debug.log*
 # stickers/logo originais pesados (só os otimizados em public/img sobem)
 /public/sticker*.png
 /public/Logo.png
+
+/public/Sticker*.png
+/public/Favicon.png
+/public/Logo*.png
