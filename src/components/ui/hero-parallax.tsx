@@ -146,7 +146,6 @@ export const ProductCard = ({
       whileHover={isLowPowerMode ? {} : {
         y: -20,
       }}
-      key={`${product.title}-${i}`}
       className={cn(
         "group/product relative shrink-0",
         isLowPowerMode ? "h-48 w-[12rem] md:h-64 md:w-[20rem]" : "h-64 w-[16rem] md:h-96 md:w-[30rem]"

@@ -1,38 +1,25 @@
 'use server';
 
-import fs from 'fs';
-import path from 'path';
-
 export interface GalleryImage {
     src: string;
     filename: string;
 }
 
+// Lista estática (evita leitura de filesystem no build da Vercel).
+const FILES = [
+    '/img/walter-hero.webp',
+    '/img/walter-historia.webp',
+    '/img/walter-mood.webp',
+    '/img/walter-alt.webp',
+    '/img/shots/atlas.webp',
+    '/img/shots/atlas1.webp',
+    '/img/shots/zephyr.webp',
+    '/img/shots/zephyr1.webp',
+    '/img/shots/cria.webp',
+    '/img/shots/cria1.webp',
+    '/img/shots/cria2.webp',
+];
+
 export async function getAllGalleryImages(): Promise<GalleryImage[]> {
-    const publicDir = path.join(process.cwd(), 'public');
-    // Fotos do Walter (/img/walter-*.webp) e telas dos sistemas (/img/shots)
-    const sources: { dir: string; base: string; filter?: (f: string) => boolean }[] = [
-        { dir: path.join(publicDir, 'img'), base: '/img', filter: (f) => f.startsWith('walter-') },
-        { dir: path.join(publicDir, 'img', 'shots'), base: '/img/shots' },
-    ];
-
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
-    const images: GalleryImage[] = [];
-
-    try {
-        for (const source of sources) {
-            if (!fs.existsSync(source.dir)) continue;
-            const files = fs.readdirSync(source.dir);
-            files
-                .filter(file => imageExtensions.includes(path.extname(file).toLowerCase()))
-                .filter(file => (source.filter ? source.filter(file) : true))
-                .forEach(file => {
-                    images.push({ src: `${source.base}/${file}`, filename: file });
-                });
-        }
-        return images;
-    } catch (error) {
-        console.error('Erro ao ler as imagens da galeria:', error);
-        return [];
-    }
+    return FILES.map((src) => ({ src, filename: src.split('/').pop() || src }));
 }
