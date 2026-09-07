@@ -1,36 +1,52 @@
-# deps
+# Dependencies
 node_modules
+.pnp
+.pnp.js
 
-# build
+# Testing
+coverage
+
+# Next.js
+.next/
+out/
+build
+
+# Production
 dist
-dist-ssr
 
-# local env / secrets
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
 .env
-.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
 .vercel
 
-# logs
-*.log
-npm-debug.log*
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
 
-# editor / OS
-.DS_Store
-.vscode/*
-!.vscode/extensions.json
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
 
-# fotos originais pesadas (só as otimizadas em public/img sobem)
-/IMG_*.jpg
-/_thumbs
-/_originals
+# OS
+Thumbs.db
 
-# screenshots-fonte (só as otimizadas em public/img sobem)
-/*.png
 
-# stickers/logo originais pesados (só os otimizados em public/img sobem)
-/public/sticker*.png
-/public/Logo.png
-
-/public/Sticker*.png
-/public/Favicon.png
-/public/Logo*.png
+# site antigo (Vite), só backup
+_backup-v1/node_modules
+_backup-v1/dist

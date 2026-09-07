@@ -1,0 +1,279 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Systems",
+    "experience": "Journey",
+    "skills": "Skills",
+    "achievements": "Achievements",
+    "blog": "Blog",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "resume": "Resume",
+    "tools": "Tools",
+    "menu": {
+      "achievements": "Achievements",
+      "achievementsDesc": "Numbers, milestones and recognition",
+      "skills": "Skills",
+      "skillsDesc": "What I use to manage wealth and build systems",
+      "experience": "Journey",
+      "experienceDesc": "Entrepreneur, builder and advisor",
+      "projects": "Systems",
+      "projectsDesc": "The SaaS I built from scratch with AI",
+      "blog": "Blog",
+      "blogDesc": "Ideas, behind the scenes and the method",
+      "gallery": "Gallery",
+      "galleryDesc": "Portraits and system screens"
+    },
+    "shortcuts": {
+      "volume1": "Volume I: Identity",
+      "volume2": "Volume II: Journey",
+      "volume3": "Volume III: Skills",
+      "volume4": "Volume IV: Systems",
+      "preview": "Preview Mode",
+      "idRef": "ID_REF"
+    }
+  },
+  "hero": {
+    "greeting": "Welcome to my space",
+    "subtitle": "Entrepreneur • Systems Builder • Investment Advisor",
+    "cta": { "primary": "See the systems", "secondary": "Talk to me", "exploreMore": "Explore more" },
+    "badge": "Zephyr Investimentos · 10+ years",
+    "scroll": "Scroll down",
+    "role": "CEO at Zephyr Investimentos",
+    "description": "I manage the wealth of those with a lot to lose, build <span class='text-primary font-semibold'>systems with AI</span> and teach the <span class='text-secondary font-semibold'>method</span> behind it."
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Entrepreneur, builder and advisor",
+    "description": "I grew up in a small inn on the coast of Santa Catarina, Brazil. My parents ran it for 25 years without ever having a plan; in 2020, it closed. In the second month of the pandemic the question became mine: are we doing this right? I started building a system to answer it. It became Atlas, and the method I now use with more than 300 families.",
+    "stats": { "experience": "Years in the market", "projects": "Systems live", "certifications": "Families planned", "competitions": "Under management" },
+    "identity": "Identity confirmed",
+    "architecting": "Building",
+    "digitalReality": "Wealth and systems",
+    "leadIn": {
+      "label": "WHAT I DO",
+      "tagline": "THREE PILLARS",
+      "headlineAI": "Wealth.",
+      "headlineData": "Systems.",
+      "headlineSoftware": "A method that repeats",
+      "thesis": "I manage the wealth of high-net-worth families and build the <span class='text-primary italic font-serif-elegant font-normal'>systems</span> that make that care scale.",
+      "scope": "Investment advisory with proprietary technology, and three SaaS built from scratch, with AI, using the same recipe.",
+      "bridging": "From the plan to the system, live.",
+      "integration": "Beyond advisory, I build complete products: data, auth, AI at the core, payments and launch. Alone, with AI, in a way that can be taught.",
+      "signature": "Walter",
+      "role": "Entrepreneur, Builder & Advisor",
+      "aboutMe": "About me",
+      "scroll": "Scroll to explore",
+      "shortStory": "My story in short"
+    },
+    "coreEngineering": {
+      "label": "What holds it up",
+      "title": "Proven <span class='text-primary italic font-serif font-light lowercase'>method.</span> <br /> Measurable <span class='italic font-serif font-light text-foreground'>results.</span>",
+      "p1": "For more than 10 years in the financial market, I manage the wealth of those with a lot to lose: around R$ 260 million under management and more than 300 families with hands-on planning.",
+      "p2": "In 2020 I started building systems to solve the pains I saw in clients. Today there are three SaaS live, Atlas, Zephyr and Cria Social Club, built alone, with AI.",
+      "p3": "All with the same repeatable recipe: Lovable, Supabase, AI at the core, payments and launch. It is exactly the method I teach.",
+      "gpa": "Under management",
+      "projects": "Systems live",
+      "years": "Years in the market"
+    },
+    "emergingResearch": {
+      "label": "Next steps",
+      "title": "WHAT'S NEXT <span class='italic font-serif font-light text-primary lowercase'>&</span> EXPANSION",
+      "agentic": { "title": "THE NEXT SYSTEM", "desc": "Every new pain that shows up in the advisory becomes a system candidate. The next one is already drafted." },
+      "web3": { "title": "FROM IDEA TO SYSTEM IN 24 HOURS", "desc": "Course and 1:1 mentorship for anyone with an idea who wants to launch it with AI, without knowing how to code." }
+    },
+    "profile": {
+      "title": "Wealth protected. <br /> Systems that work for you.",
+      "narrativeLabel": "The core idea",
+      "narrative": "Entrepreneur, investment advisor and systems builder. A decade managing the money of high-net-worth families taught me one thing: what holds people back is not lack of money, it is lack of a plan and clarity.",
+      "narrative2": "That is why I build systems: to turn a plan into routine, and routine into results. That is how Atlas was born, and then Zephyr and Cria.",
+      "pillars": {
+        "reliable": { "title": "Hands-on care", "desc": "Few clients, real attention, a decades-long view." },
+        "optimized": { "title": "From plan to execution", "desc": "Not guesswork: diagnosis, projection and method." },
+        "maintainable": { "title": "Proprietary technology", "desc": "Systems I built myself, to solve real pains." },
+        "evolvable": { "title": "Repeatable", "desc": "The same recipe, four times. And it can be taught." }
+      }
+    },
+    "closing": {
+      "experience": { "label": "JOURNEY", "title1": "KEY", "title2": "EXPERIENCE", "viewMore": "Full journey" },
+      "projects": { "label": "PORTFOLIO", "title1": "SYSTEMS", "title2": "BUILT", "viewMore": "All systems" },
+      "experiencesList": [
+        { "company": "Zephyr Investimentos", "role": "FOUNDER & CEO", "desc": "High-net-worth investment advisory. Around R$ 260 million under management, 300+ families planned, few clients and hands-on follow-up." },
+        { "company": "Atlas · Zephyr · Cria", "role": "SYSTEMS BUILDER", "desc": "Three SaaS built from scratch, alone, with AI: personal finance, wealth planning, business management and content creation." },
+        { "company": "From Idea to System in 24 Hours", "role": "MENTOR", "desc": "Course and 1:1 mentorship for anyone who wants to launch an idea with AI, without coding. The same method I used on my systems." }
+      ],
+      "projectsList": [
+        { "title": "Atlas", "desc": "The plan a good advisor would make, in an app, every day. Personal finance with wealth projection and AI reports." },
+        { "title": "Zephyr Planning", "desc": "My advisory's internal platform: tailored planning, CRM and AI-generated reports." },
+        { "title": "Cria Social Club", "desc": "Content hub for creators: from idea to published in one flow, with AI in the script." }
+      ],
+      "discoverMore": "Discover more"
+    }
+  },
+  "projects": {
+    "title": "Systems",
+    "subtitle": "What I built from scratch, with AI, to solve real pains",
+    "search": "Search systems...",
+    "viewAll": "See all systems",
+    "viewProject": "View system",
+    "liveDemo": "Open",
+    "sourceCode": "Code",
+    "techStack": "Stack",
+    "tools": "Tools",
+    "highlights": "Highlights",
+    "challenges": "Challenges",
+    "filters": { "all": "All", "ongoing": "In progress", "completed": "Live" },
+    "sections": {
+      "missionBrief": "The idea behind it",
+      "keyFeatures": "What I built to solve it",
+      "engineeringChronicles": "The pain and the solution",
+      "visualGallery": "Screens",
+      "installation": "How to use",
+      "projectAccess": "Access",
+      "technologies": "Technologies",
+      "contents": "Contents",
+      "moreProjects": "Other systems",
+      "backToProjects": "Back to systems",
+      "viewMore": "View more",
+      "viewLess": "Show less",
+      "solution": "Solution",
+      "liveDemo": "Open",
+      "sourceCode": "Code"
+    },
+    "status": { "ongoing": "In progress", "completed": "Live" },
+    "metadata": { "role": "Role", "timeline": "Timeline", "team": "Team", "techStack": "Stack", "roleValue": "Idea + build", "teamValue": "Me, with AI", "techStackValue": "{count} technologies" }
+  },
+  "experience": {
+    "title": "Journey",
+    "subtitle": "Entrepreneur, systems builder and investment advisor",
+    "showDetail": "Show details",
+    "hideDetail": "Hide details",
+    "tasks": "RESPONSIBILITIES",
+    "learned": "WHAT I LEARNED",
+    "impact": "IMPACT",
+    "present": "Present",
+    "responsibilities": "Responsibilities",
+    "skills": "Skills",
+    "month": "month",
+    "months": "months",
+    "year": "year",
+    "years": "years",
+    "type": { "full-time": "Full-time", "part-time": "Part-time", "internship": "Internship", "freelance": "Freelance", "contract": "Contract", "apprenticeship": "Apprenticeship", "volunteer": "Volunteer" },
+    "filters": { "all": "All", "latest": "Latest", "oldest": "Oldest", "ongoing": "Ongoing" },
+    "education": { "title": "Education" }
+  },
+  "expertise": { "title": "Pillars", "subtitle": "Wealth, systems and method: what I actually do", "dragHint": "Drag or scroll to explore" },
+  "skills": {
+    "title": "Skills & Tools",
+    "subtitle": "What I use to manage wealth and build systems",
+    "hard": "Skills",
+    "soft": "Soft skills",
+    "technical": "Technical proficiency",
+    "tools": "Tools",
+    "pillars": "Pillars",
+    "achievements": "Achievements",
+    "level": { "beginner": "Beginner", "intermediate": "Intermediate", "advanced": "Advanced", "expert": "Expert" }
+  },
+  "achievements": {
+    "title": "Achievements",
+    "subtitle": "Numbers, milestones and recognition",
+    "search": "Search...",
+    "viewCredential": "View credential",
+    "category": { "all": "All", "certification": "Certification", "award": "Award", "publication": "Publication", "competition": "Competition" },
+    "sort": { "newest": "Newest", "oldest": "Oldest" },
+    "stats": { "total": "Achievements", "awards": "Recognitions", "certifications": "Certifications" }
+  },
+  "contact": {
+    "title": "Let's talk",
+    "subtitle": "Advisory, systems or mentorship: tell me what you need",
+    "form": { "name": "Your name", "email": "Your email", "subject": "Subject", "message": "Your message", "messagePlaceholder": "Tell me what you need...", "send": "Send message", "submit": "SEND", "sending": "SENDING...", "sent": "SENT!", "success": "Message sent. I reply personally.", "error": "Something went wrong. Please try again." },
+    "social": { "title": "Social" },
+    "faq": { "title": "Frequently asked questions" },
+    "info": { "email": "Email", "phone": "Phone", "location": "Location", "availability": "Taking few clients" },
+    "hero": { "title": "LET'S TALK", "subtitle": "Wealth, systems or an idea to get off paper? Reach out.", "ticker": { "build": "Let's build something real · ", "freelance": "Advisory · Systems · Mentorship · " } },
+    "faqData": [
+      { "q": "Do you take any investor?", "a": "No. Zephyr is a high-net-worth advisory with few clients and hands-on follow-up. If that fits you, reach out and let's talk." },
+      { "q": "Do you build systems for other companies?", "a": "I build systems to solve real pains. Custom projects are evaluated case by case, just get in touch." },
+      { "q": "How did you build 3 SaaS without coding?", "a": "With a repeatable method and AI: Lovable to build, Supabase for data and security, AI at the core, payments and launch. Same skeleton in all four." },
+      { "q": "Is there mentorship?", "a": "Yes: From Idea to System in 24 Hours, as a recorded course or 1:1 mentorship (4 sessions). For anyone with an idea who wants to launch it without coding." },
+      { "q": "How do I reach you?", "a": "Through the contact form on this site. I reply personally." }
+    ]
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with",
+    "more": "Wealth",
+    "marquee": ["High-net-worth advisory", "Systems building", "Repeatable method", "Applied AI", "Wealth planning", "From idea to system"],
+    "cta": { "title": "Let's work", "titleHighlight": "together", "subtitle": "Wealth, systems or an idea to get off paper. Tell me what you need." },
+    "links": "LINKS",
+    "socials": "SOCIAL",
+    "localTime": "LOCAL TIME",
+    "version": "VERSION",
+    "versionEdition": "2026 © Edition"
+  },
+  "ctaSection": {
+    "title": "Let's build something",
+    "together": "together",
+    "subtitle": "High-net-worth investment advisory, systems built with AI and a method that repeats. Tell me what you need and let's talk.",
+    "start": "Talk to me",
+    "work": "See the systems",
+    "words": { "amazing": "real", "innovative": "live", "intelligent": "that lasts", "creative": "tailored" },
+    "ribbon1": "Lovable • Supabase • Claude Code • OpenAI • Stripe • Asaas • React • Vercel • PostgreSQL",
+    "ribbon2": "Entrepreneur • Investment Advisor • Systems Builder • Financial Planner • Mentor • CEO at Zephyr"
+  },
+  "stats": {
+    "systemStatus": "Status: active",
+    "portfolio": "Numbers",
+    "totalPulse": "Total",
+    "peakActivity": "Peak",
+    "dailyAverage": "Daily average",
+    "currentSprint": "Current cycle",
+    "engageFlow": "Flow",
+    "weeklyEffort": "Weekly effort",
+    "processSpeed": "Speed",
+    "avgPerf": "Average performance",
+    "latency": "LATENCY: 14MS",
+    "system": "SYSTEM: STABLE",
+    "scanning": "READING_DATA",
+    "engineering": "NUMBERS",
+    "metrics": "METRICS",
+    "analyticsSub": "WEALTH / SYSTEMS / RESULTS",
+    "statusOnline": "STATUS: ONLINE",
+    "loadStable": "SYSTEM: STABLE"
+  },
+  "projectHeader": {
+    "title": "Systems that solve real pains",
+    "subtitle": "Three SaaS built from scratch, with AI, using the same recipe. <span class='font-bold text-foreground'>Personal finance</span>, wealth planning, business management and content, each born from a real pain."
+  },
+  "common": { "loading": "Loading...", "error": "Something went wrong", "notFound": "Page not found", "backHome": "Back to home", "viewMore": "View more", "readMore": "Read more", "close": "Close", "download": "Download", "share": "Share", "scrollAudit": "Scroll to explore" },
+  "technical": {
+    "github": { "title": "Contributions", "description": "Activity over the last year.", "total": "Total", "thisWeek": "This week", "best": "Best", "average": "Average", "less": "Less", "more": "Wealth" },
+    "wakatime": { "title": "Activity", "description": "Last 7 days.", "lastUpdate": "Last updated", "startDate": "Start", "endDate": "End", "dailyAverage": "Daily average", "totalWeek": "Total this week", "bestDay": "Best day", "totalSince": "Total since joined", "topLanguages": "Top languages" }
+  },
+  "blog": {
+    "title": "Ideas & behind the scenes",
+    "subtitle": "Wealth, systems and the method behind it. One new text every week.",
+    "sectionBadge": "The archive",
+    "search": "Search articles...",
+    "readTime": "min read",
+    "readMore": "Read",
+    "back": "Back to blog",
+    "noResults": "No articles yet",
+    "categories": { "applied-ai": "Applied AI", "software-development": "Systems", "about-me": "About me", "more": "Wealth" }
+  },
+  "gallery": { "title": "Gallery", "subtitle": "Portraits and system screens.", "filter": { "all": "All", "image": "Photos", "video": "Videos" }, "viewMedia": "View" },
+  "chatbot": {
+    "title": "Assistant",
+    "subtitle": "Ask about Walter",
+    "placeholder": "Type a message...",
+    "greeting": "Hi! I'm **{name}**'s assistant. 👋\n\nI can answer about:\n- Advisory and wealth planning\n- The systems he built\n- The method and mentorship\n- His journey\n\nWhat would you like to know?",
+    "suggestions": ["How does the advisory work?", "Which systems did he build?", "What is the method?", "How do I reach Walter?"],
+    "error": "Something went wrong. Please try again.",
+    "invalidResponse": "Invalid response from server.",
+    "unknownError": "An unknown error occurred.",
+    "retry": "Try again",
+    "inputHint": "Enter to send, Shift+Enter for newline",
+    "close": "Close chat"
+  }
+}

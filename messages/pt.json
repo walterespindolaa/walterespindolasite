@@ -1,0 +1,380 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Sistemas",
+    "experience": "Trajetória",
+    "skills": "Competências",
+    "achievements": "Conquistas",
+    "blog": "Blog",
+    "gallery": "Galeria",
+    "contact": "Contato",
+    "resume": "Currículo",
+    "tools": "Ferramentas",
+    "menu": {
+      "achievements": "Conquistas",
+      "achievementsDesc": "Números, marcos e reconhecimentos",
+      "skills": "Competências",
+      "skillsDesc": "O que uso pra cuidar de patrimônio e construir sistemas",
+      "experience": "Trajetória",
+      "experienceDesc": "Empresário, construtor e assessor",
+      "projects": "Sistemas",
+      "projectsDesc": "Os SaaS que construí do zero, com IA",
+      "blog": "Blog",
+      "blogDesc": "Ideias, bastidores e o método",
+      "gallery": "Galeria",
+      "galleryDesc": "Retratos e telas dos sistemas"
+    },
+    "shortcuts": {
+      "volume1": "Volume I: Identidade",
+      "volume2": "Volume II: Trajetória",
+      "volume3": "Volume III: Competências",
+      "volume4": "Volume IV: Sistemas",
+      "preview": "Modo prévia",
+      "idRef": "ID_REF"
+    }
+  },
+  "hero": {
+    "greeting": "Bem-vindo ao meu espaço",
+    "subtitle": "Empresário • Construtor de Sistemas • Assessor de Investimentos",
+    "cta": {
+      "primary": "Ver os sistemas",
+      "secondary": "Falar comigo",
+      "exploreMore": "Explorar mais"
+    },
+    "badge": "Zephyr Investimentos · 10+ anos",
+    "scroll": "Role pra baixo",
+    "role": "CEO da Zephyr Investimentos",
+    "description": "Cuido do patrimônio de quem tem muito a perder, construo <span class='text-primary font-semibold'>sistemas com IA</span> e ensino o <span class='text-secondary font-semibold'>método</span> por trás disso."
+  },
+  "about": {
+    "title": "Sobre mim",
+    "subtitle": "Empresário, construtor e assessor",
+    "description": "Cresci numa pousada no litoral de Santa Catarina. Meus pais tocaram o negócio por 25 anos sem nunca ter um plano; em 2020, fechou. No segundo mês da pandemia a pergunta virou minha: e agora, estamos fazendo certo? Comecei a construir um sistema pra responder isso. Virou o Atlas, e o método que hoje uso com mais de 300 famílias.",
+    "stats": {
+      "experience": "Anos no mercado",
+      "projects": "Sistemas no ar",
+      "certifications": "Famílias planejadas",
+      "competitions": "Sob gestão"
+    },
+    "identity": "Identidade confirmada",
+    "architecting": "Construindo",
+    "digitalReality": "Patrimônio e sistemas",
+    "leadIn": {
+      "label": "O QUE EU FAÇO",
+      "tagline": "TRÊS PILARES",
+      "headlineAI": "Patrimônio.",
+      "headlineData": "Sistemas.",
+      "headlineSoftware": "Um método que se repete",
+      "thesis": "Cuido do patrimônio de famílias de alta renda e construo os <span class='text-primary italic font-serif-elegant font-normal'>sistemas</span> que fazem esse cuidado escalar.",
+      "scope": "Assessoria de investimentos com tecnologia própria, e três SaaS construídos do zero, com IA, pela mesma receita.",
+      "bridging": "Do plano ao sistema no ar.",
+      "integration": "Além da assessoria, construo produtos completos: dados, login, IA no core, pagamento e lançamento. Sozinho, com IA, e de um jeito que dá pra ensinar.",
+      "signature": "Walter",
+      "role": "Empresário, Construtor & Assessor",
+      "aboutMe": "Sobre mim",
+      "scroll": "Role pra explorar",
+      "shortStory": "Minha história em resumo"
+    },
+    "coreEngineering": {
+      "label": "O que sustenta",
+      "title": "Método <span class='text-primary italic font-serif font-light lowercase'>comprovado.</span> <br /> Resultado <span class='italic font-serif font-light text-foreground'>mensurável.</span>",
+      "p1": "Há mais de 10 anos no mercado financeiro, cuido do patrimônio de quem tem muito a perder: cerca de R$ 260 milhões sob gestão e mais de 300 famílias com planejamento feito de perto.",
+      "p2": "Em 2020 comecei a construir sistemas pra resolver as dores que via nos clientes. Hoje são três SaaS no ar, Atlas, Zephyr e Cria Social Club, construídos sozinho, com IA.",
+      "p3": "Tudo pela mesma receita repetível: Lovable, Supabase, IA no core, pagamento e lançamento. É exatamente o método que eu ensino.",
+      "gpa": "Sob gestão",
+      "projects": "Sistemas no ar",
+      "years": "Anos de mercado"
+    },
+    "emergingResearch": {
+      "label": "Próximos passos",
+      "title": "O QUE VEM <span class='italic font-serif font-light text-primary lowercase'>&</span> EXPANSÃO",
+      "agentic": {
+        "title": "O PRÓXIMO SISTEMA",
+        "desc": "Cada dor nova que aparece na assessoria vira candidata a sistema. O próximo já está em rascunho."
+      },
+      "web3": {
+        "title": "DA IDEIA AO SISTEMA EM 24 HORAS",
+        "desc": "Curso e mentoria 1:1 pra quem tem uma ideia e quer colocá-la no ar com IA, sem saber programar."
+      }
+    },
+    "profile": {
+      "title": "Patrimônio protegido. <br /> Sistemas que trabalham por você.",
+      "narrativeLabel": "A ideia central",
+      "narrative": "Empresário, assessor de investimentos e construtor de sistemas. Uma década cuidando do dinheiro de famílias de alta renda me ensinou uma coisa: o que trava as pessoas não é falta de dinheiro, é falta de plano e de clareza.",
+      "narrative2": "Por isso construo sistemas: pra transformar plano em rotina, e rotina em resultado. Foi assim que nasceu o Atlas, e depois o Zephyr e o Cria.",
+      "pillars": {
+        "reliable": { "title": "Cuidado de perto", "desc": "Poucos clientes, atenção real, visão de décadas." },
+        "optimized": { "title": "Do plano à execução", "desc": "Não é achismo: é diagnóstico, projeção e método." },
+        "maintainable": { "title": "Tecnologia própria", "desc": "Sistemas construídos por mim, pra resolver dores reais." },
+        "evolvable": { "title": "Repetível", "desc": "A mesma receita, três vezes. E dá pra ensinar." }
+      }
+    },
+    "closing": {
+      "experience": {
+        "label": "TRAJETÓRIA",
+        "title1": "PRINCIPAIS",
+        "title2": "EXPERIÊNCIAS",
+        "viewMore": "Trajetória completa"
+      },
+      "projects": {
+        "label": "PORTFÓLIO",
+        "title1": "SISTEMAS",
+        "title2": "CONSTRUÍDOS",
+        "viewMore": "Todos os sistemas"
+      },
+      "experiencesList": [
+        { "company": "Zephyr Investimentos", "role": "FUNDADOR & CEO", "desc": "Assessoria de investimentos de alta renda. Cerca de R$ 260 milhões sob gestão, mais de 300 famílias planejadas, poucos clientes e acompanhamento de perto." },
+        { "company": "Atlas · Zephyr · Cria", "role": "CONSTRUTOR DE SISTEMAS", "desc": "Três SaaS construídos do zero, sozinho, com IA: finanças pessoais, planejamento patrimonial, gestão de PJ e criação de conteúdo." },
+        { "company": "Da Ideia ao Sistema em 24 horas", "role": "MENTOR", "desc": "Curso e mentoria 1:1 pra quem quer colocar uma ideia no ar com IA, sem saber programar. O mesmo método que usei nos meus sistemas." }
+      ],
+      "projectsList": [
+        { "title": "Atlas", "desc": "O plano que um bom assessor faria, num app, todo dia. Organização financeira com projeção patrimonial e relatórios por IA." },
+        { "title": "Zephyr Planejamento", "desc": "A plataforma interna da minha assessoria: planejamento sob medida, CRM e relatórios gerados com IA." },
+        { "title": "Cria Social Club", "desc": "Hub de conteúdo pra criadores: da ideia ao publicado num fluxo só, com IA no roteiro." }
+      ],
+      "discoverMore": "Descubra mais"
+    }
+  },
+  "projects": {
+    "title": "Sistemas",
+    "subtitle": "O que construí do zero, com IA, pra resolver dores reais",
+    "search": "Buscar sistemas...",
+    "viewAll": "Ver todos os sistemas",
+    "viewProject": "Ver sistema",
+    "liveDemo": "Acessar",
+    "sourceCode": "Código",
+    "techStack": "Stack",
+    "tools": "Ferramentas",
+    "highlights": "Destaques",
+    "challenges": "Desafios",
+    "filters": { "all": "Todos", "ongoing": "Em construção", "completed": "No ar" },
+    "sections": {
+      "missionBrief": "A ideia por trás",
+      "keyFeatures": "O que construí pra resolver",
+      "engineeringChronicles": "A dor e a solução",
+      "visualGallery": "Telas",
+      "installation": "Como usar",
+      "projectAccess": "Acesso",
+      "technologies": "Tecnologias",
+      "contents": "Sumário",
+      "moreProjects": "Outros sistemas",
+      "backToProjects": "Voltar aos sistemas",
+      "viewMore": "Ver mais",
+      "viewLess": "Ver menos",
+      "solution": "Solução",
+      "liveDemo": "Acessar",
+      "sourceCode": "Código"
+    },
+    "status": { "ongoing": "Em construção", "completed": "No ar" },
+    "metadata": {
+      "role": "Papel",
+      "timeline": "Período",
+      "team": "Time",
+      "techStack": "Stack",
+      "roleValue": "Idealização + construção",
+      "teamValue": "Eu, com IA",
+      "techStackValue": "{count} tecnologias"
+    }
+  },
+  "experience": {
+    "title": "Trajetória",
+    "subtitle": "Empresário, construtor de sistemas e assessor de investimentos",
+    "showDetail": "Ver detalhes",
+    "hideDetail": "Ocultar detalhes",
+    "tasks": "RESPONSABILIDADES",
+    "learned": "O QUE APRENDI",
+    "impact": "IMPACTO",
+    "present": "Atual",
+    "responsibilities": "Responsabilidades",
+    "skills": "Competências",
+    "month": "mês",
+    "months": "meses",
+    "year": "ano",
+    "years": "anos",
+    "type": {
+      "full-time": "Tempo integral",
+      "part-time": "Meio período",
+      "internship": "Estágio",
+      "freelance": "Freelance",
+      "contract": "Contrato",
+      "apprenticeship": "Aprendizado",
+      "volunteer": "Voluntário"
+    },
+    "filters": { "all": "Todas", "latest": "Recentes", "oldest": "Antigas", "ongoing": "Atuais" },
+    "education": { "title": "Formação" }
+  },
+  "expertise": {
+    "title": "Pilares",
+    "subtitle": "Patrimônio, sistemas e método: o que eu faço de verdade",
+    "dragHint": "Arraste ou role pra explorar"
+  },
+  "skills": {
+    "title": "Competências & Ferramentas",
+    "subtitle": "O que uso pra cuidar de patrimônio e construir sistemas",
+    "hard": "Competências",
+    "soft": "Comportamentais",
+    "technical": "Domínio técnico",
+    "tools": "Ferramentas",
+    "pillars": "Pilares",
+    "achievements": "Conquistas",
+    "level": { "beginner": "Iniciante", "intermediate": "Intermediário", "advanced": "Avançado", "expert": "Especialista" }
+  },
+  "achievements": {
+    "title": "Conquistas",
+    "subtitle": "Números, marcos e reconhecimentos",
+    "search": "Buscar...",
+    "viewCredential": "Ver credencial",
+    "category": { "all": "Todas", "certification": "Certificação", "award": "Prêmio", "publication": "Publicação", "competition": "Competição" },
+    "sort": { "newest": "Recentes", "oldest": "Antigas" },
+    "stats": { "total": "Conquistas", "awards": "Reconhecimentos", "certifications": "Certificações" }
+  },
+  "contact": {
+    "title": "Vamos conversar",
+    "subtitle": "Assessoria, sistemas ou mentoria: me conta o que você precisa",
+    "form": {
+      "name": "Seu nome",
+      "email": "Seu e-mail",
+      "subject": "Assunto",
+      "message": "Sua mensagem",
+      "messagePlaceholder": "Me conta o que você precisa...",
+      "send": "Enviar mensagem",
+      "submit": "ENVIAR",
+      "sending": "ENVIANDO...",
+      "sent": "ENVIADO!",
+      "success": "Mensagem enviada. Eu respondo pessoalmente.",
+      "error": "Algo deu errado. Tente de novo."
+    },
+    "social": { "title": "Redes" },
+    "faq": { "title": "Perguntas frequentes" },
+    "info": { "email": "E-mail", "phone": "Telefone", "location": "Localização", "availability": "Atendendo poucos clientes" },
+    "hero": {
+      "title": "VAMOS CONVERSAR",
+      "subtitle": "Patrimônio, sistemas ou uma ideia pra tirar do papel? Me chama.",
+      "ticker": { "build": "Vamos construir algo de verdade · ", "freelance": "Assessoria · Sistemas · Mentoria · " }
+    },
+    "faqData": [
+      { "q": "Você atende qualquer investidor?", "a": "Não. A Zephyr é uma assessoria de alta renda, com poucos clientes e acompanhamento de perto. Se faz sentido pra você, me chama e a gente conversa." },
+      { "q": "Você constrói sistemas pra outras empresas?", "a": "Construo sistemas pra resolver dores reais. Projetos sob medida são avaliados caso a caso, é só entrar em contato." },
+      { "q": "Como você construiu 3 SaaS sem programar?", "a": "Com um método repetível e IA: Lovable pra construir, Supabase pra dados e segurança, IA no core, pagamento e lançamento. É o mesmo esqueleto nos quatro." },
+      { "q": "Existe mentoria?", "a": "Sim: Da Ideia ao Sistema em 24 horas, em curso gravado ou mentoria 1:1 (4 encontros). É pra quem tem uma ideia e quer colocá-la no ar sem saber programar." },
+      { "q": "Como falo com você?", "a": "Pelo formulário aqui do site. Eu respondo pessoalmente." }
+    ]
+  },
+  "footer": {
+    "copyright": "Todos os direitos reservados.",
+    "madeWith": "Feito com",
+    "more": "Patrimônio",
+    "marquee": ["Assessoria de alta renda", "Construção de sistemas", "Método repetível", "IA aplicada", "Planejamento patrimonial", "Da ideia ao sistema"],
+    "cta": {
+      "title": "Vamos trabalhar",
+      "titleHighlight": "juntos",
+      "subtitle": "Patrimônio, sistemas ou uma ideia pra tirar do papel. Me conta o que você precisa."
+    },
+    "links": "LINKS",
+    "socials": "REDES",
+    "localTime": "HORA LOCAL",
+    "version": "VERSÃO",
+    "versionEdition": "Edição 2026 ©"
+  },
+  "ctaSection": {
+    "title": "Vamos construir algo",
+    "together": "juntos",
+    "subtitle": "Assessoria de investimentos de alta renda, sistemas construídos com IA e um método que se repete. Me conta o que você precisa e a gente conversa.",
+    "start": "Falar comigo",
+    "work": "Ver os sistemas",
+    "words": { "amazing": "de verdade", "innovative": "no ar", "intelligent": "que dura", "creative": "sob medida" },
+    "ribbon1": "Lovable • Supabase • Claude Code • OpenAI • Stripe • Asaas • React • Vercel • PostgreSQL",
+    "ribbon2": "Empresário • Assessor de Investimentos • Construtor de Sistemas • Planejador Financeiro • Mentor • CEO da Zephyr"
+  },
+  "stats": {
+    "systemStatus": "Status: ativo",
+    "portfolio": "Números",
+    "totalPulse": "Total",
+    "peakActivity": "Pico",
+    "dailyAverage": "Média diária",
+    "currentSprint": "Ciclo atual",
+    "engageFlow": "Fluxo",
+    "weeklyEffort": "Esforço semanal",
+    "processSpeed": "Velocidade",
+    "avgPerf": "Desempenho médio",
+    "latency": "LATÊNCIA: 14MS",
+    "system": "SISTEMA: ESTÁVEL",
+    "scanning": "LENDO_DADOS",
+    "engineering": "NÚMEROS",
+    "metrics": "MÉTRICAS",
+    "analyticsSub": "PATRIMÔNIO / SISTEMAS / RESULTADOS",
+    "statusOnline": "STATUS: ONLINE",
+    "loadStable": "SISTEMA: ESTÁVEL"
+  },
+  "projectHeader": {
+    "title": "Sistemas que resolvem dores reais",
+    "subtitle": "Três SaaS construídos do zero, com IA, pela mesma receita. <span class='font-bold text-foreground'>Finanças pessoais</span>, planejamento patrimonial, gestão de PJ e conteúdo, cada um nascido de uma dor real."
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Algo deu errado",
+    "notFound": "Página não encontrada",
+    "backHome": "Voltar ao início",
+    "viewMore": "Ver mais",
+    "readMore": "Ler mais",
+    "close": "Fechar",
+    "download": "Baixar",
+    "share": "Compartilhar",
+    "scrollAudit": "Role pra explorar"
+  },
+  "technical": {
+    "github": {
+      "title": "Contribuições",
+      "description": "Atividade no último ano.",
+      "total": "Total",
+      "thisWeek": "Esta semana",
+      "best": "Melhor",
+      "average": "Média",
+      "less": "Menos",
+      "more": "Patrimônio"
+    },
+    "wakatime": {
+      "title": "Atividade",
+      "description": "Últimos 7 dias.",
+      "lastUpdate": "Atualizado em",
+      "startDate": "Início",
+      "endDate": "Fim",
+      "dailyAverage": "Média diária",
+      "totalWeek": "Total da semana",
+      "bestDay": "Melhor dia",
+      "totalSince": "Total desde o início",
+      "topLanguages": "Principais linguagens"
+    }
+  },
+  "blog": {
+    "title": "Ideias & bastidores",
+    "subtitle": "Patrimônio, sistemas com IA e o método por trás. Um texto novo por semana.",
+    "sectionBadge": "O arquivo",
+    "search": "Buscar artigos...",
+    "readTime": "min de leitura",
+    "readMore": "Ler",
+    "back": "Voltar ao blog",
+    "noResults": "Nenhum artigo ainda",
+    "categories": { "applied-ai": "IA aplicada", "software-development": "Sistemas", "about-me": "Sobre mim", "more": "Patrimônio" }
+  },
+  "gallery": {
+    "title": "Galeria",
+    "subtitle": "Retratos e telas dos sistemas.",
+    "filter": { "all": "Tudo", "image": "Fotos", "video": "Vídeos" },
+    "viewMedia": "Ver"
+  },
+  "chatbot": {
+    "title": "Assistente",
+    "subtitle": "Pergunte sobre o Walter",
+    "placeholder": "Escreva uma mensagem...",
+    "greeting": "Oi! Sou o assistente do **{name}**. 👋\n\nPosso responder sobre:\n- Assessoria e planejamento patrimonial\n- Os sistemas que ele construiu\n- O método e a mentoria\n- Trajetória\n\nO que você quer saber?",
+    "suggestions": ["Como funciona a assessoria?", "Quais sistemas ele construiu?", "O que é o método?", "Como falo com o Walter?"],
+    "error": "Deu um erro. Tente de novo.",
+    "invalidResponse": "Resposta inválida do servidor.",
+    "unknownError": "Erro desconhecido.",
+    "retry": "Tentar de novo",
+    "inputHint": "Enter envia, Shift+Enter quebra linha",
+    "close": "Fechar chat"
+  }
+}
