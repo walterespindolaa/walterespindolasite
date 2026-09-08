@@ -1038,8 +1038,8 @@ export default function AchievementsPage() {
                         >
                             <ErrorBoundary fallback={<div className="text-center opacity-50">Visual indisponível</div>}>
                                 <FallingText
-                                    text="Patrimônio Planejamento Zephyr Atlas Cria Supabase Lovable Claude OpenAI Stripe Asaas Vercel Método IA Sucessão Alocação Execução"
-                                    highlightWords={['Patrimônio', 'Atlas', 'Zephyr', 'Método', 'IA']}
+                                    text="Patrimônio Planejamento Zephyr Atlas Cria Supabase Lovable Claude OpenAI Stripe Asaas Vercel Método Sucessão Alocação Execução"
+                                    highlightWords={['Patrimônio', 'Atlas', 'Zephyr', 'Método', 'Cria']}
                                     trigger="scroll"
                                     gravity={0.8}
                                     mouseConstraintStiffness={0.2}

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -32,7 +33,7 @@ const PROJECT_DATA: ProjectData[] = [
     image: "/img/shots/zephyr.webp",
     category: "Plataforma · Assessoria",
     year: "2025",
-    description: "Planejamento sob medida, CRM e relatórios com IA.",
+    description: "Planejamento sob medida, CRM e relatórios automáticos.",
     pain: "Planejamento feito em planilha, que envelhece no dia seguinte.",
     slug: "zephyr"
   },
@@ -41,7 +42,7 @@ const PROJECT_DATA: ProjectData[] = [
     image: "/img/shots/cria.webp",
     category: "SaaS · Conteúdo",
     year: "2026",
-    description: "Da ideia ao publicado num fluxo só, com IA no roteiro.",
+    description: "Da ideia ao publicado num fluxo só, com apoio no roteiro.",
     pain: "Ter o que dizer e travar na hora de publicar.",
     slug: "cria-social-club"
   },
@@ -188,7 +189,55 @@ function ProjectSlide({ data, index }: { data: ProjectData; index: number }) {
   );
 }
 
+// Mobile: lista empilhada, sem sticky nem transformações por scroll (evita tremor no iOS).
+function MobileSystemsList() {
+  return (
+    <div className="w-full">
+      {PROJECT_DATA.map((data, index) => {
+        const dark = index % 2 === 0;
+        const num = String(index + 1).padStart(2, "0");
+        return (
+          <section
+            key={data.slug}
+            className={cn("w-full px-5 py-12", dark ? "bg-[#003A35] text-[#F4F0E7]" : "bg-[#F4F0E7] text-[#001F27]")}
+          >
+            <BrowserFrame src={data.image} alt={data.title} dark={dark} />
+            <div className="mt-6 space-y-4">
+              <div className="font-mono text-[10px] tracking-[0.35em] uppercase opacity-60">
+                {num} / {String(TOTAL).padStart(2, "0")} · {data.category} · {data.year}
+              </div>
+              <h3 className="font-serif text-4xl leading-none">{data.title}</h3>
+              <p className="text-base opacity-90">{data.description}</p>
+              <div className={cn("border-l-2 pl-4", dark ? "border-[#719A73]" : "border-[#003A35]")}>
+                <p className="font-mono text-[10px] tracking-[0.3em] uppercase opacity-60 mb-1">O problema que resolvi</p>
+                <p className="text-sm leading-snug">{data.pain}</p>
+              </div>
+              <Link
+                href={`/projects/${data.slug}`}
+                className={cn("inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold", dark ? "bg-[#F4F0E7] text-[#003A35]" : "bg-[#003A35] text-[#F4F0E7]")}
+              >
+                Ver sistema <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </section>
+        );
+      })}
+      <div className="px-5 py-6 bg-background">
+        <Link href="/projects" className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.25em] text-foreground/70">
+          Todos os sistemas <ArrowUpRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export function ArgentLoopInfiniteSlider() {
+  const isMobile = useIsMobile();
+  if (isMobile) return <MobileSystemsList />;
+  return <DesktopSlider />;
+}
+
+function DesktopSlider() {
   const containerRef = React.useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({

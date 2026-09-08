@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Sistemas',
-    description: 'Os SaaS que Walter Espindola construiu do zero, com IA.',
+    description: 'Os sistemas que Walter Espindola construiu do zero.',
 };
 
 export default function ProjectsLayout({

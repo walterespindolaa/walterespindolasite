@@ -139,7 +139,7 @@ function BlogContent() {
                     <p className="font-mono text-[11px] tracking-[0.3em] uppercase text-muted-foreground">Ideias & bastidores</p>
                     <h1 className="font-serif text-5xl md:text-7xl leading-[0.95] text-foreground">Em breve, toda semana.</h1>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                        Vou escrever aqui sobre patrimônio, sobre construir sistemas com IA e sobre o que aprendo no caminho. Enquanto isso, os bastidores estão no Instagram.
+                        Vou escrever aqui sobre patrimônio, sobre construir sistemas e sobre o que aprendo no caminho. Enquanto isso, os bastidores estão no Instagram.
                     </p>
                     <div className="flex flex-wrap gap-3 justify-center pt-4">
                         <a href="https://www.instagram.com/walterespindola_" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full bg-[#003A35] text-[#F4F0E7] text-sm font-semibold">Seguir no Instagram</a>

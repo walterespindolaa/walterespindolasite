@@ -52,7 +52,7 @@ const CHAPTERS: Chapter[] = [
         sticker: "/img/stk/gears.webp",
         photo: "/img/shots/zephyr.webp",
         title: "A receita se repete",
-        text: "Cada dor que eu via na assessoria virava um sistema. A plataforma da própria Zephyr. O Cria Social Club, pra quem tem o que dizer e trava na hora de publicar. Três sistemas no ar, construídos sozinho, com IA, pela mesma receita: dados, login, IA no core, pagamento e lançamento.",
+        text: "Cada dor que eu via na assessoria virava um sistema. A plataforma da própria Zephyr. O Cria Social Club, pra quem tem o que dizer e trava na hora de publicar. Três sistemas no ar, construídos sozinho, pela mesma receita: dados, login, automação, pagamento e lançamento.",
     },
     {
         id: "agora",

@@ -290,7 +290,7 @@ export default function CardNav({
                             <div className="flex-1 p-5 flex flex-col gap-4">
                                 {/* Top 2 big boxes */}
                                 <div className="grid grid-cols-2 gap-4">
-                                    <MegaBoxBig href="/projects" icon={Rocket} title="Sistemas" desc="Os SaaS que construí do zero, com IA" theme={theme} pathname={pathname} />
+                                    <MegaBoxBig href="/projects" icon={Rocket} title="Sistemas" desc="Os sistemas que construí do zero" theme={theme} pathname={pathname} />
                                     <MegaBoxBig href="/experience" icon={Briefcase} title="Trajetória" desc="Empresário, construtor e assessor" theme={theme} pathname={pathname} />
                                 </div>
                                 {/* Bottom 3 small boxes */}

@@ -360,7 +360,7 @@ export function HeroVisual({ isExiting = false }: { isExiting?: boolean }) {
               <ProfileCard
                 name={personal.name}
                 title="Empresário · Construtor de Sistemas · Assessor"
-                description={`${personal.name} é fundador e CEO da Zephyr Investimentos, assessoria de alta renda com cerca de R$ 260 milhões sob gestão e mais de 300 famílias planejadas. Construiu, sozinho e com IA, três SaaS do zero: Atlas, Zephyr e Cria Social Club. Hoje ensina o método por trás disso.`}
+                description={`${personal.name} é fundador e CEO da Zephyr Investimentos, assessoria de alta renda com cerca de R$ 260 milhões sob gestão e mais de 300 famílias planejadas. Construiu, sozinho, três SaaS do zero: Atlas, Zephyr e Cria Social Club. Hoje ensina o método por trás disso.`}
                 imageUrl={personal.avatar}
                 githubUrl={undefined}
                 linkedinUrl={personal.socialLinks.find(s => s.platform === 'LinkedIn')?.url}

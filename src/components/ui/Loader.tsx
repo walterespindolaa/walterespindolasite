@@ -26,7 +26,7 @@ const config = {
     { icon: Layers, label: "SUPABASE", color: "#719A73" },
     { icon: Code, label: "ZEPHYR", color: "#719A73" },
     { icon: Layers, label: "CRIA", color: "#719A73" },
-    { icon: Brain, label: "IA", color: "#1F73C2" },
+    { icon: Brain, label: "MÉTODO", color: "#1F73C2" },
     { icon: Workflow, label: "NO AR", color: "#719A73" }
   ],
   softskill: [

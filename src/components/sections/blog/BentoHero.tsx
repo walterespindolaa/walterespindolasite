@@ -639,7 +639,7 @@ export const BentoHero = ({ isLowPowerMode }: { isLowPowerMode?: boolean }) => {
     },
     {
       title: "Sistemas",
-      description: "Os SaaS que construí do zero, com IA.",
+      description: "Os sistemas que construí do zero.",
       visual: <ProjectsVisual />,
       colSpan: "lg:col-span-1",
       height: "h-[420px]",

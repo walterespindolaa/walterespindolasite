@@ -38,7 +38,7 @@ const TECH_DESCRIPTIONS: Record<string, string> = {
     "Node.js": "Roda a lógica de servidor e as integrações quando o Supabase não basta.",
     "Supabase": "Banco, login, segurança e edge functions. É o coração dos meus três sistemas.",
     "PostgreSQL": "O banco por trás de tudo. Confiável e feito pra dado estruturado, como patrimônio e caixa.",
-    "OpenAI": "IA no core: relatórios, diagnósticos e o copiloto dentro do fluxo de trabalho.",
+    "OpenAI": "Relatórios, diagnósticos e o copiloto dentro do fluxo de trabalho.",
     "Claude Code": "Meu parceiro de construção. É com ele que escrevo, reviso e evoluo o código.",
     "Anthropic": "Os modelos Claude, que uso pra raciocínio e geração de relatórios nos sistemas.",
     "Stripe": "Pagamento internacional e assinaturas. Planos, trial e cobrança sem dor de cabeça.",

@@ -15,7 +15,7 @@ const INITIAL_CHIPS = [
   {
     id: 2,
     title: "Construtor de Sistemas",
-    description: "3 SaaS do zero, com IA",
+    description: "3 SaaS do zero",
     icon: Cpu,
   },
   {

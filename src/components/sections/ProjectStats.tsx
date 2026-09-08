@@ -152,7 +152,7 @@ export function ProjectStats({ isLowPowerMode }: { isLowPowerMode?: boolean }) {
                     </h2>
 
                     <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Sistemas que resolvem dores reais, construídos do zero, com IA, pela mesma receita
+                        Sistemas que resolvem dores reais, construídos do zero, pela mesma receita
                     </p>
                 </motion.div>
 

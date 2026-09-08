@@ -22,10 +22,10 @@ export const ParallaxScrollFeatureSection = () => {
             id: 2,
             title: "Da ideia ao sistema no ar",
             subtitle: "CONSTRUTOR DE SISTEMAS",
-            description: "Três SaaS construídos do zero, sozinho, com IA: Atlas, Zephyr e Cria Social Club. Dados, login, IA no core, pagamento e lançamento, sempre pela mesma receita.",
+            description: "Três SaaS construídos do zero, sozinho: Atlas, Zephyr e Cria Social Club. Dados, login, automação, pagamento e lançamento, sempre pela mesma receita.",
             imageUrl: '/img/shots/atlas.webp',
             reverse: true,
-            skills: ["Atlas", "Zephyr", "Cria", "Supabase", "IA no core"]
+            skills: ["Atlas", "Zephyr", "Cria", "Supabase", "Automação"]
         },
         {
             id: 3,

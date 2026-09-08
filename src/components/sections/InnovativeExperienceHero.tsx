@@ -38,7 +38,7 @@ const NODES_DATA: Record<string, NodeData[]> = {
     ],
     experience: [
         { label: 'Fundador & CEO', description: 'Zephyr Investimentos · cerca de R$ 260M sob gestão.', orbitIndex: 0, position: 0.2, imageUrl: "/img/walter-hero.webp" },
-        { label: 'Construtor de sistemas', description: 'Três SaaS do zero, sozinho, com IA.', orbitIndex: 1, position: 0.45, imageUrl: "/img/shots/atlas.webp" },
+        { label: 'Construtor de sistemas', description: 'Três SaaS do zero, sozinho.', orbitIndex: 1, position: 0.45, imageUrl: "/img/shots/atlas.webp" },
         { label: 'Mentor', description: 'Da Ideia ao Sistema em 24 horas.', orbitIndex: 0, position: 0.6, imageUrl: "/img/walter-historia.webp" },
         { label: 'Planejador', description: '300+ famílias com um plano de verdade.', orbitIndex: 1, position: 0.8, imageUrl: "/img/shots/zephyr.webp" },
         { label: 'Empresário', description: 'Poucos clientes, alto toque, visão de décadas.', orbitIndex: 0, position: 0.95, imageUrl: "/img/walter-alt.webp" },

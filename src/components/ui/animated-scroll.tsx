@@ -31,8 +31,8 @@ const pages = [
         rightComponent: <Loader type="software" />,
         leftContent: {
             heading: 'Da ideia ao sistema no ar',
-            description: 'Três SaaS construídos do zero, sozinho, com IA: Atlas, Zephyr e Cria Social Club. Dados, login, IA no core, pagamento e lançamento. Sempre pela mesma receita.',
-            skills: ["Atlas", "Zephyr", "Cria", "Supabase", "IA no core"],
+            description: 'Três SaaS construídos do zero, sozinho: Atlas, Zephyr e Cria Social Club. Dados, login, automação, pagamento e lançamento. Sempre pela mesma receita.',
+            skills: ["Atlas", "Zephyr", "Cria", "Supabase", "Automação"],
             hoverColor: "bg-[#1F73C2]/10"
         },
         rightContent: null,

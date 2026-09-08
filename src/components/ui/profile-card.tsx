@@ -22,7 +22,7 @@ export function ProfileCard(props: ProfileCardProps) {
   const {
     name = "Walter Espindola",
     title = "Empresário · Construtor de Sistemas · Assessor de Investimentos",
-    description = "Fundador e CEO da Zephyr Investimentos. Cuido do patrimônio de quem tem muito a perder e construo, com IA, os sistemas que fazem isso escalar.",
+    description = "Fundador e CEO da Zephyr Investimentos. Cuido do patrimônio de quem tem muito a perder e construo os sistemas que fazem isso escalar.",
     imageUrl = "/img/walter-hero.webp",
     githubUrl = "#",
     twitterUrl = "#",

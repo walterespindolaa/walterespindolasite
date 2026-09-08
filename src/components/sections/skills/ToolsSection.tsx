@@ -52,7 +52,7 @@ export const ToolsSection = () => {
                     O kit de construção
                 </h2>
                 <p className="max-w-3xl mx-auto text-lg md:text-xl text-foreground/60 leading-relaxed font-medium px-4">
-                    As ferramentas que me deixam construir sozinho: Lovable pra construir, Supabase pra dados, IA no core, Stripe e Asaas pra cobrar, Vercel pra colocar no ar.
+                    As ferramentas que me deixam construir sozinho: Lovable pra construir, Supabase pra dados, Stripe e Asaas pra cobrar, Vercel pra colocar no ar.
                 </p>
             </motion.div>
 

@@ -19,7 +19,7 @@
       "experience": "Trajetória",
       "experienceDesc": "Empresário, construtor e assessor",
       "projects": "Sistemas",
-      "projectsDesc": "Os SaaS que construí do zero, com IA",
+      "projectsDesc": "Os sistemas que construí do zero",
       "blog": "Blog",
       "blogDesc": "Ideias, bastidores e o método",
       "gallery": "Galeria",
@@ -45,7 +45,7 @@
     "badge": "Zephyr Investimentos · 10+ anos",
     "scroll": "Role pra baixo",
     "role": "CEO da Zephyr Investimentos",
-    "description": "Cuido do patrimônio de quem tem muito a perder, construo <span class='text-primary font-semibold'>sistemas com IA</span> e ensino o <span class='text-secondary font-semibold'>método</span> por trás disso."
+    "description": "Cuido do patrimônio de quem tem muito a perder, construo <span class='text-primary font-semibold'>sistemas próprios</span> e ensino o <span class='text-secondary font-semibold'>método</span> por trás disso."
   },
   "about": {
     "title": "Sobre mim",
@@ -67,9 +67,9 @@
       "headlineData": "Sistemas.",
       "headlineSoftware": "Um método que se repete",
       "thesis": "Cuido do patrimônio de famílias de alta renda e construo os <span class='text-primary italic font-serif-elegant font-normal'>sistemas</span> que fazem esse cuidado escalar.",
-      "scope": "Assessoria de investimentos com tecnologia própria, e três SaaS construídos do zero, com IA, pela mesma receita.",
+      "scope": "Assessoria de investimentos com tecnologia própria, e três SaaS construídos do zero, pela mesma receita.",
       "bridging": "Do plano ao sistema no ar.",
-      "integration": "Além da assessoria, construo produtos completos: dados, login, IA no core, pagamento e lançamento. Sozinho, com IA, e de um jeito que dá pra ensinar.",
+      "integration": "Além da assessoria, construo produtos completos: dados, login, automação, pagamento e lançamento. Sozinho, e de um jeito que dá pra ensinar.",
       "signature": "Walter",
       "role": "Empresário, Construtor & Assessor",
       "aboutMe": "Sobre mim",
@@ -80,8 +80,8 @@
       "label": "O que sustenta",
       "title": "Método <span class='text-primary italic font-serif font-light lowercase'>comprovado.</span> <br /> Resultado <span class='italic font-serif font-light text-foreground'>mensurável.</span>",
       "p1": "Há mais de 10 anos no mercado financeiro, cuido do patrimônio de quem tem muito a perder: cerca de R$ 260 milhões sob gestão e mais de 300 famílias com planejamento feito de perto.",
-      "p2": "Em 2020 comecei a construir sistemas pra resolver as dores que via nos clientes. Hoje são três SaaS no ar, Atlas, Zephyr e Cria Social Club, construídos sozinho, com IA.",
-      "p3": "Tudo pela mesma receita repetível: Lovable, Supabase, IA no core, pagamento e lançamento. É exatamente o método que eu ensino.",
+      "p2": "Em 2020 comecei a construir sistemas pra resolver as dores que via nos clientes. Hoje são três SaaS no ar, Atlas, Zephyr e Cria Social Club, construídos sozinho.",
+      "p3": "Tudo pela mesma receita: dor clara, dados, telas essenciais, pagamento e lançamento. É exatamente o método que eu ensino.",
       "gpa": "Sob gestão",
       "projects": "Sistemas no ar",
       "years": "Anos de mercado"
@@ -95,7 +95,7 @@
       },
       "web3": {
         "title": "DA IDEIA AO SISTEMA EM 24 HORAS",
-        "desc": "Curso e mentoria 1:1 pra quem tem uma ideia e quer colocá-la no ar com IA, sem saber programar."
+        "desc": "Curso e mentoria 1:1 pra quem tem uma ideia e quer colocá-la no ar sem saber programar."
       }
     },
     "profile": {
@@ -125,20 +125,20 @@
       },
       "experiencesList": [
         { "company": "Zephyr Investimentos", "role": "FUNDADOR & CEO", "desc": "Assessoria de investimentos de alta renda. Cerca de R$ 260 milhões sob gestão, mais de 300 famílias planejadas, poucos clientes e acompanhamento de perto." },
-        { "company": "Atlas · Zephyr · Cria", "role": "CONSTRUTOR DE SISTEMAS", "desc": "Três SaaS construídos do zero, sozinho, com IA: finanças pessoais, planejamento patrimonial, gestão de PJ e criação de conteúdo." },
-        { "company": "Da Ideia ao Sistema em 24 horas", "role": "MENTOR", "desc": "Curso e mentoria 1:1 pra quem quer colocar uma ideia no ar com IA, sem saber programar. O mesmo método que usei nos meus sistemas." }
+        { "company": "Atlas · Zephyr · Cria", "role": "CONSTRUTOR DE SISTEMAS", "desc": "Três SaaS construídos do zero, sozinho: finanças pessoais, planejamento patrimonial, gestão de PJ e criação de conteúdo." },
+        { "company": "Da Ideia ao Sistema em 24 horas", "role": "MENTOR", "desc": "Curso e mentoria 1:1 pra quem quer colocar uma ideia no ar sem saber programar. O mesmo método que usei nos meus sistemas." }
       ],
       "projectsList": [
-        { "title": "Atlas", "desc": "O plano que um bom assessor faria, num app, todo dia. Organização financeira com projeção patrimonial e relatórios por IA." },
-        { "title": "Zephyr Planejamento", "desc": "A plataforma interna da minha assessoria: planejamento sob medida, CRM e relatórios gerados com IA." },
-        { "title": "Cria Social Club", "desc": "Hub de conteúdo pra criadores: da ideia ao publicado num fluxo só, com IA no roteiro." }
+        { "title": "Atlas", "desc": "O plano que um bom assessor faria, num app, todo dia. Organização financeira com projeção patrimonial e relatórios automáticos." },
+        { "title": "Zephyr Planejamento", "desc": "A plataforma interna da minha assessoria: planejamento sob medida, CRM e relatórios automáticos." },
+        { "title": "Cria Social Club", "desc": "Hub de conteúdo pra criadores: da ideia ao publicado num fluxo só, com apoio no roteiro." }
       ],
       "discoverMore": "Descubra mais"
     }
   },
   "projects": {
     "title": "Sistemas",
-    "subtitle": "O que construí do zero, com IA, pra resolver dores reais",
+    "subtitle": "O que construí do zero pra resolver dores reais",
     "search": "Buscar sistemas...",
     "viewAll": "Ver todos os sistemas",
     "viewProject": "Ver sistema",
@@ -173,7 +173,7 @@
       "team": "Time",
       "techStack": "Stack",
       "roleValue": "Idealização + construção",
-      "teamValue": "Eu, com IA",
+      "teamValue": "Eu",
       "techStackValue": "{count} tecnologias"
     }
   },
@@ -256,7 +256,7 @@
     "faqData": [
       { "q": "Você atende qualquer investidor?", "a": "Não. A Zephyr é uma assessoria de alta renda, com poucos clientes e acompanhamento de perto. Se faz sentido pra você, me chama e a gente conversa." },
       { "q": "Você constrói sistemas pra outras empresas?", "a": "Construo sistemas pra resolver dores reais. Projetos sob medida são avaliados caso a caso, é só entrar em contato." },
-      { "q": "Como você construiu 3 SaaS sem programar?", "a": "Com um método repetível e IA: Lovable pra construir, Supabase pra dados e segurança, IA no core, pagamento e lançamento. É o mesmo esqueleto nos quatro." },
+      { "q": "Como você construiu 3 SaaS sem programar?", "a": "Com método: dor clara em uma frase, telas essenciais no papel, dados bem definidos, construção com as ferramentas certas, pagamento e lançamento. É o mesmo esqueleto nos três." },
       { "q": "Existe mentoria?", "a": "Sim: Da Ideia ao Sistema em 24 horas, em curso gravado ou mentoria 1:1 (4 encontros). É pra quem tem uma ideia e quer colocá-la no ar sem saber programar." },
       { "q": "Como falo com você?", "a": "Pelo formulário aqui do site. Eu respondo pessoalmente." }
     ]
@@ -265,7 +265,7 @@
     "copyright": "Todos os direitos reservados.",
     "madeWith": "Feito com",
     "more": "Patrimônio",
-    "marquee": ["Assessoria de alta renda", "Construção de sistemas", "Método repetível", "IA aplicada", "Planejamento patrimonial", "Da ideia ao sistema"],
+    "marquee": ["Assessoria de alta renda", "Construção de sistemas", "Método repetível", "Tecnologia própria", "Planejamento patrimonial", "Da ideia ao sistema"],
     "cta": {
       "title": "Vamos trabalhar",
       "titleHighlight": "juntos",
@@ -280,7 +280,7 @@
   "ctaSection": {
     "title": "Vamos construir algo",
     "together": "juntos",
-    "subtitle": "Assessoria de investimentos de alta renda, sistemas construídos com IA e um método que se repete. Me conta o que você precisa e a gente conversa.",
+    "subtitle": "Assessoria de investimentos de alta renda, sistemas próprios e um método que se repete. Me conta o que você precisa e a gente conversa.",
     "start": "Falar comigo",
     "work": "Ver os sistemas",
     "words": { "amazing": "de verdade", "innovative": "no ar", "intelligent": "que dura", "creative": "sob medida" },
@@ -309,7 +309,7 @@
   },
   "projectHeader": {
     "title": "Sistemas que resolvem dores reais",
-    "subtitle": "Três SaaS construídos do zero, com IA, pela mesma receita. <span class='font-bold text-foreground'>Finanças pessoais</span>, planejamento patrimonial, gestão de PJ e conteúdo, cada um nascido de uma dor real."
+    "subtitle": "Três SaaS construídos do zero, pela mesma receita. <span class='font-bold text-foreground'>Finanças pessoais</span>, planejamento patrimonial, gestão de PJ e conteúdo, cada um nascido de uma dor real."
   },
   "common": {
     "loading": "Carregando...",
@@ -349,14 +349,14 @@
   },
   "blog": {
     "title": "Ideias & bastidores",
-    "subtitle": "Patrimônio, sistemas com IA e o método por trás. Um texto novo por semana.",
+    "subtitle": "Patrimônio, sistemas e o método por trás. Um texto novo por semana.",
     "sectionBadge": "O arquivo",
     "search": "Buscar artigos...",
     "readTime": "min de leitura",
     "readMore": "Ler",
     "back": "Voltar ao blog",
     "noResults": "Nenhum artigo ainda",
-    "categories": { "applied-ai": "IA aplicada", "software-development": "Sistemas", "about-me": "Sobre mim", "more": "Patrimônio" }
+    "categories": { "applied-ai": "Tecnologia própria", "software-development": "Sistemas", "about-me": "Sobre mim", "more": "Patrimônio" }
   },
   "gallery": {
     "title": "Galeria",

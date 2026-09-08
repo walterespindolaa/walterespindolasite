@@ -332,7 +332,7 @@ export default function SkillsPage() {
                                     O que sustenta o trabalho
                                 </h2>
                                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed pt-2">
-                                    Uma década de mercado financeiro e uma receita repetível pra construir sistemas com IA. É isso que uso todo dia.
+                                    Uma década de mercado financeiro e uma receita repetível pra construir sistemas. É isso que uso todo dia.
                                 </p>
                             </motion.div>
                         </div>

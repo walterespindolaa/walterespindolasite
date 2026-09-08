@@ -3,7 +3,7 @@ import type { BlogPost } from '@/types';
 const AUTHOR = { name: 'Walter Espindola', avatar: '/img/walter-hero.webp' };
 
 // Um texto novo por semana. Categorias: 'more' = Patrimônio, 'software-development' = Sistemas,
-// 'applied-ai' = IA aplicada, 'about-me' = Sobre mim.
+// 'applied-ai' = Construção, 'about-me' = Sobre mim.
 export const blogs: BlogPost[] = [
     {
         id: 'b01',
@@ -111,36 +111,36 @@ Se a terceira resposta for "não", já valeu a conversa.`
     {
         id: 'b04',
         slug: 'como-eu-construo-um-sistema-sem-saber-programar',
-        title: 'Como eu construo um sistema sem saber programar',
-        excerpt: 'Três sistemas no ar, todos construídos sozinho. Não é mágica e não é sorte. É uma receita que eu repito.',
+        title: 'Como eu tiro um sistema do papel',
+        excerpt: 'Três sistemas no ar, todos construídos sozinho. Não é mágica e não é sorte. É uma ordem que eu sigo sempre, e que dá pra ensinar.',
         image: '/img/shots/atlas1.webp',
         date: '2026-08-17',
         category: 'applied-ai',
-        tags: ['método', 'ia', 'lovable', 'supabase'],
+        tags: ['método', 'construção', 'processo'],
         author: AUTHOR,
         readTime: '6',
-        content: `Eu não sou programador. Nunca fui. E tenho três sistemas no ar, usados por gente de verdade, com login, pagamento e IA dentro. Vou contar como, sem romantizar.
+        content: `Eu não sou programador de formação. Sou assessor de investimentos. E tenho três sistemas no ar, usados por gente de verdade, com login, pagamento e relatório automático. Vou contar como, sem romantizar.
 
-## A receita
+## A ordem
 
-Toda vez que eu construo, sigo a mesma ordem. Sempre.
+Toda vez que eu construo, sigo a mesma sequência. Sempre.
 
 1. **Dor.** Escrevo em uma frase qual problema o sistema resolve e pra quem. Se não cabe em uma frase, não está claro, e eu não começo.
-2. **Telas no papel.** Antes de qualquer ferramenta, desenho as três ou quatro telas principais. Só o essencial.
-3. **Dados.** Defino o que precisa ser guardado. Usuário, plano, transação, relatório. Isso vira o banco no Supabase.
-4. **Construção com IA.** Aqui entra o Lovable e o Claude. Eu descrevo a tela, a IA constrói, eu testo, corrijo, descrevo de novo. Não escrevo código na mão. Eu escrevo instruções muito boas.
-5. **IA no core.** Todo sistema meu tem uma parte em que a IA faz o trabalho pesado: gerar relatório, resumir, sugerir. É o que faz a pessoa dizer "isso é diferente".
-6. **Pagamento e lançamento.** Stripe ou Asaas, um plano simples, no ar na Vercel. Depois melhoro.
+2. **Telas no papel.** Antes de qualquer ferramenta, desenho as três ou quatro telas principais. Só o essencial. O que a pessoa precisa ver primeiro, o que ela faz depois.
+3. **Dados.** Defino o que precisa ser guardado. Usuário, plano, transação, relatório. Isso vira o banco, e o banco decide o resto.
+4. **Construção.** Aqui entram as ferramentas. Eu construo tela por tela, testo com gente de verdade, corrijo, volto. Nada de "vamos fazer tudo e lançar depois".
+5. **O que faz a diferença.** Todo sistema meu tem uma parte que faz o trabalho pesado pelo usuário: gerar o relatório, resumir, sugerir o próximo passo. É o que faz a pessoa dizer "isso aqui é diferente".
+6. **Pagamento e lançamento.** Um plano simples, cobrança ligada, no ar. Depois melhoro.
 
-## O que a IA não faz por você
+## O que nenhuma ferramenta faz por você
 
-Ela não sabe qual dor importa. Não sabe o que o seu cliente precisa ver na primeira tela. Não sabe quando uma funcionalidade é excesso. Isso é experiência, e a minha vem de dez anos ouvindo família falar de dinheiro.
+Ela não sabe qual dor importa. Não sabe o que o seu cliente precisa ver na primeira tela. Não sabe quando uma funcionalidade é excesso. Isso é critério, e o meu vem de dez anos ouvindo família falar de dinheiro.
 
-Por isso a pessoa que mais se dá bem construindo com IA não é quem sabe mais de tecnologia. É quem conhece melhor a dor.
+Por isso quem se dá bem construindo não é quem sabe mais de tecnologia. É quem conhece melhor a dor e tem disciplina pra seguir a ordem.
 
 ## Por que eu ensino isso
 
-Porque a receita se repete. Foi assim no Atlas, foi assim na plataforma da Zephyr, foi assim no Cria. E se repete comigo, repete com quem tem uma dor clara e uma ideia. É isso que eu faço na mentoria: sento com a pessoa e a gente vai da ideia ao sistema no ar.`
+Porque a sequência se repete. Foi assim no Atlas, foi assim na plataforma da Zephyr, foi assim no Cria. E se repete comigo, repete com quem tem uma dor clara e uma ideia. É isso que eu faço na mentoria: sento com a pessoa e a gente vai da ideia ao sistema no ar.`
     },
     {
         id: 'b05',
@@ -165,7 +165,7 @@ Eu tinha duas opções: refazer a planilha toda semana pra 300 famílias, ou con
 
 ## O que a plataforma faz
 
-A plataforma da Zephyr nasceu pra isso. O plano vive lá dentro. A carteira entra, a projeção recalcula, o relatório sai com IA explicando o que mudou e por quê. O cliente abre no celular e vê o filme, não a foto.
+A plataforma da Zephyr nasceu pra isso. O plano vive lá dentro. A carteira entra, a projeção recalcula, o relatório sai explicando o que mudou e por quê. O cliente abre no celular e vê o filme, não a foto.
 
 Pra mim, mudou a rotina inteira. Eu deixei de ser o cara que atualiza planilha e virei o cara que interpreta o que a plataforma mostra. É um uso muito melhor das minhas horas e das horas do cliente.
 
@@ -210,7 +210,7 @@ Se você nunca fez a conta do tempo de reconstrução da sua renda, faz hoje. O 
         image: '/img/shots/cria.webp',
         date: '2026-07-27',
         category: 'software-development',
-        tags: ['cria', 'conteúdo', 'ia'],
+        tags: ['cria', 'conteúdo', 'processo'],
         author: AUTHOR,
         readTime: '4',
         content: `Todo mundo me dizia a mesma coisa: "Walter, você precisa produzir conteúdo". Eu concordava. E não fazia.
@@ -223,7 +223,7 @@ Eu percebi que eu não tinha um problema de criatividade. Tinha um problema de f
 
 ## O que eu construí
 
-O Cria Social Club junta tudo em um fluxo só. A ideia entra bruta. A IA ajuda no roteiro, sugere o gancho, adapta pra carrossel ou pra vídeo. A imagem sai do mesmo lugar. Vai pra fila. Publica.
+O Cria Social Club junta tudo em um fluxo só. A ideia entra bruta. O sistema puxa o roteiro, sugere o gancho, adapta pra carrossel ou pra vídeo. A imagem sai do mesmo lugar. Vai pra fila. Publica.
 
 Fiz pra mim. Depois pra dois amigos que tinham a mesma trava. Depois virou produto, com plano e tudo.
 
@@ -235,34 +235,34 @@ Se você tem o que dizer e não publica, provavelmente o seu problema também é
     },
     {
         id: 'b08',
-        slug: 'ia-no-core-nao-e-enfeite',
-        title: 'IA no core não é enfeite',
-        excerpt: 'Botão de "gerar com IA" todo mundo tem. A diferença está em onde a IA entra no sistema e o que ela tira das costas do usuário.',
+        slug: 'funcionalidade-nao-e-favor',
+        title: 'Funcionalidade não é favor',
+        excerpt: 'Todo sistema quer ter mais botão. O que segura o usuário é o que o sistema tira das costas dele, não o que coloca na tela.',
         image: '/img/shots/cria1.webp',
         date: '2026-07-20',
         category: 'applied-ai',
-        tags: ['ia', 'produto', 'design'],
+        tags: ['produto', 'decisão', 'construção'],
         author: AUTHOR,
         readTime: '5',
-        content: `Em 2026 não falta sistema com "IA". Falta sistema em que a IA faz diferença de verdade. Eu tenho um critério simples pra separar os dois: a IA está tirando trabalho das costas do usuário ou está só decorando a tela?
+        content: `Toda semana aparece uma sugestão nova de funcionalidade. Cliente pede, amigo sugere, eu mesmo tenho ideia no banho. Se eu aceitasse todas, o Atlas teria 80 telas e ninguém usaria nenhuma.
+
+Eu tenho um critério simples pra decidir o que entra: a funcionalidade tira trabalho das costas do usuário ou só decora a tela?
 
 ## O teste
 
-Pega a funcionalidade e pergunta: se a IA sumir, o usuário ainda consegue usar o sistema do mesmo jeito? Se sim, é enfeite. Se o sistema perde o sentido, a IA está no core.
+Pega a ideia e pergunta: se ela não existir, o usuário deixa de fazer algo importante? Se a resposta é "não, ele só deixa de ver um gráfico a mais", é enfeite. Se a resposta é "ele volta pra planilha", é essencial.
 
-No Atlas, o relatório mensal é escrito pela IA, em linguagem de gente, explicando o que mudou no patrimônio do casal. Sem isso, o Atlas seria mais uma planilha bonita. Com isso, é um assessor que fala.
+No Atlas, o relatório mensal escrito em linguagem de gente, explicando o que mudou no patrimônio do casal, é essencial. Sem ele, o Atlas seria uma planilha bonita. Um gráfico de pizza da carteira é enfeite: bonito na demo, esquecido no uso.
 
-Na plataforma da Zephyr, a IA lê a carteira e a projeção e escreve o que eu diria na reunião. Eu reviso, ajusto, assino. Meu tempo vai pra interpretação, não pra redação.
+## Onde eu procuro o que construir
 
-No Cria, a IA transforma a ideia bruta em roteiro. Sem ela, o fluxo trava no mesmo lugar de sempre.
+Eu procuro a etapa em que o usuário mais desiste. Aquele ponto do fluxo em que a pessoa fecha a aba. Quase sempre é uma tarefa chata que exige escrever, resumir ou decidir. É ali que uma funcionalidade paga o próprio custo.
 
-## Como eu decido onde ela entra
-
-Eu procuro a etapa em que o usuário mais desiste. Aquele ponto do fluxo em que a pessoa fecha a aba. Quase sempre é uma tarefa chata que exige escrever, resumir ou decidir. É exatamente o que a IA faz bem.
+No Cria, o ponto de desistência era transformar a ideia bruta em roteiro. No Zephyr, era atualizar a projeção depois de cada mudança na carteira. Nos dois casos, a funcionalidade que resolveu isso é a que as pessoas mais usam.
 
 ## O erro mais comum
 
-Colocar IA na entrada, e não na saída. Chatbot na home, assistente que "conversa". Isso impressiona na demo e some no uso. O que segura o usuário é a IA entregando algo pronto que ele levaria uma hora pra fazer.
+Construir pra impressionar na demonstração. Painel cheio, animação, assistente que conversa. Isso vende na primeira reunião e some no uso diário. O que segura o usuário é o sistema entregando algo pronto que ele levaria uma hora pra fazer.
 
 Constrói pra tirar trabalho, não pra parecer moderno.`
     },
@@ -310,7 +310,7 @@ Crescer é bom. Crescer do jeito errado destrói o que faz o negócio valer. Eu 
 
 ## O que não é
 
-Não é curso de código. Você não vai aprender React. Não é curso de "ganhe dinheiro com IA". Não tem promessa de renda.
+Não é curso de código. Você não vai aprender React. Não é curso de "ganhe dinheiro na internet". Não tem promessa de renda.
 
 ## O que é
 
@@ -320,9 +320,9 @@ São quatro encontros, um por semana, de uma hora a uma hora e meia. Dois céreb
 
 **Encontro 2: telas e dados.** Desenhamos as três telas essenciais e definimos o que precisa ser guardado. Você sai com o esqueleto.
 
-**Encontro 3: construção.** Com Lovable, Supabase e IA, a gente constrói junto. Você vê a tela nascer na sua frente e aprende a instruir a IA do jeito que funciona.
+**Encontro 3: construção.** A gente constrói junto, com as ferramentas que eu uso nos meus sistemas. Você vê a tela nascer na sua frente e aprende a conduzir o processo do jeito que funciona.
 
-**Encontro 4: IA no core, pagamento e ar.** Colocamos a inteligência onde ela faz diferença, ligamos o pagamento e publicamos.
+**Encontro 4: o que faz diferença, pagamento e ar.** Colocamos a funcionalidade que tira trabalho do usuário, ligamos o pagamento e publicamos.
 
 ## Pra quem é
 
@@ -369,22 +369,18 @@ A diferença entre os dois cenários é uma decisão tomada com dez anos de ante
         image: '/img/shots/atlas.webp',
         date: '2026-06-22',
         category: 'applied-ai',
-        tags: ['stack', 'ferramentas', 'lovable', 'supabase', 'claude'],
+        tags: ['stack', 'ferramentas', 'construção'],
         author: AUTHOR,
         readTime: '5',
-        content: `Gente que programa às vezes torce o nariz pra minha stack. Tudo bem. Eu não escolho ferramenta pra impressionar programador. Escolho pra colocar sistema no ar sozinho.
+        content: `Gente que programa às vezes torce o nariz pra minha stack. Tudo bem. Eu não escolho ferramenta pra impressionar programador. Escolho pra colocar sistema no ar sozinho e continuar dono dele.
 
 ## Lovable
 
-É onde a tela nasce. Eu descrevo o que quero, a IA constrói, eu ajusto. A vantagem não é velocidade, é foco: eu penso na experiência do usuário, não em como centralizar um botão.
+É onde a tela nasce. Eu descrevo o que quero, testo, ajusto. A vantagem não é velocidade, é foco: eu penso na experiência do usuário, não em como centralizar um botão.
 
 ## Supabase
 
 Banco de dados, login, permissões e segurança em um lugar só. Todo sistema meu começa por aqui, com as tabelas desenhadas antes de qualquer tela. Se o dado está certo, o resto é consequência.
-
-## Claude e OpenAI
-
-A IA que vai dentro do produto. Relatório do Atlas, texto da plataforma da Zephyr, roteiro do Cria. E também a IA que me ajuda a construir: eu uso o Claude pra revisar lógica, escrever instruções melhores e destravar quando algo quebra.
 
 ## Stripe e Asaas
 

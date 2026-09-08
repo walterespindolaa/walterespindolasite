@@ -22,7 +22,7 @@ const techDescriptions: Record<string, string> = {
     'Supabase': 'Banco, login, segurança e edge functions.',
     'PostgreSQL': 'O banco por trás de patrimônio e caixa.',
     'Tailwind CSS': 'Estilo direto no componente, interface consistente.',
-    'OpenAI': 'IA no core: relatórios e copiloto.',
+    'OpenAI': 'Relatórios e copiloto dentro do produto.',
     'Anthropic (Claude)': 'Raciocínio e geração de relatórios.',
     'Stripe': 'Assinaturas e pagamento internacional.',
     'Asaas': 'Pix, boleto e cartão no Brasil.',
