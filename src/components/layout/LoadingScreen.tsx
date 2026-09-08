@@ -20,8 +20,8 @@ export function LoadingScreen({ onComplete, onExitStart, duration }: LoadingScre
             onExitStart?.();
             setTimeout(() => {
                 onComplete?.();
-            }, 1200); // Increased slightly for smoother overlap
-        }, 300);
+            }, 600);
+        }, 120);
     };
 
     return (
@@ -32,7 +32,7 @@ export function LoadingScreen({ onComplete, onExitStart, duration }: LoadingScre
                     exit={{
                         y: "-100%",
                         transition: {
-                            duration: 1.2,
+                            duration: 0.6,
                             ease: [0.7, 0, 0.3, 1]
                         }
                     }}
@@ -48,7 +48,7 @@ export function LoadingScreen({ onComplete, onExitStart, duration }: LoadingScre
                         }}
                         className="relative flex flex-col items-center justify-center w-full max-w-[400px] will-change-transform"
                     >
-                        <AppleHelloEnglishEffect speed={1.2} onAnimationComplete={handleAnimationComplete} className="text-foreground h-16 sm:h-20 md:h-24 will-change-transform" />
+                        <AppleHelloEnglishEffect speed={0.55} onAnimationComplete={handleAnimationComplete} className="text-foreground h-16 sm:h-20 md:h-24 will-change-transform" />
                     </motion.div>
 
                     {/* Subtle aesthetic dot */}

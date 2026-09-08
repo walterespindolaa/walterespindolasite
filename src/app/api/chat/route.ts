@@ -217,7 +217,7 @@ export async function POST(req: NextRequest) {
                 console.error('[Chat] Gemini also failed:', geminiError);
                 return NextResponse.json(
                     {
-                        error: 'Both AI providers are currently unavailable. Please try again later.',
+                        error: 'O assistente está fora do ar agora. Me chama direto pelo formulário de contato.',
                         details: {
                             groq: groqError instanceof Error ? groqError.message : String(groqError),
                             gemini: geminiError instanceof Error ? geminiError.message : String(geminiError),
