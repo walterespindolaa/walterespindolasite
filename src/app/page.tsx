@@ -57,8 +57,8 @@ export default function Home() {
       <Nav />
       <main>
         {/* Abertura: imagem do monitor (poster) + vídeo em loop por cima */}
-        <section className="relative bg-paper">
-          <div className="relative w-full aspect-[16/9] max-h-[100svh] overflow-hidden">
+        <section className="relative bg-paper pt-20 md:pt-24">
+          <div className="relative w-full aspect-[16/9] max-h-[calc(100svh-6rem)] overflow-hidden">
             <Image src={IMG.hero.src} alt="Walter Espindola" fill priority quality={92} sizes="100vw" className="object-cover object-center" />
             <video
               className="absolute inset-0 w-full h-full object-cover object-center"
