@@ -1,55 +1,11 @@
-# Dependencies
 node_modules
-.pnp
-.pnp.js
-
-# Testing
-coverage
-
-# Next.js
-.next/
-out/
-build
-
-# Production
-dist
-
-# Misc
+.next
+out
+.env*.local
 .DS_Store
-*.pem
-
-# Debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Vercel
-.vercel
-
-# TypeScript
 *.tsbuildinfo
 next-env.d.ts
-
-# IDE
-.vscode
-.idea
-*.swp
-*.swo
-
-# OS
-Thumbs.db
-
-
-# site antigo (Vite), só backup
-_backup-v1/node_modules
-_backup-v1/dist
-
 _backup-v1/
-.DS_Store
+_backup-v2/
+_backup-v1/
+_backup-v2/

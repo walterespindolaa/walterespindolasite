@@ -1,136 +1,182 @@
-'use client';
+import Image from "next/image";
+import Link from "next/link";
+import { blogs } from "@/data/blogs";
+import { Nav } from "@/components/Nav";
+import { IMG } from "@/data/images";
 
-import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
-import dynamic from 'next/dynamic';
-import { motion, useScroll, useTransform, AnimatePresence, useSpring, useMotionValue, useMotionTemplate } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useIsMobile } from "@/hooks/useIsMobile";
+const ROLES = ["Empresário", "Assessor de investimentos", "Construtor de sistemas"];
 
-import { Sparkles, Mail, ArrowRight, ArrowDown } from 'lucide-react';
-import { LoadingScreen } from '@/components/layout';
-import { TextPressure } from '@/components/ui/TextPressure';
-import { portfolioData } from '@/data/portfolio';
-import { cn } from "@/lib/utils";
-import { SocialCorner } from '@/components/layout/SocialCorner';
-import { DeferredMount } from '@/components/ui/DeferredMount';
+const TRAJETORIA = [
+  ["A pousada", "Cresci numa pousada no litoral de Santa Catarina. Meus pais tocaram o negócio por 25 anos, no braço, sem nunca ter um plano. Em 2020 a pousada fechou. Foi ali que eu entendi, de um jeito que não se esquece, o que a falta de plano custa."],
+  ["A proposta que recusei", "A primeira proposta de trabalho que recebi foi pra um turno da noite numa fábrica de chicotes automotivos, por pouco mais de dois mil reais. Eu via um colega de faculdade crescendo em outra área. Não aceitei. Foi o choque que me tirou daquele caminho."],
+  ["A mala antes da prova", "Nunca tinha estudado mercado financeiro. Decidi que seria por ali. O primeiro risco de verdade foi mudar de cidade antes de sair o resultado da certificação. Saiu. Passei."],
+  ["2020", "Pra muita gente foi o pior ano. Pra mim foi o salto: o atendimento virou digital, o modelo que eu já preferia. E na mesa da cozinha, eu e minha esposa olhando as contas, nasceu a pergunta que virou o Atlas."],
+  ["Sair da liderança", "Perdi uma posição de liderança num escritório de terceiros. Foi quando eu mais me perguntei se estava no caminho certo. Sem esse desconforto, eu não teria aberto o meu."],
+  ["Abrir a Zephyr", "Sair de um salário bom. Não saber se os clientes viriam. Não saber empreender. Assumi tudo de uma vez. Os clientes vieram, e o escritório cresceu fazendo o básico bem feito."],
+  ["Um sistema que pensa como eu", "O maior gargalo da assessoria não é técnico, é falta de processo. Então eu construí o meu. Um estudo que levava cinco horas hoje leva quinze minutos, e sai melhor. A partir daí, cada gargalo virou um sistema."],
+];
 
-if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
+const SISTEMAS = [
+  { n: "Atlas", tag: "Finanças pessoais", img: IMG.atlas, problema: "Casais que ganham bem e mesmo assim não sabem pra onde o dinheiro vai.", fiz: "O plano que um bom assessor faria, num app, todo dia. Nasceu na minha mesa de cozinha e virou o método que uso com mais de 300 famílias.", link: "useatlasapp.com" },
+  { n: "Zephyr", tag: "Plataforma da assessoria", img: IMG.zephyrApp, problema: "Planejamento feito em planilha, que envelhece no dia seguinte.", fiz: "A plataforma do escritório. Reunião gravada, tarefas, resumo, e-mail e estudo saem do mesmo fluxo. O assessor clica e executa; a qualidade é a mesma pra 30 ou 60 clientes." },
+  { n: "Cria Social Club", tag: "Conteúdo", img: IMG.cria, problema: "Ter o que dizer e travar na hora de publicar.", fiz: "Da ideia ao publicado num fluxo só. Fiz pra mim, depois pra dois amigos com a mesma trava, depois virou produto." },
+];
+
+const CATS: [string, string][] = [["more", "Patrimônio"], ["software-development", "Sistemas"], ["applied-ai", "Construção"], ["about-me", "Sobre mim"]];
+
+function Chapter({ n, label, dark, children, id }: { n: string; label: string; dark?: boolean; id: string; children: React.ReactNode }) {
+  return (
+    <section id={id} className={`${dark ? "bg-evergreen text-paper" : "bg-paper text-ink"} px-5 md:px-10 py-20 md:py-32`}>
+      <div className={`flex items-baseline gap-4 mb-12 md:mb-20 reveal ${dark ? "text-paper/60" : "text-ink/50"}`}>
+        <span className="text-sm font-medium">{n}</span>
+        <span className="h-px flex-1 bg-current opacity-30" />
+        <span className="text-sm font-medium">{label}</span>
+      </div>
+      {children}
+    </section>
+  );
 }
 
-import AboutSection from "@/components/sections/AboutSection";
-import ExpertiseSection from "@/components/sections/ExpertiseSection";
-import { HeroVisual } from "@/components/sections/HeroVisual";
-import StatsSection from "@/components/sections/StatsSection";
-import CTASection from "@/components/sections/CTASection";
-import { usePreloadState } from "@/components/ui/arc-preloader-hero";
+export default function Home() {
+  const posts = [...blogs].sort((a, b) => (a.date < b.date ? 1 : -1));
 
-
-// ─── Helpers (Keeping Original Design) ───────────────────────────────────────
-
-const MetricCTAHijack = () => {
-    return (
-        <>
-            {/* Galeria ("Retratos & bastidores") ocultada a pedido do dono. Rota /gallery mantida, só não linkada. */}
-            <section className="relative">
-                {/* Layer 1: The Blog/Book Slider (Sticky) */}
-                <div className="sticky top-0 z-0 overflow-hidden">
-                    <StatsSection showOnly="bottom" />
-                </div>
-
-                {/* Layer 2: The CTA Section (Slides Over) */}
-                <div className="relative z-20 bg-background">
-                    {/* Top shadow element to prevent downward bleeding into footer */}
-                    <div className="absolute top-0 left-0 w-full h-10 dark:shadow-[0_-50px_150px_rgba(0,0,0,0.8)] -z-10" />
-
-                    <div className="hidden md:block h-[10vh]" />
-                    <CTASection />
-                    <div className="h-8 md:h-20" />
-                </div>
-            </section>
-        </>
-    );
-};
-
-// ─── Main Page ───────────────────────────────────────────────────────────────
-
-export default function HomePage() {
-    const { phase } = usePreloadState();
-    const [isLoading, setIsLoading] = useState(true);
-    const [isInitialLoadingExit, setIsInitialLoadingExit] = useState(false);
-    const [skipAnimation, setSkipAnimation] = useState(false);
-
-    useEffect(() => {
-        const hasLoaded = sessionStorage.getItem('portfolioLoaded');
-        if (hasLoaded) {
-            setSkipAnimation(true);
-            setIsLoading(false);
-        }
-
-        if (typeof window === 'undefined' || !('ResizeObserver' in window)) return;
-        const refreshLayout = () => {
-            window.dispatchEvent(new Event('resize'));
-            ScrollTrigger.refresh();
-        };
-        const resizeObserver = new ResizeObserver(() => { refreshLayout(); });
-        resizeObserver.observe(document.body);
-        window.addEventListener('load', refreshLayout);
-        return () => {
-            resizeObserver.disconnect();
-            window.removeEventListener('load', refreshLayout);
-            ScrollTrigger.getAll().forEach(t => t.kill());
-        };
-    }, []);
-
-    // Animasikan konten saat LoadingScreen selesai (visit pertama) 
-    // ATAU saat arc preloader mulai naik/selesai (visit kedua dst)
-    const isReadyToAnimate = isLoading ? isInitialLoadingExit : (phase === "reveal" || phase === "done");
-
-    useEffect(() => {
-        if (isReadyToAnimate) {
-            const timer = setTimeout(() => {
-                ScrollTrigger.refresh();
-            }, 1500); // Once, after transition is likely done
-            return () => clearTimeout(timer);
-        }
-    }, [isReadyToAnimate]);
-
-    const handleLoadingComplete = () => {
-        setIsLoading(false);
-        window.scrollTo({ top: 0, behavior: 'instant' });
-        sessionStorage.setItem('portfolioLoaded', 'true');
-        setTimeout(() => { ScrollTrigger.refresh(); }, 100);
-    };
-
-    const handleExitStart = () => {
-        setIsInitialLoadingExit(true);
-    };
-
-    return (
-        <>
-            {isLoading && <LoadingScreen onComplete={handleLoadingComplete} onExitStart={handleExitStart} duration={2500} />}
-            <motion.main
-                initial={skipAnimation ? false : { opacity: 0, y: 40 }}
-                animate={skipAnimation ? { opacity: 1, y: 0 } : (isReadyToAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 })}
-                transition={{
-                    duration: skipAnimation ? 0 : 1.4,
-                    ease: skipAnimation ? "linear" : [0.16, 1, 0.3, 1], // Expo out for snappy yet smooth feel
-                    opacity: { duration: skipAnimation ? 0 : 0.8 }
-                }}
-                className="relative overflow-x-clip w-full max-w-[100vw] will-change-transform will-change-opacity"
+  return (
+    <>
+      <Nav />
+      <main>
+        {/* Abertura: imagem do monitor (poster) + vídeo em loop por cima */}
+        <section className="relative bg-paper">
+          <div className="relative w-full aspect-[16/9] max-h-[100svh] overflow-hidden">
+            <Image src={IMG.hero.src} alt="Walter Espindola" fill priority quality={92} sizes="100vw" className="object-cover object-center" />
+            <video
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              autoPlay muted loop playsInline preload="metadata"
+              poster={IMG.hero.src}
             >
-                <HeroVisual isExiting={isReadyToAnimate} />
+              <source src={IMG.heroVideo} type="video/mp4" />
+            </video>
+          </div>
+          <p className="px-5 md:px-10 py-5 text-sm text-ink/50">Empresário. Santa Catarina.</p>
+        </section>
 
-                <DeferredMount>
-                    <ExpertiseSection />
-                    <AboutSection />
-                    <MetricCTAHijack />
-                    <SocialCorner className="fixed bottom-12 right-12 z-[30]" />
-                </DeferredMount>
-            </motion.main>
-        </>
-    );
+        {/* Faixa rolando */}
+        <div className="ticker bg-paper text-ink border-y border-ink/15 py-3 md:py-4">
+          <div className="ticker__track">
+            {[0, 1].map((k) => (
+              <span key={k} className="flex shrink-0">
+                {[...ROLES, ...ROLES].map((r, i) => (
+                  <span key={i} className="serif text-2xl md:text-4xl px-6 md:px-10 whitespace-nowrap">{r}<span className="mx-6 md:mx-10 text-sage">·</span></span>
+                ))}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* 01 Zephyr */}
+        <Chapter n="01" label="O escritório" id="zephyr" dark>
+          <div className="grid md:grid-cols-12 gap-10 md:gap-16">
+            <div className="md:col-span-5 reveal">
+              <h2 className="serif text-5xl md:text-7xl leading-[0.95]">Zephyr<br />Investimentos</h2>
+            </div>
+            <div className="md:col-span-7 prose-w space-y-6 reveal">
+              <p>Assessoria de investimentos pra quem tem muito a perder. Poucas famílias, atenção de perto, visão de décadas. Cerca de R$ 260 milhões sob gestão.</p>
+              <p>O mercado normalizou trocar de assessor a cada seis meses. Meus clientes estão comigo há quatro, cinco, seis anos. Se eu erro, assumo. Se acerto, a gente comemora junto. É parceria, não transação.</p>
+              <p>O maior gargalo da assessoria não é técnico. É falta de processo. A maioria age como analista quando deveria agir como assessor. Tudo o que eu faço é uma resposta a isso: gerar mais valor pro cliente gastando menos tempo, sem perder profundidade.</p>
+            </div>
+          </div>
+          <figure className="relative aspect-[16/9] md:aspect-[21/9] mt-16 md:mt-24 overflow-hidden reveal">
+            <Image src={IMG.zephyr.src} alt="Zephyr Investimentos" fill quality={90} sizes="100vw" style={{ objectPosition: IMG.zephyr.pos }} className="px-img object-cover" />
+          </figure>
+        </Chapter>
+
+        {/* 02 Sistemas */}
+        <Chapter n="02" label="O que construí" id="sistemas">
+          <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-24">
+            <h2 className="md:col-span-7 serif text-5xl md:text-7xl leading-[0.95] reveal">Cada gargalo virou um sistema.</h2>
+            <p className="md:col-span-5 md:pt-4 text-lg md:text-xl leading-relaxed text-ink/70 reveal">Três sistemas no ar, construídos sozinho, sempre pela mesma ordem: a dor, as telas essenciais, os dados, o pagamento, o ar. Nenhum nasceu de uma ideia. Todos nasceram de um problema que eu vi de perto.</p>
+          </div>
+          <div className="space-y-20 md:space-y-32">
+            {SISTEMAS.map((s, i) => (
+              <article key={s.n} className={`grid md:grid-cols-12 gap-8 md:gap-12 items-center ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
+                <figure className="md:col-span-7 relative aspect-[16/10] overflow-hidden border border-ink/10 bg-white reveal">
+                  <Image src={s.img} alt={s.n} fill quality={90} sizes="(max-width:768px) 100vw, 60vw" className="object-cover object-top" />
+                </figure>
+                <div className="md:col-span-5 reveal">
+                  <p className="text-sm text-ink/50 mb-3">{s.tag}</p>
+                  <h3 className="serif text-4xl md:text-5xl">{s.n}</h3>
+                  <p className="mt-6 text-lg leading-relaxed"><span className="text-ink/50">O problema. </span>{s.problema}</p>
+                  <p className="mt-4 text-lg leading-relaxed text-ink/70"><span className="text-ink/50">O que eu fiz. </span>{s.fiz}</p>
+                  {s.link && <a href={`https://${s.link}`} target="_blank" rel="noreferrer" className="link inline-block mt-6 text-sm">{s.link}</a>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </Chapter>
+
+        {/* 03 Trajetória */}
+        <Chapter n="03" label="Trajetória" id="trajetoria" dark>
+          <div className="grid md:grid-cols-12 gap-10 md:gap-16">
+            <div className="md:col-span-5">
+              <h2 className="serif text-5xl md:text-7xl leading-[0.95] reveal">Sete decisões,<br />em ordem.</h2>
+              <figure className="relative aspect-[4/5] mt-10 md:mt-16 overflow-hidden reveal">
+                <Image src={IMG.trajetoria.src} alt="Walter Espindola" fill quality={90} sizes="(max-width:768px) 100vw, 40vw" style={{ objectPosition: IMG.trajetoria.pos }} className="px-img object-cover" />
+              </figure>
+            </div>
+            <ol className="md:col-span-7 divide-y divide-paper/15">
+              {TRAJETORIA.map(([t, d], i) => (
+                <li key={t} className="py-7 md:py-9 grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr] gap-4 reveal">
+                  <span className="serif text-2xl text-sage">{String(i + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3 className="serif text-2xl md:text-3xl">{t}</h3>
+                    <p className="mt-2 text-[1.05rem] leading-relaxed text-paper/70">{d}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </Chapter>
+
+        {/* 04 Escritos */}
+        <Chapter n="04" label="Escritos" id="escritos">
+          <div className="grid md:grid-cols-12 gap-8 mb-14 md:mb-20">
+            <h2 className="md:col-span-7 serif text-5xl md:text-7xl leading-[0.95] reveal">Registro, não discurso.</h2>
+            <p className="md:col-span-5 md:pt-4 text-lg md:text-xl leading-relaxed text-ink/70 reveal">Um texto por semana sobre patrimônio, sistemas e o que eu aprendo construindo. <Link href="/escritos" className="link">Todos os escritos</Link></p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
+            {CATS.map(([cat, label]) => (
+              <div key={cat} className="reveal">
+                <p className="text-sm text-ink/50 pb-3 border-b border-ink/15">{label}</p>
+                <ul className="mt-4 space-y-4">
+                  {posts.filter((p) => p.category === cat).slice(0, 3).map((p) => (
+                    <li key={p.slug}>
+                      <Link href={`/escritos/${p.slug}`} className="serif text-xl leading-snug hover:text-evergreen transition-colors">{p.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Chapter>
+
+        {/* Contato / rodapé */}
+        <footer id="contato" className="bg-ink text-paper px-5 md:px-10 pt-20 md:pt-28 pb-10">
+          <div className="grid md:grid-cols-12 gap-10">
+            <p className="md:col-span-8 serif text-3xl md:text-5xl leading-[1.1] reveal">
+              Não atendo cliente por aqui. Se você está numa virada parecida, ou quer trocar ideia sobre processo e sistemas, me escreve.
+            </p>
+            <ul className="md:col-span-4 md:text-right space-y-2 text-lg reveal">
+              <li><a className="link" href="mailto:walterjoose@gmail.com">walterjoose@gmail.com</a></li>
+              <li><a className="link" href="https://www.instagram.com/walterespindola_" target="_blank" rel="noreferrer">Instagram</a></li>
+              <li><a className="link" href="https://www.linkedin.com/in/walter-espindola-885490121/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div className="mt-20 md:mt-28 flex items-end justify-between text-sm text-paper/50">
+            <span>Santa Catarina, Brasil</span>
+            <span>© {new Date().getFullYear()} Walter Espindola</span>
+          </div>
+          <p className="display text-[19vw] md:text-[12.5vw] text-paper/[0.06] -mb-[0.2em] mt-6 select-none" aria-hidden>Espindola</p>
+        </footer>
+      </main>
+    </>
+  );
 }
