@@ -17,9 +17,21 @@ const TRAJETORIA = [
 ];
 
 const SISTEMAS = [
-  { n: "Atlas", tag: "Finanças pessoais", img: IMG.atlas, problema: "A maioria dos apps de finanças só mostra o que você já gastou, olhando pra trás. Ninguém mostra o próximo passo.", fiz: "Um app de planejamento que olha pra frente. Junta tudo num lugar só, contas, dívidas, metas, investimentos, e projeta o futuro: se guardar X por mês, como fica a aposentadoria em 20, 30 anos. Tem simulador de decisão (\"posso trocar de carro esse ano?\"), funciona pra pessoa física e pra empresa, e dá pra usar em casal, cada um com seu acesso, todo mundo vendo o mesmo plano. Ele não decide por você. Te dá clareza pra decidir. Cinco minutos por dia, no celular ou no computador.", link: "useatlasapp.com" },
-  { n: "HUB Zephyr", tag: "Sistema interno da assessoria", img: IMG.zephyrApp, problema: "O assessor chega na reunião sabendo o nome do que o cliente tem, não o que tem de verdade. E o estudo levava cinco horas.", fiz: "O sistema interno do escritório, construído do zero em cima da custódia da XP. Todo mês ele consolida a carteira inteira de cada cliente, inclusive o que está em outro banco, reconhece cada papel pelo cadastro da CVM e monta uma avaliação 360: concentração, liquidez, risco de crédito, custo escondido. Lê balanço, lâmina de fundo e gráfico. Toda manhã entrega a lista de prioridades. Pra reunião, gera o estudo em slides com fonte em cada número, grava, transcreve e puxa as pendências. Não recomenda no meu lugar: garante que eu chegue sabendo tudo o que dava pra saber." },
-  { n: "Cria Social Club", tag: "Conteúdo", img: IMG.cria, problema: "Quem trabalha com conteúdo opera em dez lugares ao mesmo tempo: ideia num app, roteiro em outro, aprovação por WhatsApp, relatório na planilha.", fiz: "A operação inteira num lugar só, do primeiro rascunho ao relatório pro cliente. Tudo começa no Brandbook: quem a pessoa é, como fala, pra quem fala. É isso que faz legenda, roteiro e arte saírem com a cara da marca, não genéricos. O conteúdo anda num quadro por etapa, o cliente aprova por link, o parceiro de produção recebe a fila com prazo e fecha o mês com extrato. Serve pra qualquer nicho porque não vem com conteúdo pronto: vem com método." },
+  {
+    n: "Atlas", tag: "Planejamento financeiro pra famílias", img: IMG.atlas, link: "useatlasapp.com",
+    problema: "Todo app de finanças mostra o que você já gastou. Nenhum mostra pra onde você está indo.",
+    fiz: "Um mapa do seu dinheiro. Você coloca tudo num lugar só (contas, dívidas, metas, investimentos) e ele mostra onde você está hoje e como fica daqui a 20 ou 30 anos se continuar assim. Quer saber se dá pra trocar de carro esse ano? Ele responde com os seus números. Dá pra usar em casal, cada um com seu acesso, olhando o mesmo plano. Cinco minutos por dia.",
+  },
+  {
+    n: "HUB Zephyr", tag: "O sistema por dentro do escritório", img: IMG.zephyrApp,
+    problema: "Um estudo de carteira bem feito levava cinco horas. E mesmo assim o assessor chegava na reunião sem saber tudo o que dava pra saber.",
+    fiz: "Todo mês ele lê o extrato de cada cliente e junta tudo: ações, fundos, renda fixa, o que está em outro banco. Aí mostra onde está concentrado demais, o que custa caro escondido, o que vale trocar. Toda manhã me entrega a lista de quem precisa de atenção. Pra reunião, monta o estudo em slides, grava a conversa e anota o que foi combinado. Ele não decide por mim. Garante que eu chegue sabendo.",
+  },
+  {
+    n: "Cria Social Club", tag: "Pra quem vive de conteúdo", img: IMG.cria,
+    problema: "Ideia num app, roteiro em outro, aprovação pelo WhatsApp, relatório na planilha. Metade do dia vai embora organizando, não criando.",
+    fiz: "Tudo num lugar só, do rascunho ao relatório. Começa pelo Brandbook: quem você é, como fala, pra quem fala. A partir daí, legenda, roteiro e arte saem com a sua cara. O post anda por etapas num quadro, o cliente aprova por um link, o designer recebe a fila com prazo e fecha o mês com extrato. Não vem com conteúdo pronto. Vem com método.",
+  },
 ];
 
 const CATS: [string, string][] = [["more", "Patrimônio"], ["software-development", "Sistemas"], ["applied-ai", "Construção"], ["about-me", "Sobre mim"]];
