@@ -29,8 +29,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
       <Nav />
       <main className="bg-paper text-ink">
         <section className="px-5 md:px-10 pt-24 md:pt-32 grid md:grid-cols-12 gap-8 md:gap-12 items-end">
-          <figure className="md:col-span-5 relative aspect-[4/5] md:aspect-[3/4] overflow-hidden bg-ink/5">
-            <Image src={p.image} alt={p.title} fill priority quality={90} sizes="(max-width:768px) 100vw, 42vw" className="object-cover object-[50%_20%]" />
+          <figure className="md:col-span-5">
+            <Image src={p.image} alt={p.title} width={1333} height={2000} priority quality={90} sizes="(max-width:768px) 100vw, 42vw" className="w-full h-auto bg-ink/5" />
           </figure>
           <div className="md:col-span-7 pb-2">
             <p className="text-sm text-ink/50 mb-4">{p.date.split("-").reverse().join("/")} · {p.readTime} min de leitura</p>

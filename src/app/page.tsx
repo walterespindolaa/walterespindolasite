@@ -17,9 +17,9 @@ const TRAJETORIA = [
 ];
 
 const SISTEMAS = [
-  { n: "Atlas", tag: "Finanças pessoais", img: IMG.atlas, problema: "Casais que ganham bem e mesmo assim não sabem pra onde o dinheiro vai.", fiz: "O plano que um bom assessor faria, num app, todo dia. Nasceu na minha mesa de cozinha e virou o método que uso com mais de 300 famílias.", link: "useatlasapp.com" },
-  { n: "Zephyr", tag: "Plataforma da assessoria", img: IMG.zephyrApp, problema: "Planejamento feito em planilha, que envelhece no dia seguinte.", fiz: "A plataforma do escritório. Reunião gravada, tarefas, resumo, e-mail e estudo saem do mesmo fluxo. O assessor clica e executa; a qualidade é a mesma pra 30 ou 60 clientes." },
-  { n: "Cria Social Club", tag: "Conteúdo", img: IMG.cria, problema: "Ter o que dizer e travar na hora de publicar.", fiz: "Da ideia ao publicado num fluxo só. Fiz pra mim, depois pra dois amigos com a mesma trava, depois virou produto." },
+  { n: "Atlas", tag: "Finanças pessoais", img: IMG.atlas, problema: "A maioria dos apps de finanças só mostra o que você já gastou, olhando pra trás. Ninguém mostra o próximo passo.", fiz: "Um app de planejamento que olha pra frente. Junta tudo num lugar só, contas, dívidas, metas, investimentos, e projeta o futuro: se guardar X por mês, como fica a aposentadoria em 20, 30 anos. Tem simulador de decisão (\"posso trocar de carro esse ano?\"), funciona pra pessoa física e pra empresa, e dá pra usar em casal, cada um com seu acesso, todo mundo vendo o mesmo plano. Ele não decide por você. Te dá clareza pra decidir. Cinco minutos por dia, no celular ou no computador.", link: "useatlasapp.com" },
+  { n: "HUB Zephyr", tag: "Sistema interno da assessoria", img: IMG.zephyrApp, problema: "O assessor chega na reunião sabendo o nome do que o cliente tem, não o que tem de verdade. E o estudo levava cinco horas.", fiz: "O sistema interno do escritório, construído do zero em cima da custódia da XP. Todo mês ele consolida a carteira inteira de cada cliente, inclusive o que está em outro banco, reconhece cada papel pelo cadastro da CVM e monta uma avaliação 360: concentração, liquidez, risco de crédito, custo escondido. Lê balanço, lâmina de fundo e gráfico. Toda manhã entrega a lista de prioridades. Pra reunião, gera o estudo em slides com fonte em cada número, grava, transcreve e puxa as pendências. Não recomenda no meu lugar: garante que eu chegue sabendo tudo o que dava pra saber." },
+  { n: "Cria Social Club", tag: "Conteúdo", img: IMG.cria, problema: "Quem trabalha com conteúdo opera em dez lugares ao mesmo tempo: ideia num app, roteiro em outro, aprovação por WhatsApp, relatório na planilha.", fiz: "A operação inteira num lugar só, do primeiro rascunho ao relatório pro cliente. Tudo começa no Brandbook: quem a pessoa é, como fala, pra quem fala. É isso que faz legenda, roteiro e arte saírem com a cara da marca, não genéricos. O conteúdo anda num quadro por etapa, o cliente aprova por link, o parceiro de produção recebe a fila com prazo e fecha o mês com extrato. Serve pra qualquer nicho porque não vem com conteúdo pronto: vem com método." },
 ];
 
 const CATS: [string, string][] = [["more", "Patrimônio"], ["software-development", "Sistemas"], ["applied-ai", "Construção"], ["about-me", "Sobre mim"]];
@@ -98,8 +98,8 @@ export default function Home() {
           <div className="space-y-20 md:space-y-32">
             {SISTEMAS.map((s, i) => (
               <article key={s.n} className={`grid md:grid-cols-12 gap-8 md:gap-12 items-center ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
-                <figure className="md:col-span-7 relative aspect-[16/10] overflow-hidden border border-ink/10 bg-white reveal">
-                  <Image src={s.img} alt={s.n} fill quality={90} sizes="(max-width:768px) 100vw, 60vw" className="object-cover object-top" />
+                <figure className="md:col-span-7 reveal">
+                  <Image src={s.img} alt={s.n} width={1920} height={1040} quality={90} sizes="(max-width:768px) 100vw, 60vw" className="w-full h-auto border border-ink/10 bg-white" />
                 </figure>
                 <div className="md:col-span-5 reveal">
                   <p className="text-sm text-ink/50 mb-3">{s.tag}</p>
